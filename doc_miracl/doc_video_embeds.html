@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="You can embed files with a Video JS wrapper by adding 'video: true' in the frontmatter. Alternatively, you can just fall back on the default video wrapper in...">
+<meta name="keywords" content="formatting,  videos, youtube, vimeo, video js, video wrapper, mp4, stream">
+<title>Video embeds  | MIRACL</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+<link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+<script src="https://vjs.zencdn.net/4.12/video.js"></script>
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img src="img/company-logo.svg">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+
+      <a href="//github.com/MiraclHQ" target="_blank" class="default-btn pull-right">
+        <span class="txt">view on gihub</span>
+      </a>
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div>
+            <div class="row">
+  <div class="col-md-12">
+    <div class="post-header">
+       <h1 class="post-title-main">Video embeds</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="col-md-9">
+
+    <div class="post-content">
+
+       
+        <div class="summary">You can embed files with a Video JS wrapper by adding 'video: true' in the frontmatter. Alternatively, you can just fall back on the default video wrapper in the browser.</div>
+       
+
+        
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+        
+        <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_video_embeds.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+        
+
+           <h2 id="about-video-js">About Video JS</h2>
+
+<p>The theme has the <a href="http://www.videojs.com/">video.js</a> player integrated. But the scripts only appear on a page or post if you have certain frontmatter in that page or post. If you want to embed a video in a page and use the Video JS player, add <code>video: true</code> in your frontmatter of a page or post, and then add code like this where you want the video to appear:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;video</span> <span class="na">id=</span><span class="s">&quot;scenario-1&quot;</span> <span class="na">class=</span><span class="s">&quot;video-js vjs-default-skin vjs-big-play-centered&quot;</span> <span class="na">controls</span>
+ <span class="na">preload=</span><span class="s">&quot;auto&quot;</span> <span class="na">width=</span><span class="s">&quot;640&quot;</span> <span class="na">height=</span><span class="s">&quot;480&quot;</span> <span class="na">data-setup=</span><span class="s">&#39;{}&#39;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4&quot;</span> <span class="na">type=</span><span class="s">&#39;video/mp4&#39;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/video&gt;&lt;/p&gt;</span>
+</code></pre></div>
+<p>Here&#39;s an example: </p>
+
+<p><video id="scenario-1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+ preload="auto" width="640"  height="480" data-setup='{}'>
+  <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type='video/mp4'>
+</video></p>
+
+<p>If you want the player button in the upper-left corner (which is the default), remove the <code>vjs-big-play-centered</code> from the video class.</p>
+
+<p><video id="scenario-1" class="video-js vjs-default-skin" controls
+ preload="auto" width="640" height="480" data-setup='{}'>
+  <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type='video/mp4'>
+</video></p>
+
+<p>Here are <a href="https://github.com/videojs/video.js/blob/stable/docs/guides/setup.md">more details on this video player from Video JS</a>.</p>
+
+<p>Note that if some of the js doesn&#39;t load correctly, the default fallback player is the regular HTML5 video player available via the browser. Here&#39;s an example of the built-in browser video wrapper:</p>
+
+<p><video width="640" controls>
+  <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video></p>
+
+<p>However, I don&#39;t think the built-in browser video players work very well (you can&#39;t easily scrub around the video without seeing lots of buffering and other issues). But definitely compare the two. You may find that adding the Video JS wrapper is overkill.</p>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b>Github wasn't designed to store video content. If you have an mp3 file, don't store it in your Github directory. Instead, put it on a web host using regular FTP methods, or stream the video from a video streaming service such as Youtube or Vimeo. Also, note that Github's Large File Storage (which does handle large files) isn't compatible with Github Pages.</div>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+
+        <a href="tag-formatting.html" class="btn btn-info navbar-btn cursorNorm" role="button">formatting</a>
+        
+        
+        
+    </div>
+
+    
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+    </div>
+
+    
+
+    <footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Company Name. All rights reserved.<br />
+<p>Page last updated:</span> August 12, 2015<br/> Site last generated: Oct 21, 2015 <br />
+<p><img src="img/company_logo.png"/></p>
+                </div>
+            </div>
+        </footer>
+
+  </div>
+
+  <div class="col-md-3">
+    <!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ul id="mysidebar" class="nav">
+
+            <span class="siteTagline">OpenMIRACL</span>
+            <span class="versionTagline">version 3.0</span>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Getting started</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Introduction</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_getting_started.html">Getting started with this theme</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_configuration_settings.html">Setting configuration options</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_customizing_the_theme.html">Customizing the theme</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_supported_features.html">Supported features</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Authoring</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_pages.html">Pages</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_webstorm_text_editor.html">WebStorm Text Editor</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_series.html">Series</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_collections.html">Collections</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Navigation</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_sidebar_navigation.html">Sidebar navigation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_top_navigation.html">Top navigation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_tags.html">Tags</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Formatting</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_adding_tooltips.html">Tooltips</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_alerts.html">Alerts</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_icons.html">Icons</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_images.html">Images</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_labels.html">Labels</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_hyperlinks.html">Links</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_navtabs.html">Navtabs</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li class="active"><a href="doc_video_embeds.html">Video embeds</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_tables.html">Tables</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_syntax_highlighting.html">Syntax highlighting</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Single-sourcing</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_conditional_logic.html">Conditional logic</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_content_reuse.html">Content reuse</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Handling reviews</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_commenting_on_files.html">Commenting on files</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Publishing</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_build_arguments.html">Build arguments</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_themes.html">Themes</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_link_validation.html">Link validation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_generating_pdfs.html">Generating PDFs</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_excluding_files.html">Excluding files</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_help_api.html">Help APIs and UI tooltips</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_search_configuration.html">Search configuration</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_iterm_profiles.html">iTerm profiles</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_push_build_to_server.html">Pushing builds to server</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special layouts</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_kb_layout.html">Knowledge-base layout</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_scroll.html">Scroll layout</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_shuffle.html">Shuffle layout</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ layout</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_glossary.html">Glossary layout</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Tag archives</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="tag_archives_overview.html">Tag archives overview</a></li>
+                    
+
+                    
+                    
+                    <li class="thirdlevel"><a href="#">Tag archive pages</a>
+                        <ul>
+                            
+                            
+                            
+                            <li><a href="tag-getting-started.html">Getting started pages</a></li>
+                            
+
+                            
+                            
+                            
+                            
+                            <li><a href="tag-formatting.html">Formatting pages</a></li>
+                            
+
+                            
+                            
+                            
+                            
+                            <li><a href="tag-navigation.html">Navigation pages</a></li>
+                            
+
+                            
+                            
+                            
+                            
+                            <li><a href="tag-content-types.html">Content types pages</a></li>
+                            
+
+                            
+                            
+                            
+                            
+                            <li><a href="tag-publishing.html">Publishing pages</a></li>
+                            
+
+                            
+                            
+                            
+                            
+                            <li><a href="tag-special-layouts.html">Special layout pages</a></li>
+                            
+
+                            
+                            
+                        </ul>
+                    </li>
+                    
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+</div>
+
+        </div><!-- /.row -->
+    </div> 
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66296557-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+
