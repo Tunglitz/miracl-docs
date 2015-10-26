@@ -11,9 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/syntax.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/modern-business.css">
-<link rel="stylesheet" type="text/css" href="css/customstyles.css">
-<link rel="stylesheet" type="text/css" href="css/style/css/style.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="js/jquery.navgoco.min.js"></script>
@@ -51,7 +49,7 @@
 
   </head>
 
-<body>
+<body class="detail-page">
 
    <header>
 
@@ -119,31 +117,6 @@
   <div class="dim"></div>
   <h1 class="title">Tooltips</h1>
   <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
-  <div class="btn-row">
-
-  <a href="#" class="default-btn white">
-      <span class="txt">Products</span>
-    </a>
-
-    <a href="#open-miracl-hook" class="default-btn white outline">
-      <span class="txt">Services</span>
-    </a>
-  </div>
-
-</div>
-
-<div class="container desc-wrapper">
-<div class="row">
-  <div class="col-md-6 demo">
-    <div class="command">
-      <p class="command-line"><span class="txt">$ cd ~</span></p>
-      <p class="command-line green"><span class="txt">$ Starting 'MIRACL Datacenter cryptosystem'</span></p>
-      <p class="command-line"><span class="txt">$ Successfuly connected to the DB</span></p>
-      <p class="command-line"><span class="txt">$ Express server listening on port 8000</span></p>
-      <p class="command-line active"><span class="txt">$</span><p>
-    </div>
-  </div>
-</div>
 </div>
 
 <div class="content-wrapper">
@@ -277,14 +250,14 @@ $('#toc').on('click', 'a', function() {
                     $("#mysidebar").navgoco('toggle', true);
                 });
 
-                $('#mysidebar').affix({
-                  offset: {
-                    top: 10,
-                    bottom: function () {
-                      return (this.bottom = $('.footer').outerHeight(true))
-                    }
-                  }
-                })
+                // $('#mysidebar').affix({
+                //   offset: {
+                //     top: 10,
+                //     bottom: function () {
+                //       return (this.bottom = $('.footer').outerHeight(true))
+                //     }
+                //   }
+                // })
 
                 });
 
@@ -306,7 +279,7 @@ $('#toc').on('click', 'a', function() {
 
 
 
-            <ul class="nav">
+            <ul id="mysidebar" class="nav">
 
                 <span class="siteTagline">OpenMIRACL</span>
 
@@ -808,7 +781,7 @@ $('#toc').on('click', 'a', function() {
 
 </div>
 
-
+1
 </body>
 
 <!-- the google_analytics_id gets auto inserted from the config file -->

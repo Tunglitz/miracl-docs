@@ -34,14 +34,14 @@
                     $("#mysidebar").navgoco('toggle', true);
                 });
 
-                $('#mysidebar').affix({
-                  offset: {
-                    top: 10,
-                    bottom: function () {
-                      return (this.bottom = $('.footer').outerHeight(true))
-                    }
-                  }
-                })
+                // $('#mysidebar').affix({
+                //   offset: {
+                //     top: 10,
+                //     bottom: function () {
+                //       return (this.bottom = $('.footer').outerHeight(true))
+                //     }
+                //   }
+                // })
 
                 });
 
@@ -50,7 +50,7 @@
 
             {% include custom/conditions.html %}
 
-            <ul class="nav">
+            <ul id="mysidebar" class="nav">
 
                 <span class="siteTagline">{{site.sidebar_tagline}}</span>
 
