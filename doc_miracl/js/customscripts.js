@@ -1,6 +1,5 @@
 
-$('#mysidebar').height($(".nav").height());
-
+$('#asideAffix').height($(".nav").height());
 
 $( document ).ready(function() {
 
@@ -9,7 +8,12 @@ $( document ).ready(function() {
     var h = $(window).height();
     console.log (h);
     if (h > 800) {
-        $( "#mysidebar" ).attr("class", "nav affix");
+
+        $('#asideAffix').affix({
+          offset: {
+            top: 300
+          }
+        })
     }
     // activate tooltips. although this is a bootstrap js function, it must be activated this way in your theme.
     $('[data-toggle="tooltip"]').tooltip({
