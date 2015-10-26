@@ -2,54 +2,76 @@
 layout: default
 ---
 
-<div class="row">
-    <div class="post-header">
-      <div class="container">
-         <h1 class="post-title-main">{% if page.homepage == true %} {{site.homepage_title}} {% else %}{{ page.title }}{% endif %}</h1>
-      </div>
-    </div>
+<div class="header-intro small text-center">
+  <div class="dim"></div>
+  <h1 class="title">{% if page.homepage == true %} {{site.homepage_title}} {% else %}{{ page.title }}{% endif %}</h1>
+  <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
+  <div class="btn-row">
+
+  <a href="#" class="default-btn white">
+      <span class="txt">Products</span>
+    </a>
+
+    <a href="#open-miracl-hook" class="default-btn white outline">
+      <span class="txt">Services</span>
+    </a>
+  </div>
+
 </div>
 
-<div class="container">
-  <div class="col-md-9">
-
-    <div class="post-content">
-
-       {% if page.summary %}
-        <div class="summary">{{page.summary}}</div>
-       {% endif %}
-
-        {% include toc.html %}
-        {% if site.github_editme_path %}
-        <a href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-        {% endif %}
-
-           {{content}}
-
-    <div class="tags">
-        {% if page.tags != null %}
-        <b>Tags: </b>
-        {% include custom/conditions.html %}
-        {% for tag in page.tags %}
-        {% if projectTags contains tag %}
-
-        <a href="tag-{{tag}}.html" class="btn btn-info navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
+<div class="container desc-wrapper">
+<div class="row">
+  <div class="col-md-6 demo">
+    <div class="command">
+      <p class="command-line"><span class="txt">$ cd ~</span></p>
+      <p class="command-line green"><span class="txt">$ Starting 'MIRACL Datacenter cryptosystem'</span></p>
+      <p class="command-line"><span class="txt">$ Successfuly connected to the DB</span></p>
+      <p class="command-line"><span class="txt">$ Express server listening on port 8000</span></p>
+      <p class="command-line active"><span class="txt">$</span><p>
     </div>
+  </div>
+</div>
+</div>
 
-    {% include disqus.html %}
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
 
+      <div class="col-xs-12 col-sm-8 col-md-9 desc-wrapper">
+
+      <div class="content">
+           {% if page.summary %}
+            <div class="summary">{{page.summary}}</div>
+           {% endif %}
+
+            {% include toc.html %}
+            {% if site.github_editme_path %}
+            <a href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+            {% endif %}
+
+               {{content}}
+
+        <div class="tags">
+            {% if page.tags != null %}
+            <b>Tags: </b>
+            {% include custom/conditions.html %}
+            {% for tag in page.tags %}
+            {% if projectTags contains tag %}
+
+            <a href="tag-{{tag}}.html" class="btn btn-info navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </div>
+
+        {% include disqus.html %}
+      </div>
+
+      </div>
+
+      {% include sidebar.html %}
+      
     </div>
-
-    {{hr_shaded}}
-
-    {% include footer.html %}
   </div>
 
-  <div class="col-md-3">
-    {% include sidebar.html %}
-  </div>
-  
 </div>
