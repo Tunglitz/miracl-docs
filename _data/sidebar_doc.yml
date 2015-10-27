@@ -37,7 +37,6 @@ entries:
       print: true
 
       items:
-	  
        - title: Overview
          url: /docs-m-pin-core.html
          audience: writers, designers
