@@ -35,7 +35,6 @@ entries:
       product: all
       version: all
       print: true
-
       items:
         - title: Overview
           url: /docs-m-pin-core.html
@@ -85,7 +84,6 @@ entries:
       product: all
       version: all
       print: true
-	  
       items:
 	  
         - title: Overview
