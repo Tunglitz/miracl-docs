@@ -6,7 +6,7 @@ last_updated: August 12, 2015
 summary: "To get started with this theme, first make sure you have all the prerequisites in place; then build the theme following the sample build commands. Because this theme is set up for single sourcing projects, it doesn't follow the same pattern as most Jekyll projects (which have just a _config.yml file in the root directory)."
 ---
 
-## Step 1: Set up the prerequisites - by Tung
+## Step 1: Set up the prerequisites
 
 Before you start installing the theme, make sure you have all of these prerequisites in place.
 

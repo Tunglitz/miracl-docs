@@ -7,7 +7,7 @@ summary: "I use this theme for sophisticated single-sourcing projects that I wor
 ---
 
 
-My name is Tung Nguyen, and I'm a technical writer, blogger, and podcaster based in San Jose, California. My blog is here: [http://idratherbewriting.com](http://idratherbewriting.com). I write several posts there a week. See [my blog's about page](http://idratherbewriting.com/aboutme/) for more details about me.
+My name is Tom Something, and I'm a technical writer, blogger, and podcaster based in San Jose, California. My blog is here: [http://idratherbewriting.com](http://idratherbewriting.com). I write several posts there a week. See [my blog's about page](http://idratherbewriting.com/aboutme/) for more details about me.
 
 I'm using this theme for my documentation projects. This theme has undergone several major iterations, and now it's fairly stable and full of all the features that I need. You are welcome to use it for your documentation projects for free.
 
