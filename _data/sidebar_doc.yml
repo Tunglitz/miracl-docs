@@ -38,54 +38,54 @@ entries:
 
       items:
 	  
-        - title: Overview
-          url: /docs-m-pin-core.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
+       - title: Overview
+         url: /docs-m-pin-core.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all
 
-        - title: Release Notes 3.3
-          url: /docs-m-pin-core-m-pin-core-3.3-release-notes.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
+       - title: Release Notes 3.3
+         url: /docs-m-pin-core-m-pin-core-3.3-release-notes.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all
 
-        - title: M-PIN Core Access
-          url: /docs-m-pin-core-access.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
+       - title: M-PIN Core Access
+         url: /docs-m-pin-core-access.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all
 
-        - title: M-Pin Core Brower User Guide
-          url: /docs-m-pin-core-m-pin-in-browser-end-user-guide.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
+       - title: M-Pin Core Brower User Guide
+         url: /docs-m-pin-core-m-pin-in-browser-end-user-guide.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all
 
-        - title: M-Pin Core Mobile End User Guide
-          url: /docs-m-pin-core-m-pin-in-mobile-end-user-guide.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
+       - title: M-Pin Core Mobile End User Guide
+         url: /docs-m-pin-core-m-pin-in-mobile-end-user-guide.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all
 
-        - title: M-PIN Core Billing Options
-          url: /docs-m-pin-core-m-pin-understanding-billing-options.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
+       - title: M-PIN Core Billing Options
+         url: /docs-m-pin-core-m-pin-understanding-billing-options.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all
 		  
-        - title: M-PIN Core Quick Install Guide
-          url: /docs-m-pin-core-quick-install-guide.html
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all		  
+       - title: M-PIN Core Quick Install Guide
+         url: /docs-m-pin-core-quick-install-guide.html
+         audience: writers, designers
+         platform: all
+         product: all
+         version: all		  
 
     - title: M-PIN SSO
       audience: writers, designers
