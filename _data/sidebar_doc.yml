@@ -72,7 +72,7 @@ entries:
          product: all
          version: all
 
-       - title: M-PIN Core Billing Options
+       - title: M-Pin Core Billing
          url: /docs-m-pin-core-m-pin-understanding-billing-options.html
          audience: writers, designers
          platform: all
