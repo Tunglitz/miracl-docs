@@ -28,7 +28,7 @@ exclude:
   - di_multi*
 
 # same for all
-host: 127.0.0.1
+host: 0.0.0.0
 feedback_email: jordan.katsarov@miracl.com
 markdown: redcarpet
 print: false
