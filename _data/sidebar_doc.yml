@@ -84,8 +84,7 @@ entries:
       product: all
       version: all
       print: true
-      items:
- 	  
+      items: 	  
         - title: Overview
           url: /ddocs-m-pin-sso.html
           audience: writers, designers
