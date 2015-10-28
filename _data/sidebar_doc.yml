@@ -69,13 +69,6 @@ entries:
           audience: writers, designers
           platform: all
           product: all
-          version:all
-		  
-        - title: M-Pin Core Understanding DTA
-          url: /docs-m-pin-core-m-pin-understanding-dta.html
-          audience: writers, designers
-          platform: all
-          product: all
           version: all
 
         - title: M-Pin Core Billing
