@@ -30,7 +30,7 @@ All the above elements are needed to perform the M-Pin Authentication, together 
 
 The following diagram shows at a high level how key shares are distributed to both the M-Pin Server & Clients from the two D-TA's:
 
-![2-DTA-nodes-overlay](\data\assets\images\chunks\/2-DTA-nodes-overlay.jpg)
+![2-DTA-nodes-overlay](\img\2-DTA-nodes-overlay.jpg)
 
 ## Infrastructure architecture and deployment
 
