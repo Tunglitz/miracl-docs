@@ -1,0 +1,4330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Docs MIRACL Reference Manual  | MIRACL</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body class="detail-page">
+
+   <header>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/company-logo.svg">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+
+    <a href="#" class="default-btn outline pull-right">
+      <span class="txt">open  miracl</span>
+    </a>
+
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <!-- <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Services
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Dedicated Distributed Trust Aughthority</a></li>
+          <li><a href="#">Cryptographic Engineering</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Products
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Miracl Datacenter Cryptosystem</a></li>
+          <li><a href="#">Miracl Crypto Libraries</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li> -->
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Resources</a></li>
+      <!-- <li><a href="#">Crypto Labs</a></li> -->
+      <li><a href="#">Success Stories</a></li>
+      <!-- <li><a href="#">Community</a></li> -->
+      <!-- <li><a href="#">Contact us</a></li> -->
+    </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+
+</header>
+
+    <div class="header-intro small text-center">
+  <div class="dim"></div>
+  <h1 class="title">Docs MIRACL Reference Manual</h1>
+  <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
+</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-8 col-md-9 desc-wrapper">
+
+      <div class="content">
+           
+
+            
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+            
+            <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/docs-miracl-miracl-reference-manual.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+            
+
+               <ul>
+<li>  <a href="#chap1">1 MIRACL Reference Manual</a></li>
+<li>  <a href="#chap2">2 MIRACL Module Documentation</a>
+
+<ol>
+<li> <a href="#chap21">2.1 Low level routines</a></li>
+<li> <a href="#chap22">2.2 Advanced arithmetic routines</a></li>
+<li> <a href="#chap23">2.3 Montgomery arithmetic routines</a></li>
+<li> <a href="#chap24">2.4 ZZn2 arithmetic routines</a></li>
+<li> <a href="#chap25">2.5 Encryption routines</a></li>
+<li> <a href="#chap26">2.6 Elliptic curve routines</a></li>
+<li> <a href="#chap27">2.7 Floating-slash routines</a></li>
+</ol></li>
+<li>  <a href="#chap3">3 MIRACL Data Structure Documentation</a>
+
+<ol>
+<li> <a href="#chap31">3.1 MIRACL Structure Reference</a></li>
+</ol></li>
+</ul>
+
+<h2 id="1-miracl-reference-manual">1 MIRACL Reference Manual</h2>
+
+<p>Note: In these routines a big parameter can also be used wherever a flash is specified, but not viceversa.  Further information may be gleaned from the (lightly) commented source code. An asterisk after the name indicates that the function does not take a mip parameter if MR_GENERIC_MT is defined in mirdef.h.  </p>
+
+<ul>
+<li><p><strong>Low-level routines</strong></p></li>
+<li><p><strong>Advanced arithmetic routines</strong>  </p></li>
+<li><p><strong>Montgomery arithmetic routines</strong>  </p></li>
+<li><p><strong>ZZn2 arithmetic routines</strong>  </p></li>
+<li><p><strong>Elliptic curve routines</strong></p></li>
+<li><p><strong>Encryption routines</strong></p></li>
+<li><p><strong>Floating-slash routines</strong></p></li>
+</ul>
+
+<h2 id="2-miracl-module-documentation">2 MIRACL Module Documentation</h2>
+
+<h3 id="2-1-low-level-routines">2.1 Low level routines</h3>
+
+<h4 id="functions">Functions</h4>
+
+<ul>
+<li>  void absol* (flash x, flash y)</li>
+<li>  void add (big x, big y, big z)</li>
+<li>  int big_to_bytes (int max, big x, char (*ptr, BOOL justify)</li>
+<li>  void bigbits (int n, big x)</li>
+<li>  mr_small brand (void)</li>
+<li>  void bytes_to_big (int len, char *ptr, big x)</li>
+<li>  int cinnum (flash x, FILE *filep)</li>
+<li>  int cinstr (flash x, char *string)</li>
+<li>  int compare* (big x, big y)</li>
+<li>  void convert (int n, big x)</li>
+<li>  void copy* (flash x, flash y)</li>
+<li>  int cotnum (flash x, FILE *filep)</li>
+<li>  int cotstr (flash x, char *string)</li>
+<li>  void decr (big x, int n, big z)</li>
+<li>  void divide (big x, big y, big z)</li>
+<li>  BOOL divisible (big x, big y)</li>
+<li>  void * ecp_memalloc (int num)</li>
+<li>  void ecp_memkill (char *mem, int num)</li>
+<li>  int exsign* (flash x)</li>
+<li>  miracl * get_mip ()</li>
+<li>  int getdig (big x, int i)</li>
+<li>  unsigned int igcd* (unsigned int x, unsigned int y)</li>
+<li>  void incr (big x, int n, big z)</li>
+<li>  BOOL init_big_from_rom (big x, int len, const mr_small *rom, int romsize, int *romptr)</li>
+<li>  BOOL init_point_from_rom (epoint *P, int len, const mr_small *rom, int romsize, int *romptr)</li>
+<li>  int innum (flash x, FILE *filep)</li>
+<li>  void insign* (int s, flash x)</li>
+<li>  int instr (flash x, char *string)</li>
+<li>  void irand (mr_unsign32 seed)</li>
+<li>  void lgconv (long n, big x)</li>
+<li>  void mad (big x, big y, big z, big w, big q, big r)</li>
+<li>  void * memalloc (int num)</li>
+<li>  void memkill (char *mem, int len)</li>
+<li>  void mirexit (void)</li>
+<li>  void mirkill* (big x)</li>
+<li>  miracl * mirsys (int nd, mr_small nb)</li>
+<li>  flash mirvar (int iv)</li>
+<li>  flash mirvar_mem (char *mem, int index)</li>
+<li>  void multiply (big x, big y, big z)</li>
+<li>  void negify* (flash x, flash y)</li>
+<li>  mr_small normalise (big x, big y)</li>
+<li>  int numdig (big x)</li>
+<li>  int otnum (flash x, FILE *filep)</li>
+<li>  int otstr (flash x, char *string)</li>
+<li>  void premult (big x, int n, big z)</li>
+<li>  void putdig (int n, big x, int i)</li>
+<li>  int remain (big x, int n)</li>
+<li>  void set_io_buffer_size (int len)</li>
+<li>  void set_user_function (BOOL(*user)(void))</li>
+<li>  int size* (big x)</li>
+<li>  int subdiv (big x, int n, big z)</li>
+<li>  BOOL subdivisible (big x, int n)</li>
+<li>  void subtract (big x, big y, big z)</li>
+<li>  void zero* (flash x)</li>
+</ul>
+
+<h4 id="2-1-1-function-documentation">2.1.1 Function Documentation</h4>
+
+<h4 id="2-1-1-1-void-absol-flash-x-flash-y">2.1.1.1 void absol* (flash x, flash y)</h4>
+
+<p>Gives absolute value of a big or flash number  </p>
+
+<p><strong>Parameters:</strong></p>
+
+<p>←|x The number whose absolute value is to be computed<br>
+→y = |x|</p>
+
+<h4 id="2-1-1-2-void-add-big-x-big-y-big-z">2.1.1.2 void add (big x, big y, big z)</h4>
+
+<p>Adds two big numbers  </p>
+
+<p><strong>Parameters:</strong></p>
+
+<p>←x<br>
+ →y<br>
+ →z = x + y</p>
+
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">// This doubles the value of x</span>
+</code></pre></div>
+<h5 id="2-1-1-3-int-big_to_bytes-int-max-big-x-char-ptr-bool-justify">2.1.1.3 int big_to_bytes (int max, big x, char * ptr, BOOL justify)</h5>
+
+<p>Converts a positive big number into a binary octet string. Error checking is carried out to ensure that the function does not write beyond the limits of ptr if max &gt; 0. If max = 0, no checking is carried out. If max &gt; 0 and justify = TRUE, the output is right-justified, otherwise leading zeros are supressed  </p>
+
+<p><strong>Parameters:</strong></p>
+
+<p>←max Maximum number of octets to be written in ptr<br>
+←x The original big number<br>
+→ptr Destination of the binary octet string<br>
+→justify If TRUE, the output is right-justified, otherwise leading zeros are suppresed  </p>
+
+<p><strong>Returns:</strong></p>
+
+<p>The number of bytes generated in ptr. If justify = TRUE then the return value is max  </p>
+
+<p><strong>Precondition:</strong></p>
+
+<p>max must be greater than 0 if justify = TRUE</p>
+
+<h5 id="2-1-1-4-void-bigbits-int-n-big-x">2.1.1.4 void bigbits (int n, big x)</h5>
+
+<p>Generates a big random number of given length. Uses the built-in simple random number generator initialised<br>
+ by irand()  </p>
+
+<p><strong>Parameters:</strong></p>
+
+<p>←n The desired length of the random big number<br>
+ →x The random number</p>
+
+<p>2.1.1.5 mr_small brand (void)</p>
+
+<p>Generates random integer number  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>A random integer number  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>First use must be preceded by an initial call to irand()  </p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>This generator is not cryptographically strong. For cryptographic applications, use the strong_rng() routine</p>
+
+<h5 id="2-1-1-6-void-bytes_to_big-int-len-char-ptr-big-x">2.1.1.6 void bytes_to_big (int len, char * ptr, big x)</h5>
+
+<p>Converts a binary octet string to a big number. Binary to big conversion</p>
+
+<p><strong>Parameters:</strong></p>
+
+<p>←len Length of ptr<br>
+←ptr Byte array of the binary octet string<br>
+→x Big result</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="cp">#include &lt;stdio.h&gt;  </span>
+    <span class="cp">#include &quot;miracl.h&quot;</span>
+
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>  
+    <span class="p">{</span>  
+        <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">len</span><span class="p">;</span>  
+        <span class="n">miracl</span> <span class="o">*</span><span class="n">mip</span> <span class="o">=</span> <span class="n">mirsys</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>  
+        <span class="n">big</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">;</span>  
+        <span class="kt">char</span> <span class="n">b</span><span class="p">[</span><span class="mi">200</span><span class="p">];</span> <span class="c1">// b needs space allocated to it  </span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">mirvar</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// all big variables need to be &quot;mirvar&quot;ed  </span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">mirvar</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+        <span class="n">expb2</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  
+        <span class="n">incr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">// x = 2^100 + 3</span>
+
+        <span class="n">len</span> <span class="o">=</span> <span class="n">big_to_bytes</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">FALSE</span><span class="p">);</span>  
+        <span class="c1">// Now b contains big number x in raw binary  </span>
+        <span class="c1">// It is len bytes in length</span>
+
+        <span class="c1">// now print out the raw binary number b in hex  </span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%02x&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>  
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;n&quot;</span><span class="p">);</span>
+
+        <span class="c1">// now convert it back to big format, and print it out again  </span>
+        <span class="n">bytes_to_big</span><span class="p">(</span><span class="n">len</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>  
+        <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>  
+        <span class="n">cotnum</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">stdout</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>  
+    <span class="p">}</span>
+</code></pre></div>
+<h5 id="2-1-1-7-int-cinnum-flash-x-file-filep">2.1.1.7 int cinnum (flash x, FILE * filep)</h5>
+
+<p>Inputs a flash/big number from the keyboard or a file, using as number base the current value of the instance variable miracl::IOBASE. Flash numbers can be entered using either a slash &#39;/&#39; to indicate numerator and denominator, or with a radix point  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x Big/flash number</p>
+
+<p>←filep File descriptor. For input from the keyboard specify stdin, otherwise as the descriptor of some other opened file  </p>
+
+<p><strong>Note</strong>:</p>
+
+<p>To force input of a fixed number of bytes, set the instance variable miracl::INPLEN to the required number, just before calling cinnum()  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span> <span class="o">=</span> <span class="mi">256</span><span class="p">;</span>  
+    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">INPLEN</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span> <span class="c1">// this inputs 14 bytes from fp and  </span>
+    <span class="n">cinnum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span> <span class="c1">// converts them into big number x  </span>
+</code></pre></div>
+<h5 id="2-1-1-8-int-cinstr-flash-x-char-string">2.1.1.8 int cinstr (flash x, char * string)</h5>
+
+<p>Inputs a flash/big number from a character string, using as number base the current value of the instance variable miracl::IOBASE. Flash numbers can be input using a slash &#39;/&#39; to indicate numerator and denominator, or with a radix point  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x<br>
+←string  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The number of input characters  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// input large hex number into big x  </span>
+    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>  
+    <span class="n">cinstr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s">&quot;AF12398065BFE4C96DB723A&quot;</span><span class="p">);</span>  
+</code></pre></div>
+<h5 id="2-1-1-9-int-compare-big-x-big-y">2.1.1.9 int compare* (big x, big y)</h5>
+
+<p>Compares two big numbers  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y  </p>
+
+<p><strong>Returns</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="o">+</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">;</span>
+    <span class="mi">0</span> <span class="k">if</span> <span class="n">x</span> <span class="o">=</span> <span class="n">y</span><span class="p">;</span> 
+    <span class="o">-</span><span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">;</span>
+</code></pre></div>
+<h5 id="2-1-1-10-void-convert-int-n-big-x">2.1.1.10 void convert (int n, big x)</h5>
+
+<p>Converts an integer number to big number format  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+→x</p>
+
+<h5 id="2-1-1-11-void-copy-flash-x-flash-y">2.1.1.11 void copy* (flash x, flash y)</h5>
+
+<p>Copies a big/flash number to another  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y= x  </p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If x and y are the same variable, no operation is performed  </p>
+
+<h5 id="2-1-1-12-int-cotnum-flash-x-file-filep">2.1.1.12 int cotnum (flash x, FILE * filep)</h5>
+
+<p>Outputs a big/flash number to the screen or to a file, using as number base the value currently assigned to the instance variable miracl::IOBASE. A flash number will be converted to radix-point representation if the instance variable miracl::RPOINT = ON. Otherwise it will output as a fraction</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x Big/flash number to be output<br>
+→filep File descriptor. If stdout then output will be to the screen, otherwise to the file opened with descriptor filep  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>Number of output characters  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// This outputs x in hex, to the file associated with fp  </span>
+    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>  
+    <span class="n">cotnum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fp</span><span class="p">);</span>  
+</code></pre></div>
+<h5 id="2-1-1-13-int-cotstr-flash-x-char-string">2.1.1.13 int cotstr (flash x, char * string)</h5>
+
+<p>Outputs a big/flash number to the specified string, using as number base the value currently assigned to the instance variable miracl::IOBASE. A flash number will be converted to radix-point representation if the instance variable miracl::RPOINT = ON. Otherwise it will be output as a fraction  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→string  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>Number of output characters  </p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Note that there is nothing to prevent this routine from overflowing the limits of the user supplied character array string, causing obscure runtime problems. It is the programmer&#39;s responsibility to ensure that string is big enough to contain the number output to it. Alternatively use the internally declared instance string miracl::IOBUFF, which is of size miracl::IOBSIZ. If this array overflows a MIRACL error will be flagged  </p>
+
+<h5 id="2-1-1-14-void-decr-big-x-int-n-big-z">2.1.1.14 void decr (big x, int n, big z)</h5>
+
+<p>Decrements a big number by an integer amount  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+→z = x − n  </p>
+
+<h5 id="2-1-1-15-void-divide-big-x-big-y-big-z">2.1.1.15 void divide (big x, big y, big z)</h5>
+
+<p>Divides one big number by another: z = x/y, x = x (mod y). The quotient only is returned if x and z are the same, the remainder only if y and z are the same  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→x<br>
+→y<br>
+→z  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Parameters x and y must be different, and y must be non-zero  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>normalise()  </p>
+
+<h5 id="2-1-1-16-bool-divisible-big-x-big-y">2.1.1.16 BOOL divisible (big x, big y)</h5>
+
+<p>Tests a big number for divisibility by another  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if y divides x exactly, otherwise FALSE  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The parameter y must be non-zero  </p>
+
+<h5 id="2-1-1-17-void-ecp_memalloc-int-num">2.1.1.17 void* ecp_memalloc (int num)</h5>
+
+<p>Reserves space for a number elliptic curve points in one heap access. Individual points can subsequently be initialised from this memory by calling epoint_init_mem()  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←num The number of elliptic curve points to reserve space for  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>A pointer to the allocated memory  </p>
+
+<h5 id="2-1-1-18-void-ecp_memkill-char-mem-int-num">2.1.1.18 void ecp_memkill (char * mem, int num)</h5>
+
+<p>Deletes and sets to zero the memory previously allocated by ecp_memalloc()  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→mem Pointer to the memory to be erased and deleted<br>
+←num The size of the memory in elliptic curve points  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to ecp_memalloc()  </p>
+
+<h5 id="2-1-1-19-int-exsign-flash-x">2.1.1.19 int exsign* (flash x)</h5>
+
+<p>Extracts the sign of a big/flash number  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big/flash number  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The sign of x, i.e. -1 if x is negative, +1 if x is zero or positive  </p>
+
+<h5 id="2-1-1-20-miracl-get_mip">2.1.1.20 miracl* get_mip ()</h5>
+
+<p>Gets the current Miracl Instance Pointer  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The mip (Miracl Instance Pointer) for the current thread  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>This function does not exist if MR_GENERIC_MT is defined</p>
+
+<h5 id="2-1-1-21-int-getdig-big-x-int-i">2.1.1.21 int getdig (big x, int i)</h5>
+
+<p>Extracts a digit from a big number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big number<br>
+→i The position of the digit to be extracted from x  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The value of the requested digit  </p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Returns rubbish if required digit does not exist  </p>
+
+<h5 id="2-1-1-22-unsigned-int-igcd-unsigned-int-x-unsigned-int-y">2.1.1.22 unsigned int igcd* (unsigned int x, unsigned int y)</h5>
+
+<p>Calculates the Greatest Common Divisor of two integers using Euclid&#39;s Method  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The GCD of x and y  </p>
+
+<h5 id="2-1-1-23-void-incr-big-x-int-n-big-z">2.1.1.23 void incr (big x, int n, big z)</h5>
+
+<p>Increments a big number  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+→z = x + n  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">incr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">// This increments x by 2  </span>
+</code></pre></div>
+<h5 id="2-1-1-24-bool-init_big_from_rom-big-x-int-len-const-mr_small-rom-int-romsize-int-romptr">2.1.1.24 BOOL init_big_from_rom (big x, int len, const mr_small * rom, int romsize, int * romptr)</h5>
+
+<p>Initialises a big variable from ROM memory  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→rx A big number<br>
+←len Length of the big number in computer words<br>
+←rom Address of ROM memory which stores up to romsize computer words<br>
+←romsize<br>
+←→romptr A pointer into ROM. This pointer is incremented internally as ROM memory is accessed to fill x  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, or FALSE if an attempt is made to read beyond the end of the ROM</p>
+
+<h5 id="2-1-1-25-bool-init_point_from_rom-epoint-p-int-len-const-mr_small-rom-int-romsize-int-romptr">2.1.1.25 BOOL init_point_from_rom (epoint * P, int len, const mr_small * rom, int romsize, int * romptr)</h5>
+
+<p>Initialises an elliptic curve point from ROM memory  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→P An elliptic curve point<br>
+←len Length of the two big coordinates of P, in computer words<br>
+←rom Address of ROM memory which stores up to romsize computer words<br>
+←romsize<br>
+←→romptr A pointer into ROM. This pointer is incremented internally as ROM memory is accessed to fill P  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, or FALSE if an attempt is made to read beyond the end of the ROM  </p>
+
+<h5 id="2-1-1-26-int-innum-flash-x-file-filep">2.1.1.26 int innum (flash x, FILE * filep)</h5>
+
+<p>Inputs a big/flash number from a file or the keyboard, using as number base the value specified in the initial call to mirsys(). Flash numbers can be entered using either a slash &#39;/&#39; to indicate numerator and denominator, or with a radix point  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x A big/flash number<br>
+←filep A file descriptor. For input from the keyboard specify stdin, otherwise the descriptor of some other opened file  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The number of characters input</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The number base specified in mirsys() must be less than or equal to 256. If not use cinnum() instead</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>For fastest inputting of ASCII text to a big number, and if a full-width base is possible, use</p>
+
+<p>mirsys(...,256) initially. This has the same effect as specifying mirsys(...,0), except that now ASCII bytes may be input directly via innum(x, fp) without the time-consuming change of base implicit in the use of cinnum()  </p>
+
+<h5 id="2-1-1-27-void-insign-int-s-flash-x">2.1.1.27 void insign* (int s, flash x)</h5>
+
+<p>Forces a big/flash number to a particular sign</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←s The sign the big/flash is to take<br>
+→x = s|x|  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">insign</span><span class="p">(</span><span class="n">PLUS</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">// force x to be positive</span>
+</code></pre></div>
+<h5 id="2-1-1-28-int-instr-flash-x-char-string">2.1.1.28 int instr (flash x, char * string)</h5>
+
+<p>Inputs a big or flash number from a character string, using as number base the value specified in the initial call to mirsys(). Flash numbers can be entered using either a slash &#39;/&#39; to indicate numerator and denominator, or with a radix point</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x<br>
+←string  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The number of characters input  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The number base specified in mirsys() must be less than or equal to 256. If not use cinstr() instead  </p>
+
+<h5 id="2-1-1-29-void-irand-mr_unsign32-seed">2.1.1.29 void irand (mr_unsign32 seed)</h5>
+
+<p>Initialises internal random number system. Long integer types are used internally to yield a generator with maximum period</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←seed A seed used to start off the random number generator  </p>
+
+<h5 id="2-1-1-30-void-lgconv-long-n-big-x">2.1.1.30 void lgconv (long n, big x)</h5>
+
+<p>Converts a long integer to big number format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+→x</p>
+
+<h5 id="2-1-1-31-void-mad-big-x-big-y-big-z-big-w-big-q-big-r">2.1.1.31 void mad (big x, big y, big z, big w, big q, big r)</h5>
+
+<p>Multiplies, adds and divides big numbers. The initial product is stored in a double-length internal variable to avoid the possibility of overflow at this stage</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←z<br>
+←w<br>
+→q = (xy + z)/w<br>
+→r The remainder</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If w and q are not distinct variables then only the remainder is returned; if q and r are not distinct then only the quotient is returned. The addition of z is not done if x and z (or y and z) are the same</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Parameters w and r must be distinct. The value of w must not be zero  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">mad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,);</span> <span class="c1">// x = x^2 / w  </span>
+</code></pre></div>
+<h5 id="2-1-1-32-void-memalloc-int-num">2.1.1.32 void* memalloc (int num)</h5>
+
+<p>Reserves space for big/flash variables in one heap access. Individual big/flash variables can subsequently be initialised from this memory by calling mirvar_mem()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←num The number of big/flash variables to reserve space for</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>A pointer to the allocated memory  </p>
+
+<h5 id="2-1-1-33-void-memkill-char-mem-int-len">2.1.1.33 void memkill (char * mem, int len)</h5>
+
+<p>Deletes and sets to zero the memory previously allocated by memalloc()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→mem A pointer to the memory to be erased and deleted<br>
+←len The size of that memory in bigs  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to memalloc()  </p>
+
+<h5 id="2-1-1-34-void-mirexit-void">2.1.1.34 void mirexit (void)</h5>
+
+<p>Cleans up after the current instance of MIRACL, and frees all internal variables. A subsequent call to mirsys() will re-initialise the MIRACL system  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be called after mirsys()  </p>
+
+<h5 id="2-1-1-35-void-mirkill-big-x">2.1.1.35 void mirkill* (big x)</h5>
+
+<p>Securely kills off a big/flash number by zeroising it, and freeing its memory</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x</p>
+
+<h5 id="2-1-1-36-miracl-mirsys-int-nd-mr_small-nb">2.1.1.36 miracl* mirsys (int nd, mr_small nb)</h5>
+
+<p>Initialises the MIRACL system for the current program thread, as described below. Must be called before attempting to use any other MIRACL routines</p>
+
+<ol>
+<li> The error tracing mechanism is initialised</li>
+<li> The number of computer words to use for each big/flash number is calculated from nd and nb</li>
+<li> Sixteen big work variables (four of them double length) are initialised</li>
+<li> Certain instance variables are given default initial values</li>
+<li> The random number generator is started by calling irand(0L)</li>
+</ol>
+
+<p><strong>Parameters:</strong></p>
+
+<p>←nd The number of digits to use for each big/flash variable. If negative, it is taken as indicating the size of big/flash numbers in 8-bit bytes<br>
+→nb The number base  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The Miracl Instance Pointer, via which all instance variables can be accessed, or NULL if there was not enough memory to create an instance  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The number base nb should normally be greater than 1 and less than or equal to MAXBASE. A base of 0 implies that the &#39;full-width&#39; number base should be used. The number of digits nd must be less than a certain maximum, depending on the underlying type mr_utype and on whether or not MR_FLASH is defined  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// This initialises the MIRACL system to use 500 decimal digits for each  </span>
+    <span class="c1">// big or flash number  </span>
+    <span class="n">miracl</span> <span class="o">*</span><span class="n">mip</span> <span class="o">=</span> <span class="n">mirsys</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>  
+</code></pre></div>
+<h5 id="2-1-1-37-flash-mirvar-int-iv">2.1.1.37 flash mirvar (int iv)</h5>
+
+<p>Initialises a big/flash variable by reserving a suitable number of memory locations for it. This memory may be released by a subsequent call to the function mirkill()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←iv An integer initial value for the big/flash number  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>A pointer to the reserved memory  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">flash</span> <span class="n">x</span><span class="p">;</span>  
+    <span class="n">x</span> <span class="o">=</span> <span class="n">mirvar</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span> <span class="c1">// Creates a flash variable x = 8  </span>
+</code></pre></div>
+<h5 id="2-1-1-38-flash-mirvar_mem-char-mem-int-index">2.1.1.38 flash mirvar_mem (char * mem, int index)</h5>
+
+<p>Initialises memory for a big/flash variable from a pre-allocated byte array mem. This array may be created from the heap by a call to memalloc(), or in some other way. This is quicker than multiple calls to mirvar()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←mem A pointer to the pre-allocated array<br>
+←index An index into that array. Each index should be unique</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>An initialised big/flash variable  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Sufficient memory must have been allocated and pointed to by mem</p>
+
+<h5 id="2-1-1-39-void-multiply-big-x-big-y-big-z">2.1.1.39 void multiply (big x, big y, big z)</h5>
+
+<p>Multiplies two big numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = xy  </p>
+
+<h5 id="2-1-1-40-void-negify-flash-x-flash-y">2.1.1.40 void negify* (flash x, flash y)</h5>
+
+<p>Negates a big/flash number  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = - x  </p>
+
+<p><strong>Note</strong>:</p>
+
+<p>negify(x,x) is valid and sets x = - x  </p>
+
+<h5 id="2-1-1-41-mr_small-normalise-big-x-big-y">2.1.1.41 mr_small normalise (big x, big y)</h5>
+
+<p>Multiplies a big number such that its most significant word is greater than half the number base. If such a number is used as a divisor by divide(), the division will be carried out faster. If many divisions by the same divisor are required, it makes sense to normalise the divisor just once beforehand</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = nx  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>n, the normalising multiplier  </p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Use with care. Used internally</p>
+
+<h5 id="2-1-1-42-int-numdig-big-x">2.1.1.42 int numdig (big x)</h5>
+
+<p>Determines the number of digits in a big number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The number of digits in x  </p>
+
+<h5 id="2-1-1-43-int-otnum-flash-x-file-filep">2.1.1.43 int otnum (flash x, FILE * filep)</h5>
+
+<p>Outputs a big/flash number to the screen or to a file, using as number base the value specified in the initial call to mirsys(). A flash number will be converted to radix-point representation if the instance variable miracl::RPOINT = ON. Otherwise it will be output as a fraction  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big/flash number<br>
+←filep A file descriptor. If stdout then output will be to the screen, otherwise to the file opened with descriptor filep</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>Number of output characters</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The number base specified in mirsys() must be less than or equal to 256. If not, use cotnum() instead</p>
+
+<h5 id="2-1-1-44-int-otstr-flash-x-char-string">2.1.1.44 int otstr (flash x, char * string)</h5>
+
+<p>Outputs a big or flash number to the specified string, using as number base the value specified in the initial call to mirsys(). A flash number will be converted to radix-point representation if the instance variable miracl::RPOINT = ON. Otherwise it will be output as a fraction</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big/flash number<br>
+→string A representation of x</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>Number of output characters</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The number base specified in mirsys() must be less than or equal to 256. If not, use cotstr() instead</p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Note that there is nothing to prevent this routine from overflowing the limits of the user supplied character array string, causing obscure runtime problems. It is the programmer&#39;s responsibility to ensure that string is big enough to contain the number output to it. Alternatively use the internally declared instance string miracl::IOBUFF, which is of size miracl::IOBSIZ. If this array overflows a MIRACL error will be flagged</p>
+
+<h5 id="2-1-1-45-void-premult-big-x-int-n-big-z">2.1.1.45 void premult (big x, int n, big z)</h5>
+
+<p>Multiplies a big number by an integer</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+→z = nx  </p>
+
+<h5 id="2-1-1-46-void-putdig-int-n-big-x-int-i">2.1.1.46 void putdig (int n, big x, int i)</h5>
+
+<p>Sets a digit of a big number to a given value</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n The new value for the digit<br>
+→x A big number<br>
+←i A digit position  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The digit indicated must exist</p>
+
+<h5 id="2-1-1-47-int-remain-big-x-int-n">2.1.1.47 int remain (big x, int n)</h5>
+
+<p>Finds the integer remainder, when a big number is divided by an integer</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The integer remainder  </p>
+
+<h5 id="2-1-1-48-void-set_io_buffer_size-int-len">2.1.1.48 void set_io_buffer_size (int len)</h5>
+
+<p>Sets the size of the input/output buffer. By default this is set to 1024, but programs that need to handle very large numbers may require a larger I/O buffer</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←len The size of I/O buffer required  </p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Destroys the current contents of the I/O buffer  </p>
+
+<h5 id="2-1-1-49-void-set_user_function-bool-void-user">2.1.1.49 void set_user_function (BOOL(*)(void) user)</h5>
+
+<p>Supplies a user-specified function, which is periodically called during some of the more time-consuming MIRACL functions, particularly those involved in modular exponentiation and in finding large prime numbers.  The supplied function must take no parameters and return a BOOL value. Normally this should be TRUE. If FALSE then MIRACL will attempt to abort its current operation. In this case the function should continue to return FALSE until control is returned to the calling program. The user-supplied function should normally include only a few instructions, and no loops, otherwise it may adversely impact the speed of MIRACL functions  </p>
+
+<p>Once MIRACL is initialised, this function may be called multiple times with a new supplied function. If no longer required, call with a NULL parameter  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←user A pointer to a user-supplied function, or NULL if not required  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// Windows Message Pump  </span>
+    <span class="k">static</span> <span class="n">BOOL</span> <span class="nf">idle</span><span class="p">()</span>  
+    <span class="p">{</span>  
+        <span class="n">MSG</span> <span class="n">msg</span><span class="p">;</span>  
+        <span class="k">if</span> <span class="p">(</span><span class="n">PeekMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PM_NOREMOVE</span><span class="p">))</span>  
+        <span class="p">{</span>  
+            <span class="k">if</span> <span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">message</span> <span class="o">!=</span> <span class="n">WM_QUIT</span><span class="p">)</span>  
+            <span class="p">{</span>  
+                <span class="k">if</span> <span class="p">(</span><span class="n">PeekMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">PM_REMOVE</span><span class="p">))</span>  
+                <span class="p">{</span>  
+                    <span class="c1">// do a Message Pump  </span>
+                    <span class="n">TranslateMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg</span><span class="p">);</span>  
+                    <span class="n">DispatchMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">msg</span><span class="p">);</span>  
+                <span class="p">}</span>  
+            <span class="p">}</span>  
+            <span class="k">else</span>  
+                <span class="k">return</span> <span class="n">FALSE</span><span class="p">;</span>  
+        <span class="p">}</span>  
+        <span class="k">return</span> <span class="n">TRUE</span><span class="p">;</span>  
+    <span class="p">}</span>  
+    <span class="p">...</span>  
+    <span class="n">set_user_function</span><span class="p">(</span><span class="n">idle</span><span class="p">);</span>  
+</code></pre></div>
+<h5 id="2-1-1-50-int-size-big-x">2.1.1.50 int size* (big x)</h5>
+
+<p>Tries to convert big number to a simple integer. Also useful for testing the sign of big/flash variable as in: </p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="k">if</span> <span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">...</span>  
+</code></pre></div>
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big number</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The value of x as an integer. If this is not possible (because x is too big) it returns the value plus or minus MR_TOOBIG</p>
+
+<h5 id="2-1-1-51-int-subdiv-big-x-int-n-big-z">2.1.1.51 int subdiv (big x, int n, big z)</h5>
+
+<p>Divides a big number by an integer</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+→z = x/n</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The integer remainder</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of n must not be zero</p>
+
+<h5 id="2-1-1-52-bool-subdivisible-big-x-int-n">2.1.1.52 BOOL subdivisible (big x, int n)</h5>
+
+<p>Tests a big number for divisibility by an integer</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if n divides x exactly, otherwise FALSE</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of n must not be zero  </p>
+
+<h5 id="2-1-1-53-void-subtract-big-x-big-y-big-z">2.1.1.53 void subtract (big x, big y, big z)</h5>
+
+<p>Subtracts two big numbers  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = x − y  </p>
+
+<h5 id="2-1-1-54-void-zero-flash-x">2.1.1.54 void zero* (flash x)</h5>
+
+<p>Sets a big/flash number to zero  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x  </p>
+
+<h3 id="2-2-advanced-arithmetic-routines">2.2 Advanced arithmetic routines</h3>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+<li>  void bigdig (int n, int b, big x)</li>
+<li>  void bigrand (big w, big x)</li>
+<li>  void brick_end* (brick *b)</li>
+<li>  BOOL brick_init (brick *b, big g, big n, int window, int nb)</li>
+<li>  void crt (big_chinese *c, big *u, big x)</li>
+<li>  void crt_end* (big_chinese *c)</li>
+<li>  BOOL crt_init (big_chinese *c, int r, big *moduli)</li>
+<li>  int egcd (big x, big y, big z)</li>
+<li>  void expb2 (int n, big x)</li>
+<li>  void expint (int b, int n, big x)</li>
+<li>  void fft_mult (big x, big y, big z)</li>
+<li>  void gprime (int maxp)</li>
+<li>  int hamming (big x)</li>
+<li>  mr_small invers* (mr_small x, mr_small y)</li>
+<li>  BOOL isprime (big x)</li>
+<li>  int jac (mr_small x, mr_small n)</li>
+<li>  int jack (big U, big V)</li>
+<li>  int logb2 (big x)</li>
+<li>  void lucas (big p, big r, big n, big vp, big v)</li>
+<li>  BOOL multi_inverse (int m, big *x, big n, big *w)</li>
+<li>  BOOL nroot (big x, int n, big w)</li>
+<li>  BOOL nxprime (big w, big x)</li>
+<li>  BOOL nxsafeprime (int type, int subset, big w, big p)</li>
+<li>  void pow_brick (brick *b, big e, big w)</li>
+<li>  void power (big x, long n, big z, big w)</li>
+<li>  int powltr (int x, big y, big n, big w)</li>
+<li>  void powmod (big x, big y, big n, big w)</li>
+<li>  void powmod2 (big x, big y, big a, big b, big n, big w)</li>
+<li>  void powmodn (int n, big *x, big *y, big p, big w)</li>
+<li>  void scrt (small_chinese *c, mr_utype *u, big x)</li>
+<li>  void scrt_end* (small_chinese *c)</li>
+<li>  BOOL scrt_init (small_chinese *c, int r, mr_utype*moduli)</li>
+<li>  void sftbit (big x, int n, big z)</li>
+<li>  mr_small smul* (mr_small x, mr_small y, mr_small n)</li>
+<li>  mr_small spmd* (mr_small x, mr_small n, mr_small m)</li>
+<li>  mr_small sqrmp* (mr_small x, mr_small m)</li>
+<li>  BOOL sqroot (big x, big p, big w)</li>
+<li>  int trial_division (big x, big y)</li>
+<li>  int xgcd (big x, big y, big xd, big yd, big z)</li>
+</ul>
+
+<h4 id="2-2-1-function-documentation">2.2.1 Function Documentation</h4>
+
+<h5 id="2-2-1-1-void-bigdig-int-n-int-b-big-x">2.2.1.1 void bigdig (int n, int b, big x)</h5>
+
+<p>Generates a big random number of given length. Uses the built-in simple random number generator initialised by irand()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+←b<br>
+→x A big random number n digits long to base b  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The base b must be printable, that is 2 &lt;= b &lt;= 256  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// This generates a 100 decimal digit random number  </span>
+    <span class="n">bigdig</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  
+</code></pre></div>
+<h5 id="2-2-1-2-void-bigrand-big-w-big-x">2.2.1.2 void bigrand (big w, big x)</h5>
+
+<p>Generates a big random number. Uses the built-in simple random number generator initialised by irand()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←w<br>
+→x A big random number in the range 0 &lt;= x &lt; w</p>
+
+<h5 id="2-2-1-3-void-brick_end-brick-b">2.2.1.3 void brick_end* (brick * b)</h5>
+
+<p>Cleans up after an application of the Comb method  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←b A pointer to the current instance</p>
+
+<h5 id="2-2-1-4-bool-brick_init-brick-b-big-g-big-n-int-window-int-nb">2.2.1.4 BOOL brick_init (brick * b, big g, big n, int window, int nb)</h5>
+
+<p>Initialises an instance of the Comb method for modular exponentiation with precomputation. Internally memory is allocated for 2w big numbers which will be precomputed and stored. For bigger w more space is required, but the exponentiation is quicker. Try w = 8</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→b A pointer to the current instance<br>
+←g The fixed generator<br>
+←n The modulus<br>
+←window The window size w<br>
+←nb The maximum number of bits to be used in the exponent</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If MR_STATIC is defined in mirdef.h, then the g parameter in this function is replaced by an mr_small pointer to a precomputed table. In this case the function returns a void</p>
+
+<h5 id="2-2-1-5-void-crt-big_chinese-c-big-u-big-x">2.2.1.5 void crt (big_chinese * c, big * u, big x)</h5>
+
+<p>Applies the Chinese Remainder Theorem</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←c A pointer to the current instance<br>
+←u An array of big remainders<br>
+→x The big number which yields the given remainders u when it is divided by the big moduli specified in a prior call to crt_init()</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The routine crt_init() must be called first</p>
+
+<h5 id="2-2-1-6-void-crt_end-big_chinese-c">2.2.1.6 void crt_end* (big_chinese * c)</h5>
+
+<p>Cleans up after an application of the Chinese Remainder Theorem</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←c A pointer to the current instance</p>
+
+<h5 id="2-2-1-7-bool-crt_init-big_chinese-c-int-r-big-moduli">2.2.1.7 BOOL crt_init (big_chinese * c, int r, big * moduli)</h5>
+
+<p>Initialises an instance of the Chinese Remainder Theorem. Some internal workspace is allocated</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→c A pointer to the current instance<br>
+←r The number of co-prime moduli<br>
+←moduli An array of at least two big moduli</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<h5 id="2-2-1-8-int-egcd-big-x-big-y-big-z">2.2.1.8 int egcd (big x, big y, big z)</h5>
+
+<p>Calculates the Greatest Common Divisor of two big numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←z = gcd(x,y)  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>GCD as integer, if possible, otherwise MR_TOOBIG  </p>
+
+<h5 id="2-2-1-9-void-expb2-int-n-big-x">2.2.1.9 void expb2 (int n, big x)</h5>
+
+<p>Calculates 2 to the power of an integer as a big  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+→x = 2n</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// This calculates and prints out the largest known prime number  </span>
+    <span class="c1">// (on a true 32-bit computer with lots of memory!)  </span>
+    <span class="n">expb2</span><span class="p">(</span><span class="mi">1398269</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  
+    <span class="n">decr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>  
+    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>  
+    <span class="n">cotnum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">stdout</span><span class="p">);</span>  
+</code></pre></div>
+<h5 id="2-2-1-10-void-expint-int-b-int-n-big-x">2.2.1.10 void expint (int b, int n, big x)</h5>
+
+<p>Calculates an integer to the power of an integer as a big</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←b<br>
+←n<br>
+→x = bn  </p>
+
+<h5 id="2-2-1-11-void-fft_mult-big-x-big-y-big-z">2.2.1.11 void fft_mult (big x, big y, big z)</h5>
+
+<p>Multiplies two big numbers, using the Fast Fourier Method. See [Pollard71]</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = xy</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>Should only be used on a 32-bit computer when x and y are ver large, at least 1000 decimal digits.  </p>
+
+<h5 id="2-2-1-12-void-gprime-int-maxp">2.2.1.12 void gprime (int maxp)</h5>
+
+<p>Generates all prime numbers up to a certain limit into the instance array miracl::PRIMES, terminated by zero. This array is used internally by the routines isprime() and nxprime()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←maxp A positive integer indicating the maximum prime number to be generated. If maxp = 0 the miracl::PRIMES array is deleted  </p>
+
+<h5 id="2-2-1-13-int-hamming-big-x">2.2.1.13 int hamming (big x)</h5>
+
+<p>Calculates the hamming weight of a big number (in fact the number of 1&#39;s in its binary representation)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>Hamming weight of x  </p>
+
+<h5 id="2-2-1-14-mr_small-invers-mr_small-x-mr_small-y">2.2.1.14 mr_small invers* (mr_small x, mr_small y)</h5>
+
+<p>Calculates the inverse of an integer modulus a co-prime integer.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>x−1 (mod y)  </p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Result unpredictable if x and y not co-prime  </p>
+
+<h5 id="2-2-1-15-bool-isprime-big-x">2.2.1.15 BOOL isprime (big x)</h5>
+
+<p>Tests whether or not a big number is prime using a probabilistic primality test. The number is assumed to be prime if it passes this test miracl::NTRY times, where miracl::NTRY is an instance variable with a default initialisation in routine mirsys()  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if x is (almost certainly) prime, otherwise FALSE  </p>
+
+<p><strong>Note</strong>:</p>
+
+<p>This routine first test divides x by the list of small primes stored in the instance array miracl::PRIMES.  The testing of larger primes will be significantly faster in many cases if this list is increased. See gprime(). By default only the small primes less than 1000 are used</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>gprime()  </p>
+
+<h5 id="2-2-1-16-int-jac-mr_small-x-mr_small-n">2.2.1.16 int jac (mr_small x, mr_small n)</h5>
+
+<p>Calculates the value of the Jacobi symbol. See [Reisel]</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The value of (x | n) as +1 or -1, or 0 if symbol undefined</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>jack</p>
+
+<h5 id="2-2-1-17-int-jack-big-u-big-v">2.2.1.17 int jack (big U, big V)</h5>
+
+<p>Calculates the value of the Jacobi symbol. See [Reisel]</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←U<br>
+←V  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The value of (U | V) as +1 or -1, or 0 if symbol undefined  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>jac  </p>
+
+<h5 id="2-2-1-18-int-logb2-big-x">2.2.1.18 int logb2 (big x)</h5>
+
+<p>Calculates the approximate integer log to the base 2 of a big number (in fact the number of bits in it)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>Number of bits in x</p>
+
+<h5 id="2-2-1-19-void-lucas-big-p-big-r-big-n-big-vp-big-v">2.2.1.19 void lucas (big p, big r, big n, big vp, big v)</h5>
+
+<p>Performs Lucas modular exponentiation. Uses Montgomery arithmetic internally. This function can be speeded up further for particular moduli, by invoking special assembly language routines to implement Montgomery arithmetic. See powmod()  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p The base<br>
+←r The exponent<br>
+←n The modulus<br>
+→vp = Vr−1(p) (mod n)<br>
+→v = Vr(p) (mod n)</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>Only v is returned if v and vp are not distinct  </p>
+
+<p>The &quot;sister&quot; Lucas function Ur(p) can, if required, be calculated as Ur(p) * [pVr(p) − 2Vr−1(p)]/(p2 − 4) (mod n)  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of n must be odd  </p>
+
+<h5 id="2-2-1-20-bool-multi_inverse-int-m-big-x-big-n-big-w">2.2.1.20 BOOL multi_inverse (int m, big * x, big n, big * w)</h5>
+
+<p>Finds the modular inverses of many numbers simultaneously, exploiting Montgomery&#39;s observation that x−1 = y(xy)−1, y−1 = x(xy)−1. This will be quicker, as modular inverses are slow to calculate, and this way only one is required</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←m The number of inverses required<br>
+←x An array of m numbers whose inverses are required<br>
+←n The modulus<br>
+→w The resulting array of inverses</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The parameters x and w must be distinct  </p>
+
+<h5 id="2-2-1-21-bool-nroot-big-x-int-n-big-w">2.2.1.21 BOOL nroot (big x, int n, big w)</h5>
+
+<p>Extracts lower approximation to a root of a big number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big number<br>
+←n A positive integer<br>
+→w = [nx]  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the root is exact, otherwise FALSE  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of n must be positive. If x is negative, then n must be odd  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>sqroot, nres_sqroot  </p>
+
+<h5 id="2-2-1-22-bool-nxprime-big-w-big-x">2.2.1.22 BOOL nxprime (big w, big x)</h5>
+
+<p>Finds next prime number  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←w<br>
+←x The next prime number greater than w  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>nxsafeprime  </p>
+
+<h5 id="2-2-1-23-bool-nxsafeprime-int-type-int-subset-big-w-big-p">2.2.1.23 BOOL nxsafeprime (int type, int subset, big w, big p)</h5>
+
+<p>Finds next safe prime number greater than w. A safe prime number p is defined here to be one for which q = (p − 1)/2 (type=0) or q = (p + 1)/2 (type=1) is also prime</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←type The type of safe prime as above<br>
+←subset If subset = 1, then the search is restricted so that the value of the prime q is congruent to 1 mod 4. If subset = 3, then the search is restricted so that the value of q is congruent to 3 mod 4.  If subset = 0 then there is no condition on q: it can be either 1 or 3 mod 4<br>
+←w<br>
+→p  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>nxprime</p>
+
+<h5 id="2-2-1-24-void-pow_brick-brick-b-big-e-big-w">2.2.1.24 void pow_brick (brick * b, big e, big w)</h5>
+
+<p>Carries out a modular exponentiation, using the precomputed values stored in the brick structure</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←b A pointer to the current instance<br>
+←e A big exponent<br>
+→w = ge (mod n), where g and n are specified in the initial call to brick_init()</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to brick_init()</p>
+
+<h5 id="2-2-1-25-void-power-big-x-long-n-big-z-big-w">2.2.1.25 void power (big x, long n, big z, big w)</h5>
+
+<p>Raises a big number to an integer power</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x A big number<br>
+←n A positive integer<br>
+←z A big number<br>
+→w = xn (mod z)  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of n must be positive  </p>
+
+<h5 id="2-2-1-26-int-powltr-int-x-big-y-big-n-big-w">2.2.1.26 int powltr (int x, big y, big n, big w)</h5>
+
+<p>Raises an int to the power of a big number modulus another big number. Uses Left-to-Right binary method, and will be somewhat faster than powmod() for small x. Uses Montgomery arithmetic internally if the modulus n is odd</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←n<br>
+→w = xy (mod n)  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The result expressed as an integer, if possible. Otherwise the value MR_TOOBIG</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of y must be positive. The parameters x and n must be distinct</p>
+
+<h5 id="2-2-1-27-void-powmod-big-x-big-y-big-n-big-w">2.2.1.27 void powmod (big x, big y, big n, big w)</h5>
+
+<p>Raises a big number to a big power modulus another big. Uses a sophisticated 5-bit sliding window technique, which is close to optimal for popular modulus sizes (such as 512 or 1024 bits). Uses Montgomery arithmetic internally if the modulus n is odd.  </p>
+
+<p>This function can be speeded up further for particular moduli, by invoking special assembly language routines (ir your compiler allows it). A KCM Modular Multiplier will be automatically invoked if MR_-KCM has been defined in mirdef.h and has been set to an appropriate size. Alternatively a Comba modular multiplier will be used if MR_COMBA is so defined, and the modulus is of the specified size. Experimental coprocessor code will be called if MR_PENTIUM is defined. Only one of these conditionals should be defined  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←n<br>
+→w = xy (mod n)  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of y must be positive. The parameters x and n must be distinct  </p>
+
+<h5 id="2-2-1-28-void-powmod2-big-x-big-y-big-a-big-b-big-n-big-w">2.2.1.28 void powmod2 (big x, big y, big a, big b, big n, big w)</h5>
+
+<p>Calculates the product of two modular exponentiations. This is quicker than doing two separate exponentiations, and is useful for certain cryptographic protocols. Uses 2-bit sliding window</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←a<br>
+←b<br>
+←n<br>
+→w = xy ab (mod n)  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The values of y and b must be positive. The parameters n and w must be distinct. The modulus n must be odd  </p>
+
+<h5 id="2-2-1-29-void-powmodn-int-n-big-x-big-y-big-p-big-w">2.2.1.29 void powmodn (int n, big * x, big * y, big p, big w)</h5>
+
+<p>Calculates the product of n modular exponentiations. This is quicker than doing n separate exponentiations, and is useful for certain cryptographic protocols. Extra memory is allocated internally for this function  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+←x<br>
+←y<br>
+←p<br>
+→w = x[0]y[0]x[1]y[1] · · · x[n − 1]y[n−1) (mod p)  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The values of y[] must be positive. The parameters p and w must be distinct. The modulus p must be odd. The underlying number base must be a power of 2  </p>
+
+<h5 id="2-2-1-30-void-scrt-small_chinese-c-mr_utype-u-big-x">2.2.1.30 void scrt (small_chinese * c, mr_utype * u, big x)</h5>
+
+<p>Applies Chinese Remainder Theorem (for small prime moduli)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←c A pointer to the current instance of the Chinese Remainder Theorem<br>
+←u An array of remainders<br>
+→x The big number which yields the given integer remainders u[] when it is divided by the integer moduli specified in a prior call to scrt_init()  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The routine scrt_init() must be called first  </p>
+
+<h5 id="2-2-1-31-void-scrt_end-small_chinese-c">2.2.1.31 void scrt_end* (small_chinese * c)</h5>
+
+<p>Cleans up after an application of the Chinese Remainder Theorem  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←c A pointer to the current instance of the Chinese Remainder Theorem  </p>
+
+<h5 id="2-2-1-32-bool-scrt_init-small_chinese-c-int-r-mr_utype-moduli">2.2.1.32 BOOL scrt_init (small_chinese * c, int r, mr_utype * moduli)</h5>
+
+<p>Initialises an instance of the Chinese Remainder Theorem. Some internal workspace is allocated</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→c A pointer to the current instance<br>
+←r The number of co-prime moduli<br>
+←moduli An array of at least two integer moduli</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<h5 id="2-2-1-33-void-sftbit-big-x-int-n-big-z">2.2.1.33 void sftbit (big x, int n, big z)</h5>
+
+<p>Shifts a big integer left or right by a number of bits</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n If positive shifts to the left, if negative shifts to the right<br>
+→z = x shifted by n bits</p>
+
+<h5 id="2-2-1-34-mr_small-smul-mr_small-x-mr_small-y-mr_small-n">2.2.1.34 mr_small smul* (mr_small x, mr_small y, mr_small n)</h5>
+
+<p>Multiplies two integers mod a third</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←n  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>xy (mod n)</p>
+
+<h5 id="2-2-1-35-mr_small-spmd-mr_small-x-mr_small-n-mr_small-m">2.2.1.35 mr_small spmd* (mr_small x, mr_small n, mr_small m)</h5>
+
+<p>Raises an integer to an integer power modulo a third</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+←m  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>xn (mod m)  </p>
+
+<h5 id="2-2-1-36-mr_small-sqrmp-mr_small-x-mr_small-m">2.2.1.36 mr_small sqrmp* (mr_small x, mr_small m)</h5>
+
+<p>Calculates the square root of an integer modulo an integer prime number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←m A prime number  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>x (mod m), or 0 if root does not exist  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>p must be prime, otherwise the result is unpredictable  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>sqroot</p>
+
+<h5 id="2-2-1-37-bool-sqroot-big-x-big-p-big-w">2.2.1.37 BOOL sqroot (big x, big p, big w)</h5>
+
+<p>Calculates the square root of a big integer mod a big integer prime</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←p<br>
+→w =x (mod p) if the square root exists, otherwise w = 0. Note that the &quot;other&quot; square root may be found by subtracting w from p  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the square root exists, FALSE otherwise</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The number p must be prime  </p>
+
+<p><strong>Note</strong>:</p>
+
+<p>This routine is particularly efficient if p = 3 (mod 4)  </p>
+
+<h5 id="2-2-1-38-int-trial_division-big-x-big-y">2.2.1.38 int trial_division (big x, big y)</h5>
+
+<p>Dual purpose trial division routine. If x and y are the same big variable then trial division by the small prime numbers in the instance array miracl::PRIMES is attempted to determine the primality status of the big number. If x and y are distinct then, after trial division, the unfactored part of x is returned in y</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←→y  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>If x and y are the same, then a return value of 0 means that the big number is definitely not prime, a return value of 1 means that it definitely is prime, while a return value of 2 means that it is possibly prime (and that perhaps further testing should be carried out). If x and y are distinct, then a return value of 1 means that x is smooth, that it is completely factored by trial division (and y is the largest prime factor). A return value of 2 means that the unfactored part y is possibly prime</p>
+
+<h5 id="2-2-1-39-int-xgcd-big-x-big-y-big-xd-big-yd-big-z">2.2.1.39 int xgcd (big x, big y, big xd, big yd, big z)</h5>
+
+<p>Calculates extended Greatest Common Divisor of two big numbers. Can be used to calculate modular inverses. Note that this routine is much slower than a mad() operation on numbers of similar size</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y<br>
+→xd<br>
+→yd<br>
+→z = gcd(x, y) = (x * xd) + (y * yd)  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>GCD as integer, if possible, otherwise MR_TOOBIG</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>If xd and yd are not distinct, only xd is returned. The GCD is only returned if z distinct from both xd and yd</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">xgcd</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,);</span> <span class="c1">// x = 1/x mod p (p is prime)  </span>
+</code></pre></div>
+<h3 id="2-3-montgomery-arithmetic-routines">2.3 Montgomery arithmetic routines</h3>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+<li>  void nres (big x, big y)</li>
+<li>  void nres_dotprod (int m, big *x, big *y, big w)</li>
+<li>  void nres_double_modadd (big x, big y, big w)</li>
+<li>  void nres_double_modsub (big x, big y, big w)</li>
+<li>  void nres_lazy (big a0, big a1, big b0, big b1, big r, big i)</li>
+<li>  void nres_lucas (big p, big r, big vp, big v)</li>
+<li>  void nres_modadd (big x, big y, big w)</li>
+<li>  int nres_moddiv (big x, big y, big w)</li>
+<li>  void nres_modmult (big x, big y, big w)</li>
+<li>  void nres_modsub (big x, big y, big w)</li>
+<li>  BOOL nres_multi_inverse (int m, big *x, big *w)</li>
+<li>  void nres_negate (big x, big w)</li>
+<li>  void nres_powltr (int x, big y, big w)</li>
+<li>  void nres_powmod (big x, big y, big w)</li>
+<li>  void nres_powmod2 (big x, big y, big a, big b, big w)</li>
+<li>  void nres_powmodn (int n, big *x, big *y, big w)</li>
+<li>  void nres_premult (big x, int k, big w)</li>
+<li>  BOOL nres_sqroot (big x, big w)</li>
+<li>  mr_small prepare_monty (big n)</li>
+<li>  void redc (big x, big y)</li>
+</ul>
+
+<h4 id="2-3-1-function-documentation">2.3.1 Function Documentation</h4>
+
+<h5 id="2-3-1-1-void-nres-big-x-big-y">2.3.1.1 void nres (big x, big y)</h5>
+
+<p>Converts a big number to n-residue form</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y the n-residue form of x</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty()</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>redc</p>
+
+<h5 id="2-3-1-2-void-nres_dotprod-int-m-big-x-big-y-big-w">2.3.1.2 void nres_dotprod (int m, big * x, big * y, big w)</h5>
+
+<p>Finds the dot product of two arrays of n-residues. So-called &quot;lazy&quot; reduction is used, in that the sum of products is only reduced once with respect to the Montgomery modulus. This is quicker---nearly twice as fast  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←m<br>
+←x An array of m n-residues<br>
+←y An array of m n-residues<br>
+→w =Σxiyi (mod n), where n is the current Montgomery modulus</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty()</p>
+
+<h5 id="2-3-1-3-void-nres_double_modadd-big-x-big-y-big-w">2.3.1.3 void nres_double_modadd (big x, big y, big w)</h5>
+
+<p>Adds two double length bigs modulo pR, where R = 2n and n is the smallest multiple of the word-length of the underlying MIRACL type, such that R &gt; p. This is required for lazy reduction.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = a + b (mod pR)  </p>
+
+<h5 id="2-3-1-4-void-nres_double_modsub-big-x-big-y-big-w">2.3.1.4 void nres_double_modsub (big x, big y, big w)</h5>
+
+<p>Subtracts two double length bigs modulo pR, where R = 2n and n is the smallest multiple of the wordlength of the underlying MIRACL type, such that R &gt; p. This is required for lazy reduction</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = a − b (mod pR)</p>
+
+<h5 id="2-3-1-5-void-nres_lazy-big-a0-big-a1-big-b0-big-b1-big-r-big-i">2.3.1.5 void nres_lazy (big a0, big a1, big b0, big b1, big r, big i)</h5>
+
+<p>Uses the method of lazy reduction combined with Karatsuba&#39;s method to multiply two zzn2 variables.  Requires just 3 multiplications and two modular reductions.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a0<br>
+←a1<br>
+←b0<br>
+←b1<br>
+→r = the &quot;real part&quot; of (a0 + a1i)(b0 + b1i)<br>
+→i = the &quot;imaginary part&quot; of (a0 + a1i)(b0 + b1i)  </p>
+
+<h5 id="2-3-1-6-void-nres_lucas-big-p-big-r-big-vp-big-v">2.3.1.6 void nres_lucas (big p, big r, big vp, big v)</h5>
+
+<p>Modular Lucas exponentiation of an n-residue</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p An n-residue<br>
+←r A big exponent<br>
+→vp = Vr−1(p) (mod n) where n is the current Montgomery modulus<br>
+→v = Vr(p) (mod n) where n is the current Montgomery modulus  </p>
+
+<p><strong>Note</strong>:</p>
+
+<p>Only v is returned if v and vp are the same big variable</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of the first parameter to n-residue form.  Note that the exponent is not converted to n-residue form</p>
+
+<p><strong>See also:</strong></p>
+
+<p>lucas</p>
+
+<h5 id="2-3-1-7-void-nres_modadd-big-x-big-y-big-w">2.3.1.7 void nres_modadd (big x, big y, big w)</h5>
+
+<p>Modular addition of two n-residues</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x + y (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to prepare_monty()</p>
+
+<h5 id="2-3-1-8-int-nres_moddiv-big-x-big-y-big-w">2.3.1.8 int nres_moddiv (big x, big y, big w)</h5>
+
+<p>Modular division of two n-residues</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x/y (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>GCD of y and n as an integer, if possible, or MR_TOOBIG. Should be 1 for a valid result</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of parameters to n-residue form. Parameters x and y must be distinct</p>
+
+<h5 id="2-3-1-9-void-nres_modmult-big-x-big-y-big-w">2.3.1.9 void nres_modmult (big x, big y, big w)</h5>
+
+<p>Modular multiplication of two n-residues. Note that this routine will invoke a KCM Modular Multiplier if MR_KCM has been defined in mirdef.h and set to an appropriate size for the current modulus, or a Comba fixed size modular multiplier if MR_COMBA is defined as exactly the size of the modulus</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = xy (mod n), where n is the current Montgomery modulus</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_month() and conversion of parameters to n-residue form</p>
+
+<h5 id="2-3-1-10-void-nres_modsub-big-x-big-y-big-w">2.3.1.10 void nres_modsub (big x, big y, big w)</h5>
+
+<p>Modular subtraction of two n-residues</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x − y (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to prepare_monty()  </p>
+
+<h5 id="2-3-1-11-bool-nres_multi_inverse-int-m-big-x-big-w">2.3.1.11 BOOL nres_multi_inverse (int m, big * x, big * w)</h5>
+
+<p>Finds the modular inverses of many numbers simultaneously, exploiting Montgomery&#39;s observation that x−1 = y(xy)−1, y−1 = x(xy)−1. This will be quicker, as modular inverses are slow to calculate, and this way only one is required</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←m The number of inverses required<br>
+←x An array of m n-residues whose inverses are wanted<br>
+→w An array with the inverses of za x</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The parameters x and w must be distinct  </p>
+
+<h5 id="2-3-1-12-void-nres_negate-big-x-big-w">2.3.1.12 void nres_negate (big x, big w)</h5>
+
+<p>Modular negation</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x An n-residue number<br>
+→w = −x (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to prepare_monty()  </p>
+
+<h5 id="2-3-1-13-void-nres_powltr-int-x-big-y-big-w">2.3.1.13 void nres_powltr (int x, big y, big w)</h5>
+
+<p>Modular exponentiation of an n-residue</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = xy (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty(). Note that the small integer x and the exponent are not converted to n-residue form  </p>
+
+<h5 id="2-3-1-14-void-nres_powmod-big-x-big-y-big-w">2.3.1.14 void nres_powmod (big x, big y, big w)</h5>
+
+<p>Modular exponentiation of an n-residue  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x An n-reside number, the base<br>
+←y A big number, the exponent<br>
+→w = xy (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of the first parameter to n-residue form.  Note that the exponent is not converted to n-residue form  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>nres_powltr, nres_powmod2  </p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">prepare_monty</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>  
+    <span class="p">...</span>  
+    <span class="n">nres</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span> <span class="c1">// convert to n-residue form  </span>
+    <span class="n">nres_powmod</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">z</span><span class="p">);</span>  
+    <span class="n">redc</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">w</span><span class="p">);</span> <span class="c1">// convert back to normal form  </span>
+</code></pre></div>
+<h5 id="2-3-1-15-void-nres_powmod2-big-x-big-y-big-a-big-b-big-w">2.3.1.15 void nres_powmod2 (big x, big y, big a, big b, big w)</h5>
+
+<p>Calculates the product of two modular exponentiations involving n-residues.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x An n-residue number<br>
+←y A big integer<br>
+←a An n-residue number<br>
+←b A big integer<br>
+→w = xy ab (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of the appropriate parameters to n-residue form. Note that the exponents are not converted to n-residue form</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>nres_powltr, nres_powmod  </p>
+
+<h5 id="2-3-1-16-void-nres_powmodn-int-n-big-x-big-y-big-w">2.3.1.16 void nres_powmodn (int n, big * x, big * y, big w)</h5>
+
+<p>Calculates the product of n modular exponentiations involving n-residues. Extra memory is allocated internally by this function</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n The number of n-residue numbers<br>
+←x An array of n n-residue numbers<br>
+←y An array of n big integers<br>
+→w = x[0]y[0]x[1]y[1] · · · x[n − 1]y[n−1) (mod p), where p is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of the appropriate parameters to n-residue form. Note that the exponents are not converted to n-residue forms  </p>
+
+<h5 id="2-3-1-17-void-nres_premult-big-x-int-k-big-w">2.3.1.17 void nres_premult (big x, int k, big w)</h5>
+
+<p>Multiplies an n-residue by a small integer  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←k<br>
+→w = kx (mod n), where n is the current Montgomery modulus  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of the first parameter to n-residue form.<br>
+ Note that the small integer is not converted to n-residue form  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>nres_modmult  </p>
+
+<h5 id="2-3-1-18-bool-nres_sqroot-big-x-big-w">2.3.1.18 BOOL nres_sqroot (big x, big w)</h5>
+
+<p>Calculates the square root of an n-residue mod a prime modulus  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→w =x (mod n), where n is the current Montgomery modulus</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the square root exists, otherwise FALSE</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty() and conversion of the first parameter to n-residue form  </p>
+
+<h5 id="2-3-1-19-mr_small-prepare_monty-big-n">2.3.1.19 mr_small prepare_monty (big n)</h5>
+
+<p>Prepares a Montgomery modulus for use. Each call to this function replaces the previous modulus (if any)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n A big number which is to be the Montgomery modulus</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>???  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The parameter n must be positive and odd. Allocated memory is freed when the current instance of MIRACL is terminated by a call to mirexit()  </p>
+
+<h5 id="2-3-1-20-void-redc-big-x-big-y">2.3.1.20 void redc (big x, big y)</h5>
+
+<p>Converts an n-residue back to normal form</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x an n-residue<br>
+→y the normal form of the n-residue x  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to prepare_monty()  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>nres  </p>
+
+<h3 id="2-4-zzn2-arithmetic-routines">2.4 ZZn2 arithmetic routines</h3>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+<li>  void zzn2_add (zzn2 *x, zzn2 *y, zzn2 *w)</li>
+<li>  BOOL zzn2_compare* (zzn2 *x, zzn2 *y)</li>
+<li>  void zzn2_conj (zzn2 *x, zzn2 *w)</li>
+<li>  void zzn2_copy* (zzn2 *x, zzn2 *w)</li>
+<li>  void zzn2_from_big (big x, zzn2 *w)</li>
+<li>  void zzn2_from_bigs (big x, big y, zzn2 *w)</li>
+<li>  void zzn2_from_int (int i, zzn2 *w)</li>
+<li>  void zzn2_from_ints (int i, int j, zzn2 *w)</li>
+<li>  void zzn2_from_zzn (big x, zzn2 *w)</li>
+<li>  void zzn2_from_zzns (big x, big y, zzn2 *w)</li>
+<li>  void zzn2_imul (zzn2 *x, int y, zzn2 *w)</li>
+<li>  void zzn2_inv (zzn2 *w)</li>
+<li>  BOOL zzn2_isunity (zzn2 *x)</li>
+<li>  BOOL zzn2_iszero* (zzn2 *x)</li>
+<li>  void zzn2_mul (zzn2 *x, zzn2 *y, zzn2 *w)</li>
+<li>  void zzn2_negate (zzn2 *x, zzn2 *w)</li>
+<li>  void zzn2_sadd (zzn2 *x, big y, zzn2 *w)</li>
+<li>  void zzn2_smul (zzn2 *x, big y, zzn2 *w)</li>
+<li>  void zzn2_ssub (zzn2 *x, big y, zzn2 *w)</li>
+<li>  void zzn2_sub (zzn2 *x, zzn2 *y, zzn2 *w)</li>
+<li>  void zzn2_timesi (zzn2 *u)</li>
+<li>  void zzn2_zero* (zzn2 *w)</li>
+</ul>
+
+<h4 id="2-4-1-function-documentation">2.4.1 Function Documentation</h4>
+
+<h5 id="2-4-1-1-void-zzn2_add-zzn2-x-zzn2-y-zzn2-w">2.4.1.1 void zzn2_add (zzn2 * x, zzn2 * y, zzn2 * w)</h5>
+
+<p>Adds two zzn2 variables  </p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x + y  </p>
+
+<h5 id="2-4-1-2-bool-zzn2_compare-zzn2-x-zzn2-y">2.4.1.2 BOOL zzn2_compare* (zzn2 * x, zzn2 * y)</h5>
+
+<p>Compares two zzn2 variables for equality</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if x = y, otherwise FALSE  </p>
+
+<h5 id="2-4-1-3-void-zzn2_conj-zzn2-x-zzn2-w">2.4.1.3 void zzn2_conj (zzn2 *x, zzn2 *w)</h5>
+
+<p>Finds the conjugate of a zzn2</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→w If x = a + bi, then w = a - bi  </p>
+
+<h5 id="2-4-1-4-void-zzn2_copy-zzn2-x-zzn2-w">2.4.1.4 void zzn2_copy* (zzn2 * x, zzn2 * w)</h5>
+
+<p>Copies one zzn2 to another</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→w = x  </p>
+
+<h5 id="2-4-1-5-void-zzn2_from_big-big-x-zzn2-w">2.4.1.5 void zzn2_from_big (big x, zzn2 * w)</h5>
+
+<p>Creates a zzn2 from a big integer. This is converted internally into n-residue format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→w = x  </p>
+
+<h5 id="2-4-1-6-void-zzn2_from_bigs-big-x-big-y-zzn2-w">2.4.1.6 void zzn2_from_bigs (big x, big y, zzn2 * w)</h5>
+
+<p>Creates a zzn2 from two big integers. These are converted internally into n-residue format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x + yi  </p>
+
+<h5 id="2-4-1-7-void-zzn2_from_int-int-i-zzn2-w">2.4.1.7 void zzn2_from_int (int i, zzn2 * w)</h5>
+
+<p>Converts an integer to zzn2 format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←i<br>
+→w = i  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>zzn2_from_ints  </p>
+
+<h5 id="2-4-1-8-void-zzn2_from_ints-int-i-int-j-zzn2-w">2.4.1.8 void zzn2_from_ints (int i, int j, zzn2 * w)</h5>
+
+<p>Creates a zzn2 from two integers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←i<br>
+←j<br>
+→w = i + j i  </p>
+
+<p><strong>See also</strong>:</p>
+
+<p>zzn2_from_int  </p>
+
+<h5 id="2-4-1-9-void-zzn2_from_zzn-big-x-zzn2-w">2.4.1.9 void zzn2_from_zzn (big x, zzn2 * w)</h5>
+
+<p>Creates a zzn2 from a big already in n-residue format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→w = x</p>
+
+<h5 id="2-4-1-10-void-zzn2_from_zzns-big-x-big-y-zzn2-w">2.4.1.10 void zzn2_from_zzns (big x, big y, zzn2 * w)</h5>
+
+<p>Creates a zzn2 from two bigs already in n-residue format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x + y i</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>zzn2_from_zzn  </p>
+
+<h5 id="2-4-1-11-void-zzn2_imul-zzn2-x-int-y-zzn2-w">2.4.1.11 void zzn2_imul (zzn2 * x, int y, zzn2 * w)</h5>
+
+<p>Multiplies a zzn2 variable by an integer</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = xy</p>
+
+<h5 id="2-4-1-12-void-zzn2_inv-zzn2-w">2.4.1.12 void zzn2_inv (zzn2 * w)</h5>
+
+<p>In-place inversion of a zzn2 variable</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→w = 1 / w</p>
+
+<h5 id="2-4-1-13-bool-zzn2_isunity-zzn2-x">2.4.1.13 BOOL zzn2_isunity (zzn2 * x)</h5>
+
+<p>Tests a zzn2 value for equality to one</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if x is one, otherwise FALSE</p>
+
+<h5 id="2-4-1-14-bool-zzn2_iszero-zzn2-x">2.4.1.14 BOOL zzn2_iszero* (zzn2 * x)</h5>
+
+<p>Tests a zzn2 value for equality to zero</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if x is zero, otherwise FALSE</p>
+
+<h5 id="2-4-1-15-void-zzn2_mul-zzn2-x-zzn2-y-zzn2-w">2.4.1.15 void zzn2_mul (zzn2 * x, zzn2 * y, zzn2 * w)</h5>
+
+<p>Multiplies two zzn2 variables. If x and y are the same variable, a faster squaring method is used</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = xy</p>
+
+<h5 id="2-4-1-16-void-zzn2_negate-zzn2-x-zzn2-w">2.4.1.16 void zzn2_negate (zzn2 * x, zzn2 * w)</h5>
+
+<p>Negates a zzn2</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→w = -x</p>
+
+<h5 id="2-4-1-17-void-zzn2_sadd-zzn2-x-big-y-zzn2-w">2.4.1.17 void zzn2_sadd (zzn2 * x, big y, zzn2 * w)</h5>
+
+<p>Adds a big in n-residue format to a zzn2</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x + y</p>
+
+<h5 id="2-4-1-18-void-zzn2_smul-zzn2-x-big-y-zzn2-w">2.4.1.18 void zzn2_smul (zzn2 * x, big y, zzn2 * w)</h5>
+
+<p>Multiplies a zzn2 variable by a big in n-residue</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = xy</p>
+
+<h5 id="2-4-1-19-void-zzn2_ssub-zzn2-x-big-y-zzn2-w">2.4.1.19 void zzn2_ssub (zzn2 * x, big y, zzn2 * w)</h5>
+
+<p>Subtracts a big in n-residue format from a zzn2</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x - y</p>
+
+<h5 id="2-4-1-20-void-zzn2_sub-zzn2-x-zzn2-y-zzn2-w">2.4.1.20 void zzn2_sub (zzn2 * x, zzn2 * y, zzn2 * w)</h5>
+
+<p>Subtracts two zzn2 variables</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→w = x - y</p>
+
+<h5 id="2-4-1-21-void-zzn2_timesi-zzn2-u">2.4.1.21 void zzn2_timesi (zzn2 * u)</h5>
+
+<p>In-place multiplication of a zzn2 by i, the imaginary square root of the quadratic non-residue</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→u If u = a + bi then on exit u = i2b + ai</p>
+
+<h5 id="2-4-1-22-void-zzn2_zero-zzn2-w">2.4.1.22 void zzn2_zero* (zzn2 * w)</h5>
+
+<p>Sets a zzn2 variable to zero</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→w = 0  </p>
+
+<h3 id="2-5-encryption-routines">2.5 Encryption routines</h3>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+<li>  mr_unsign32 aes_decrypt* (aes *a, char *buff)</li>
+<li>  mr_unsign32 aes_encrypt* (aes *a, char *buff)</li>
+<li>  void aes_end* (aes *a)</li>
+<li>  void aes_getreg* (aes *a, char *ir)</li>
+<li>  BOOL aes_init* (aes *a, int mode, int nk, char *key, char *iv)</li>
+<li>  void aes_reset* (aes *a, int mode, char *iv)</li>
+<li>  void shs256_hash* (sha256 *sh, char hash[32])</li>
+<li>  void shs256_init* (sha256 *sh)</li>
+<li>  void shs256_process* (sha256 *sh, int byte)</li>
+<li>  void shs384_hash* (sha384 *sh, char hash[48])</li>
+<li>  void shs384_init* (sha384 *sh)</li>
+<li>  void shs384_process* (sha384 *sh, int byte)</li>
+<li>  void shs512_hash* (sha512 *sh, char hash[64])</li>
+<li>  void shs512_init* (sha512 *sh)</li>
+<li>  void shs512_process* (sha512 *sh, int byte)</li>
+<li>  void shs_hash* (sha *sh, char hash[20])</li>
+<li>  void shs_init* (sha *sh)</li>
+<li>  void shs_process* (sha *sh, int byte)</li>
+<li>  void strong_bigdig (csprng *rng, int n, int b, big x)</li>
+<li>  void strong_bigrand (csprng *rng, big w, big x)</li>
+<li>  void strong_init* (csprng *rng, int rawlen, char *raw, mr_unsign32 tod)</li>
+<li>  void strong_kill* (csprng *rng)</li>
+<li>  int strong_rng* (csprng *rng)</li>
+</ul>
+
+<h4 id="2-5-1-function-documentation">2.5.1 Function Documentation</h4>
+
+<h5 id="2-5-1-1-mr_unsign32-aes_decrypt-aes-a-char-buff">2.5.1.1 mr_unsign32 aes_decrypt* (aes * a, char * buff)</h5>
+
+<p>Decrypts a 16 or n byte input buffer in situ. If the mode of operation is as a block cipher (MR_ECB or MR_CBC) then 16 bytes will be decrypted. If the mode of operation is as a stream cipher (MR_CFBn, MR_OFBn or MR_PCFBn) then n bytes will be decrypted</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a Pointer to an initialised instance of an aes structured defined in miracl.h<br>
+ ←→buff Pointer to the buffer of bytes to be decrypted  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>If MR_CFBn and MR_PCFBn modes then n byte(s) that were shifted off the end of the input register<br>
+ as result of decrypting the n input byte(s), otherwise 0  </p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by call to aes_init()</p>
+
+<h5 id="2-5-1-2-mr_unsign32-aes_encrypt-aes-a-char-buff">2.5.1.2 mr_unsign32 aes_encrypt* (aes * a, char * buff)</h5>
+
+<p>Encrypts a 16 or n byte input buffer in situ. If the mode of operation is as a block cipher (MR_ECB or MR_CBC) then 16 bytes will be encrypted. If the mode of operation is as a stream cipher (MR_CFBn, MR_OFBn or MR_PCFBn) then n bytes will be encrypted</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a Pointer to an initialised instance of an aes structure defined in miracl.h<br>
+←→buff Pointer to the buffer of bytes to be encrypted</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>In MR_CFBn and MR_PCFBn modes the n byte(s) that were shifted off the end of the input register as result of encrypting the n input byte(s), otherwise 0</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to aes_init()</p>
+
+<h5 id="2-5-1-3-void-aes_end-aes-a">2.5.1.3 void aes_end* (aes * a)</h5>
+
+<p>Ends an AES encryption session, and de-allocates the memory associated with it. The internal session key data is destroyed</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→a Pointer to an initialised instance of an aes structured defined in miracl.h</p>
+
+<h5 id="2-5-1-4-void-aes_getreg-aes-a-char-ir">2.5.1.4 void aes_getreg* (aes * a, char * ir)</h5>
+
+<p>Reads the current contents of the input chaining register associated with this instance of the AES. This is the register initialised by the IV in the calls to aes_init() and aes_reset()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a Pointer to an instance of the aes structured, defined in miracl.h<br>
+ →ir A character array to hold the extracted 16-byte data</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to aes_init()</p>
+
+<h5 id="2-5-1-5-bool-aes_init-aes-a-int-mode-int-nk-char-key-char-iv">2.5.1.5 BOOL aes_init* (aes * a, int mode, int nk, char * key, char * iv)</h5>
+
+<p>Initialises an Encryption/Decryption session using the Advanced Encryption Standard (AES). This is a block cipher system that encrypts data in 128-bit blocks using a key of 128, 192 or 256 bits. See [Stinson] for more background on block ciphers.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→a Pointer to an instance of the aes structure defined in miracl.h<br>
+←mode The mode of operation to be used: MR_ECB (Electronic Code Book), MR_CBC (Cipher Block Chaining), MR_CFBn (Cipher Feed-Back where n is 1, 2 or 4), MR_PCFBn (error Propagating Cipher Feed-Back where n is 1, 2 or 4) or MR_OFBn (Output Feed-Back where n is 1, 2, 4, 8 or 16). The value of n indicates the number of bytes to be processed in each application.  For more information on Modes of Operation, see [Stinson]. MR_PCFBn is an invention of our own [Scott93]<br>
+←nk The size of the key in bytes. It can be either 16, 24 or 32<br>
+←key A pointer to the key<br>
+←iv A pointer to the Initialisation Vector (IV). A 16-byte initialisation vector should be specified for all modes other than MR_ECB, in which case it can be NULL</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<h5 id="2-5-1-6-void-aes_reset-aes-a-int-mode-char-iv">2.5.1.6 void aes_reset* (aes * a, int mode, char * iv)</h5>
+
+<p>Resets the AES structure</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a Pointer to an instance of the aes structure defined in miracl.h<br>
+←mode an Indication of the new mode of operation<br>
+←iv A pointer to a (possibly new) initialisation vector</p>
+
+<h5 id="2-5-1-7-void-shs256_hash-sha256-sh-char-hash-32">2.5.1.7 void shs256_hash* (sha256 * sh, char hash[32])</h5>
+
+<p>Generates a 32 byte (256 bit) hash value into the provided array</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+→hash Pointer to array to be filled</p>
+
+<h5 id="2-5-1-8-void-shs256_init-sha256-sh">2.5.1.8 void shs256_init* (sha256 * sh)</h5>
+
+<p>Initialises an instance of the Secure Hash Algorithm (SHA-256). Must be called before new use</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→sh Pointer to an instance of a structure defined in miracl.h</p>
+
+<h5 id="2-5-1-9-void-shs256_process-sha256-sh-int-byte">2.5.1.9 void shs256_process* (sha256 * sh, int byte)</h5>
+
+<p>Processes a single byte. Typically called many times to provide input to the hashing process. The hash value of all the processed bytes can be retrieved by a subsequent call to shs256_hash()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+←byte Character to be processed</p>
+
+<h5 id="2-5-1-10-void-shs384_hash-sha384-sh-char-hash-48">2.5.1.10 void shs384_hash* (sha384 * sh, char hash[48])</h5>
+
+<p>Generates a 48 byte (384 bit) hash value into the provided array</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+→hash Pointer to array to be filled</p>
+
+<h5 id="2-5-1-11-void-shs384_init-sha384-sh">2.5.1.11 void shs384_init* (sha384 * sh)</h5>
+
+<p>Initialises an instance of the Secure Hash Algorithm (SHA-384). Must be called before new use</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>! sh Pointer to an instance of a structure defined in miracl.h</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The SHA-384 algorithm is only available if 64-bit data-type is defined</p>
+
+<h5 id="2-5-1-12-void-shs384_process-sha384-sh-int-byte">2.5.1.12 void shs384_process* (sha384 * sh, int byte)</h5>
+
+<p>Processes a single byte. Typically called many times to provide input to the hashing process. The hash value of all the processed bytes can be retrieved by a subsequent call to shs384_hash()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+←byte Character to be processed</p>
+
+<h5 id="2-5-1-13-void-shs512_hash-sha512-sh-char-hash-64">2.5.1.13 void shs512_hash* (sha512 * sh, char hash[64])</h5>
+
+<p>Generates a 64 byte (512 bit) hash value into the provided array</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+→hash Pointer to array to be filled</p>
+
+<h5 id="2-5-1-14-void-shs512_init-sha512-sh">2.5.1.14 void shs512_init* (sha512 * sh)</h5>
+
+<p>Initialises an instance of the Secure Hash Algorithm (SHA-512). Must be called before new use</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→sh Pointer to an instance of a structure defined in miracl.h</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The SHA-512 algorithm is only available if 64-bit data-type is defined</p>
+
+<h5 id="2-5-1-15-void-shs512_process-sha512-sh-int-byte">2.5.1.15 void shs512_process* (sha512 * sh, int byte)</h5>
+
+<p>Processes a single byte. Typically called many times to provide input to the hashing process. The hash value of all the processed bytes can be retrieved by a subsequent call to shs512_hash()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+←byte Character to be processed</p>
+
+<h5 id="2-5-1-16-void-shs_hash-sha-sh-char-hash-20">2.5.1.16 void shs_hash* (sha * sh, char hash[20])</h5>
+
+<p>Generates a twenty byte (160 bit) hash value into the provided array</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+→hash Pointer to array to be filled</p>
+
+<h5 id="2-5-1-17-void-shs_init-sha-sh">2.5.1.17 void shs_init* (sha * sh)</h5>
+
+<p>Initialises an instance of the Secure Hash Algorithm (SHA-1). Must be called before new use</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→sh Pointer to an instance of a structure defined in miracl.h</p>
+
+<h5 id="2-5-1-18-void-shs_process-sha-sh-int-byte">2.5.1.18 void shs_process* (sha * sh, int byte)</h5>
+
+<p>Processes a single byte. Typically called many times to provide input to the hashing process. The hash value of all the processed bytes can be retrieved by a subsequent call to shs_hash()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←sh Pointer to the current instance<br>
+←byte Character to be processed</p>
+
+<h5 id="2-5-1-19-void-strong_bigdig-csprng-rng-int-n-int-b-big-x">2.5.1.19 void strong_bigdig (csprng * rng, int n, int b, big x)</h5>
+
+<p>Generates a big random number of given length from the cryptographically strong generator rng</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←rng A pointer to the random number generator<br>
+←n<br>
+←b<br>
+→x Big random number n digits long to base b</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The base b must be printable, that is 2 &lt;= b &lt;= 256</p>
+
+<h5 id="2-5-1-20-void-strong_bigrand-csprng-rng-big-w-big-x">2.5.1.20 void strong_bigrand (csprng * rng, big w, big x)</h5>
+
+<p>Generates a cryptographically strong random big number x using the random number generator rng such that 0 &lt;= x &lt; w</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←rng A pointer to the current instance<br>
+←w<br>
+→x</p>
+
+<h5 id="2-5-1-21-void-strong_init-csprng-rng-int-rawlen-char-raw-mr_unsign32-tod">2.5.1.21 void strong_init* (csprng * rng, int rawlen, char * raw, mr_unsign32 tod)</h5>
+
+<p>Initialises the cryptographically strong random number generator rng. The array raw (of length rawlen) and the time-of-day value tod are the two sources used together to seed the generator. The former might be provided from random keystrokes, the latter from an internal clock. Subsequent calls to strong_rng() will provide random bytes</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→rng<br>
+←rawlen<br>
+←raw An array of length rawlen<br>
+←tod A 32-bit time-of-day value  </p>
+
+<h5 id="2-5-1-22-void-strong_kill-csprng-rng">2.5.1.22 void strong_kill* (csprng * rng)</h5>
+
+<p>Kills the internal state of the random number generator rng</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←rng A pointer to a random number generator</p>
+
+<h5 id="2-5-1-23-int-strong_rng-csprng-rng">2.5.1.23 int strong_rng* (csprng * rng)</h5>
+
+<p>Generates a sequence of cryptographically strong random bytes</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←rng A pointer to a random number generator</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>A random byte  </p>
+
+<h3 id="2-6-elliptic-curve-routines">2.6 Elliptic curve routines</h3>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+<li>  void ebrick2_end* (ebrick2 *B)</li>
+<li>  BOOL ebrick2_init (ebrick2 *B, big x, big y, big a2, big a6, int m, int a, int b, int c, int window, int nb)</li>
+<li>  void ebrick_end* (ebrick *B)</li>
+<li>  BOOL ebrick_init (ebrick *B, big x, big y, big a, big b, big n, int window, int nb)</li>
+<li>  big ecurve2_add (epoint *p, epoint *pa)</li>
+<li>  BOOL ecurve2_init (int m, int a, int b, int c, big a2, big a6, BOOL check, int type)</li>
+<li>  void ecurve2_mult (big e, epoint *pa, epoint *pt)</li>
+<li>  void ecurve2_mult2 (big e, epoint *p, big ea, epoint *pa, epoint *pt)</li>
+<li>  void ecurve2_multi_add (int m, epoint **x, epoint **w)</li>
+<li>  void ecurve2_multn (int n, big *y, epoint **x, epoint *w)</li>
+<li>  big ecurve2_sub (epoint *p, epoint *pa)</li>
+<li>  big ecurve_add (epoint *p, epoint *pa)</li>
+<li>  void ecurve_init (big a, big b, big p, int type)</li>
+<li>  void ecurve_mult (big e, epoint *pa, epoint *pt)</li>
+<li>  void ecurve_mult2 (big e, epoint *p, big ea, epoint *pa, epoint *pt)</li>
+<li>  void ecurve_multi_add (int m, epoint **x, epoint **w)</li>
+<li>  void ecurve_multn (int n, big *y, epoint **x, epoint *w)</li>
+<li>  big ecurve_sub (epoint *p, epoint *pa)</li>
+<li>  BOOL epoint2_comp (epoint *a, epoint *b)</li>
+<li>  void epoint2_copy* (epoint *a, epoint *b)</li>
+<li>  int epoint2_get (epoint *p, big x, big y)</li>
+<li>  void epoint2_getxyz (epoint *p, big x, big y, big z)</li>
+<li>  BOOL epoint2_norm (epoint *p)</li>
+<li>  BOOL epoint2_set (big x, big y, int cb, epoint *p)</li>
+<li>  BOOL epoint_comp (epoint *a, epoint *b)</li>
+<li>  void epoint_copy* (epoint *a, epoint *b)</li>
+<li>  void epoint_free* (epoint *p)</li>
+<li>  int epoint_get (epoint *p, big x, big y)</li>
+<li>  void epoint_getxyz (epoint *p, big x, big y, big z)</li>
+<li>  epoint epoint_init (void)</li>
+<li>  epoint epoint_init_mem (char *mem, int index)</li>
+<li>  BOOL epoint_norm (epoint *p)</li>
+<li>  BOOL epoint_set (big x, big y, int cb, epoint *p)</li>
+<li>  BOOL epoint_x (big x)</li>
+<li>  int mul2_brick (ebrick2 *B, big e, big x, big y)</li>
+<li>  int mul_brick (ebrick *B, big e, big x, big y)</li>
+<li>  BOOL point_at_infinity* (epoint *p)</li>
+</ul>
+
+<h4 id="2-6-1-function-documentation">2.6.1 Function Documentation</h4>
+
+<h5 id="2-6-1-1-void-ebrick2_end-ebrick2-b">2.6.1.1 void ebrick2_end* (ebrick2 * B)</h5>
+
+<p>Cleans up after an application of the Comb for GF(2m) elliptic curves</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→B A pointer to the current instance</p>
+
+<h5 id="2-6-1-2-bool-ebrick2_init-ebrick2-b-big-x-big-y-big-a2-big-a6-int-m-int-a-int-b-int-c-int-window-int-nb">2.6.1.2 BOOL ebrick2_init (ebrick2 * B, big x, big y, big a2, big a6, int m, int a, int b, int c, int window, int nb)</h5>
+
+<p>Initialises an instance of the Comb method for GF(2m) elliptic curve multiplication with precomputation.  The field is defined with respect to the trinomial basis tm+ta+1 or the pentanomial basis tm+ta+tb+tc+1.  Internally memory is allocated for 2w elliptic curve points which will be precomputed and sotred. For bigger w more space is required, but the exponentiation is quicker. Try w = 8</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←B A pointer to the current instance<br>
+←x x coordinate of the fixed point<br>
+←y y coordinate of the fixed point<br>
+←a2 The a2 coefficient of the curve y2 + xy = x3 + a2x2 + a6<br>
+←a6 the a6 coefficient of the curve y2 + xy = x3 + a2x2 + a6<br>
+←m<br>
+←a<br>
+←b<br>
+←c<br>
+←window The size w of the window<br>
+←nb The maximum number of bits to be used in the exponent</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If MR_STATIC is defined in mirdef.h, then the x and y parameters in this function are replaced by a single mr_small * pointer to a precomputed table. In this case the function returns a void</p>
+
+<h5 id="2-6-1-3-void-ebrick_end-ebrick-b">2.6.1.3 void ebrick_end* (ebrick * B)</h5>
+
+<p>Cleans up after an application of the Comb for GF(p) elliptic curves</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←→B A pointer to the current instance</p>
+
+<h5 id="2-6-1-4-bool-ebrick_init-ebrick-b-big-x-big-y-big-a-big-b-big-n-int-window-int-nb">2.6.1.4 BOOL ebrick_init (ebrick * B, big x, big y, big a, big b, big n, int window, int nb)</h5>
+
+<p>Initialises an instance of the Comb method for GF(p) elliptic curve multiplication with precomputation.  Internally memory is allocated for 2w elliptic curve points which will be precomputed and stored. For bigger w more space is required, but the exponentiation is quicker. Try w = 8</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→B A pointer to the current instance<br>
+←x x coordinate of the fixed point<br>
+←y y coordinate of the fixed point<br>
+←a The a coefficient of the curve y2 = x3 + ax + b<br>
+←b The b coefficient of the curve y2 = x3 + ax + b<br>
+←n The modulus<br>
+←window The size w of the window<br>
+←nb The maximum number of bits to be used in the exponent</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If MR_STATIC is defined in mirdef.h, then the x and y parameters in this function are replaced by a single mr_small * pointer to a precomputed table. In this case the function returns a void.</p>
+
+<h5 id="2-6-1-5-big-ecurve2_add-epoint-p-epoint-pa">2.6.1.5 big ecurve2_add (epoint * p, epoint * pa)</h5>
+
+<p>Adds two points on a GF(2m) elliptic curve using the special rule for addition. Note that if pa = p, then a different duplication rule is used. Addition is quicker if p is normalised</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+←→pa = pa + p</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>An ephemeral pointer to the sline slope if curve is super-singular</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The input points must actually be on the current active curve</p>
+
+<h5 id="2-6-1-6-bool-ecurve2_init-int-m-int-a-int-b-int-c-big-a2-big-a6-bool-check-int-type">2.6.1.6 BOOL ecurve2_init (int m, int a, int b, int c, big a2, big a6, BOOL check, int type)</h5>
+
+<p>Initialises the internal parameters of the current active GF(2m) elliptic curve. The curve is assumed to be of the form y2 + xy = x3 + Ax2 + B. The field is defined with respect to the trinomial basis tm + ta + 1 or the pentanomial basis tm+ta+tb+tc+1. This routine can be called subsequently with the parameters of a different curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←m<br>
+←a<br>
+←b<br>
+←c<br>
+←a2 The A coefficient on the elliptic curve equation<br>
+←a6 The B coefficient on the elliptic curve equation<br>
+←check If TRUE a check is made that the specified basis is irreducible. If FALSE, this basis validity check, which is time-consuming, is supressed<br>
+←type Either MR_PROJECTIVE or MR_AFFINE, specifying whether projective or affine coordinates should be used internally. Normally the former is faster</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if parameters make sense, otherwise FALSE</p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Allocated memory will be freed when the current instance of MIRACL is terminated by a call to mirexit(). Only one elliptic curve, GF(p) or GF(2m) may be active within a single MIRACL instance</p>
+
+<h5 id="2-6-1-7-void-ecurve2_mult-big-e-epoint-pa-epoint-pt">2.6.1.7 void ecurve2_mult (big e, epoint * pa, epoint * pt)</h5>
+
+<p>Multiplies a point on a GF(2m) elliptic curve by an integer. Uses the addition/subtraction method</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←e<br>
+←pa<br>
+→pt = e × pa</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point pa must be on the active curve</p>
+
+<h5 id="2-6-1-8-void-ecurve2_mult2-big-e-epoint-p-big-ea-epoint-pa-epoint-pt">2.6.1.8 void ecurve2_mult2 (big e, epoint * p, big ea, epoint * pa, epoint * pt)</h5>
+
+<p>Calculates the point e × p + ea × pa on a GF(2m) elliptic curve. This is quicker than doing two separate multiplications and an addition. Useful for certain cryptosystems</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←e<br>
+←p<br>
+←ea<br>
+←pa<br>
+→pt = e × p + ea × pa</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The points p and pa must be on the active curve</p>
+
+<h5 id="2-6-1-9-void-ecurve2_multi_add-int-m-epoint-x-epoint-w">2.6.1.9 void ecurve2_multi_add (int m, epoint ** x, epoint ** w)</h5>
+
+<p>Simultaneously adds pairs of points on the active GF(2m) curve. This is much quicker than adding them individually, but only when using affine coordinates</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←m<br>
+←x<br>
+→w w[i] = w[i] + x[i] for i = 0 to m - 1</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>Only useful when using affine coordinates</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>ecurve2_init</p>
+
+<h5 id="2-6-1-10-void-ecurve2_multn-int-n-big-y-epoint-x-epoint-w">2.6.1.10 void ecurve2_multn (int n, big * y, epoint ** x, epoint * w)</h5>
+
+<p>Calculates the point x[0]y[0] + x[1]y[1] + . . . + x[n − 1]y[n − 1]) on a GF(2m) elliptic curve, for n &gt;= 2</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+←y an array of n big numbers<br>
+←x an array of n elliptic curve points<br>
+→w = x[0]y[0] + x[1]y[1] + . . . + x[n − 1]y[n − 1])</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The points must be on the active curve. The y[] values must all be positive. The underlying number base must be a power of 2</p>
+
+<h5 id="2-6-1-11-big-ecurve2_sub-epoint-p-epoint-pa">2.6.1.11 big ecurve2_sub (epoint * p, epoint * pa)</h5>
+
+<p>Subtracts two points on a GF(2m) elliptic curve. Actually negates p and adds it to pa. Subtraction is quicker if p is normalised.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+←→ pa = pa − p</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>An ephemeral pointer to the sline slope</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The input points must actually be on the current active curve</p>
+
+<h5 id="2-6-1-12-big-ecurve_add-epoint-p-epoint-pa">2.6.1.12 big ecurve_add (epoint * p, epoint * pa)</h5>
+
+<p>Adds two points on a GF(p) elliptic curve using the special rule for addition. Note that if pa = p, then a different duplication rule is used. Addition is quicker if p is normalised</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+←→pa = pa + p</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>An ephemeral pointer to the sline slope</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The input points must actually be on the current active curve</p>
+
+<h5 id="2-6-1-13-void-ecurve_init-big-a-big-b-big-p-int-type">2.6.1.13 void ecurve_init (big a, big b, big p, int type)</h5>
+
+<p>Initialises the internal parameters of the current active GF(p) elliptic curve. The curve is assumed to be of the form y2 = x3 + Ax + B (mod p), the so-called Weierstrass model. This routine can be called subsequently with the parameters of a different curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a The A coefficient of the elliptic curve<br>
+←b The B coefficient of the elliptic curve<br>
+←p The modulus<br>
+→type Either MR_PROJECTIVE or MR_AFFINE, specifying whether projective or affine coordinates should be used internally. Normally the former is faster</p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>Allocated memory will be freed when the current instance of MIRACL is terminated by a call to mirexit(). Only one elliptic curve, GF(p) or GF(2m) may be active within a single MIRACL instance</p>
+
+<h5 id="2-6-1-14-void-ecurve_mult-big-e-epoint-pa-epoint-pt">2.6.1.14 void ecurve_mult (big e, epoint * pa, epoint * pt)</h5>
+
+<p>Multiplies a point on a GF(p) elliptic curve by an integer. Uses the addition/subtraction method</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←e<br>
+←pa<br>
+→pt = e × pa</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point pa must be on the active curve</p>
+
+<h5 id="2-6-1-15-void-ecurve_mult2-big-e-epoint-p-big-ea-epoint-pa-epoint-pt">2.6.1.15 void ecurve_mult2 (big e, epoint * p, big ea, epoint * pa, epoint * pt)</h5>
+
+<p>Calculates the point e × p + ea × pa on a GF(p) elliptic curve. This is quicker than doing two separate multiplications and an addition. Useful for certain cryptosystems</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←e<br>
+←p<br>
+←ea<br>
+←pa<br>
+→pt = e × p + ea × pa</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The points p and pa must be on the active curve</p>
+
+<h5 id="2-6-1-16-void-ecurve_multi_add-int-m-epoint-x-epoint-w">2.6.1.16 void ecurve_multi_add (int m, epoint ** x, epoint ** w)</h5>
+
+<p>Simultaneously adds pairs of points on the active GF(p) curve. This is much quicker than adding them individually, but only when using affine coordinates</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←m<br>
+←x<br>
+→w w[i] = w[i] + x[i] for i = 0 to m - 1</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>Only useful when using affine coordinates</p>
+
+<p><strong>See also</strong>:</p>
+
+<p>ecurve_init, nres_multi_inverse</p>
+
+<h5 id="2-6-1-17-void-ecurve_multn-int-n-big-y-epoint-x-epoint-w">2.6.1.17 void ecurve_multn (int n, big * y, epoint ** x, epoint * w)</h5>
+
+<p>Calculates the point x[0]y[0] + x[1] * y[1] + . . . + x[n − 1]y[n − 1] on a GF(p) elliptic curve, for n &gt;= 2</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+←y An array of n big numbers<br>
+←x An array of n elliptic curve points<br>
+→w = x[0]y[0] + x[1]y[1] + . . . + x[n − 1]y[n − 1]</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The points must be on the active curve. The y[] values must all be positive. The underlying number base must be a power of 2</p>
+
+<h5 id="2-6-1-18-big-ecurve_sub-epoint-p-epoint-pa">2.6.1.18 big ecurve_sub (epoint * p, epoint * pa)</h5>
+
+<p>Subtracts two points on a GF(p) elliptic curve. Actually negates p and adds it to pa. Subtraction is quicker if p is normalised.</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+←→pa = pa − p  </p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>An ephemeral pointer to the sline slope</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The input points must actually be on the current active curve</p>
+
+<h5 id="2-6-1-19-bool-epoint2_comp-epoint-a-epoint-b">2.6.1.19 BOOL epoint2_comp (epoint * a, epoint * b)</h5>
+
+<p>Compares two points on the current active GF(2m) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a<br>
+←b</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the points are the same, otherwise FALSE</p>
+
+<h5 id="2-6-1-20-void-epoint2_copy-epoint-a-epoint-b">2.6.1.20 void epoint2_copy* (epoint * a, epoint * b)</h5>
+
+<p>Copies one point to another on a GF(2m) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a<br>
+←b = a</p>
+
+<h5 id="2-6-1-21-int-epoint2_get-epoint-p-big-x-big-y">2.6.1.21 int epoint2_get (epoint * p, big x, big y)</h5>
+
+<p>Normalises a point and extracts its (x,y) coordinates on the active GF(2m) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+→x<br>
+→y</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The least significant bit of y. Note that it is possible to reconstruct a point from its x coordinate and just the least significant bit of y. Often such a &#39;compressed&#39; description of a point is useful</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point p must be on the active curve</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If x and y are not distinct variables on entry then only the value of x is returned</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">i</span> <span class="o">=</span> <span class="n">epoint2_get</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">// extract x coordinate and lsb of y/x</span>
+</code></pre></div>
+<h5 id="2-6-1-22-void-epoint2_getxyz-epoint-p-big-x-big-y-big-z">2.6.1.22 void epoint2_getxyz (epoint * p, big x, big y, big z)</h5>
+
+<p>Extracts the raw (x,y,z) coordinates of a point on the active GF(2m) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+→x<br>
+→y<br>
+→z</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point p must be on the active curve</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If any of x, y, z is NULL then that coordinate is not returned</p>
+
+<h5 id="2-6-1-23-bool-epoint2_norm-epoint-p">2.6.1.23 BOOL epoint2_norm (epoint * p)</h5>
+
+<p>Normalises a point on the current active GF(2m) elliptic curve. This sets the z coordinate to 1. Point addition is quicker when adding a normalised point. This function does nothing if affine coordinates are being used (in which case there is no z coordinate)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p A point on the current active elliptic curve</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<h5 id="2-6-1-24-bool-epoint2_set-big-x-big-y-int-cb-epoint-p">2.6.1.24 BOOL epoint2_set (big x, big y, int cb, epoint * p)</h5>
+
+<p>Sets a point on the current active GF(2m) elliptic curve (if possible)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x The x coordinate of the point<br>
+←y The y coordinate of the point</p>
+
+<p>2.6 Elliptic curve routines 59</p>
+
+<p>←cb If x and y are not distinct variables then x only is passed to the function, and cb is taken as the least significant bit of y. In this case the full value of y is reconstructed internally. This is known as &#39;point decompression&#39; (and is a bit time-consuming, requiring the extraction of a modular square root)<br>
+→p = (x,y)</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the point exists on the current active elliptic curve, otherwise FALSE</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">p</span> <span class="o">=</span> <span class="n">epoint_init</span><span class="p">();</span>  
+    <span class="n">epoint2_set</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span> <span class="c1">// decompress p</span>
+</code></pre></div>
+<h5 id="2-6-1-25-bool-epoint_comp-epoint-a-epoint-b">2.6.1.25 BOOL epoint_comp (epoint * a, epoint * b)</h5>
+
+<p>Compares two points on the current active GF(p) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a<br>
+←b</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the points are the same, otherwise FALSE</p>
+
+<h5 id="2-6-1-26-void-epoint_copy-epoint-a-epoint-b">2.6.1.26 void epoint_copy* (epoint * a, epoint * b)</h5>
+
+<p>Copies one point to another on a GF(p) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←a<br>
+←b = a</p>
+
+<h5 id="2-6-1-27-void-epoint_free-epoint-p">2.6.1.27 void epoint_free* (epoint * p)</h5>
+
+<p>Frees memory associated with a point on a GF(p) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p</p>
+
+<h5 id="2-6-1-28-int-epoint_get-epoint-p-big-x-big-y">2.6.1.28 int epoint_get (epoint * p, big x, big y)</h5>
+
+<p>Normalises a point and extracts its (x,y) coordinates on the active GF(p) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+→x<br>
+→y</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The least significant bit of y. Note that it is possible to reconstruct a point from its x coordinate and just the least significant bit of y. Often such a &#39;compressed&#39; description of a point is useful</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point p must be on the active curve</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If x and y are not distinct variables on entry then only the value of x is returned</p>
+
+<p><strong>Example</strong>:</p>
+
+<p>i = epoint_get(p, x, x); // extract x coordinate and lsb of y</p>
+
+<h5 id="2-6-1-29-void-epoint_getxyz-epoint-p-big-x-big-y-big-z">2.6.1.29 void epoint_getxyz (epoint * p, big x, big y, big z)</h5>
+
+<p>Extracts the raw (x,y,z) coordinates of a point on the active GF(p) elliptic curve</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p<br>
+→x<br>
+→y<br>
+→z</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point p must be on the active curve</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If any of x, y, z is NULL then that coordinate is not returned</p>
+
+<h5 id="2-6-1-30-epoint-epoint_init-void">2.6.1.30 epoint* epoint_init (void)</h5>
+
+<p>Assigns memory to a point on a GF(p) elliptic curve, and initialises it to the &#39;point at infinity&#39;</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>A pointer to an elliptic curve point (in fact a pointer to a structure allocated from the heap)</p>
+
+<p><strong>Warning</strong>:</p>
+
+<p>It is the C programmer&#39;s responsibility to ensure that all elliptic curve points initialised by a call to this function are ultimately freed by a call to epoint_free(). If not a memory leak will result</p>
+
+<h5 id="2-6-1-31-epoint-epoint_init_mem-char-mem-int-index">2.6.1.31 epoint* epoint_init_mem (char * mem, int index)</h5>
+
+<p>Initialises memory for an elliptic curve point from a pre-allocated byte array mem. This array may be created from the heap by a call to ecp_memalloc(), or in some other way. This is quicker than multiple calls to epoint_init()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←mem<br>
+←index An index into mem. Each index should be unique</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>An initialised elliptic curve point</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Sufficient memory must have been allocated and pointed to by mem</p>
+
+<h5 id="2-6-1-32-bool-epoint_norm-epoint-p">2.6.1.32 BOOL epoint_norm (epoint * p)</h5>
+
+<p>Normalises a point on the current active GF(p) elliptic curve. This sets the z coordinate to 1. Point addition is quicker when adding a normalised point. This function does nothing if affine coordinates are being used (in which case there is no z coordinate)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p A point on the current active elliptic curve</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if successful, otherwise FALSE</p>
+
+<h5 id="2-6-1-33-bool-epoint_set-big-x-big-y-int-cb-epoint-p">2.6.1.33 BOOL epoint_set (big x, big y, int cb, epoint * p)</h5>
+
+<p>Sets a point on the current active GF(p) elliptic curve (if possible)</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x The x coordinate of the point<br>
+←y The y coordinate of the point<br>
+←cb If x and y are not distinct variables then x only is passed to the function, and cb is taken as the least significant bit of y. In this case the full value of y is reconstructed internally. This is known as &#39;point decompression&#39; (and is a bit time-consuming, requiring the extraction of a modular square root)<br>
+→p = (x,y)</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if the point exists on the current active elliptic curve, otherwise FALSE</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">p</span> <span class="o">=</span> <span class="n">epoint_init</span><span class="p">();</span>  
+    <span class="n">epoint_set</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span> <span class="c1">// decompress p</span>
+</code></pre></div>
+<h5 id="2-6-1-34-bool-epoint_x-big-x">2.6.1.34 BOOL epoint_x (big x)</h5>
+
+<p>Tests to see if the parameter x is a valid coordinate of a point on the curve. It is faster to test an x coordinate first in this way, rather than trying to directly set it on the curve by calling epoint_set(), as it avoids an expensive modular square root</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x The integer coordinate x</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if x is the coordinate of a curve point, otherwise FALSE</p>
+
+<h5 id="2-6-1-35-int-mul2_brick-ebrick2-b-big-e-big-x-big-y">2.6.1.35 int mul2_brick (ebrick2 * B, big e, big x, big y)</h5>
+
+<p>Carries out a GF(2m) elliptic curve multiplication using the precomputed values stored in the ebrick structure</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←B A pointer to the current instance<br>
+←e A big exponent<br>
+→x The x coordinate of e × G, where G is specified in the initial call to ebrick2_init()<br>
+→y The y coordinate of e × G, where G is specified in the initial call to ebrick2_init()</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The least significant bit of y</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If x and y are not distinct variables, only x is returned</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to ebrick2_init()</p>
+
+<h5 id="2-6-1-36-int-mul_brick-ebrick-b-big-e-big-x-big-y">2.6.1.36 int mul_brick (ebrick * B, big e, big x, big y)</h5>
+
+<p>Carries out a GF(p) elliptic curve multiplication using the precomputed values stored in the ebrick structure</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←B A pointer to the current instance<br>
+←e A big exponent<br>
+→x The x coordinate of eG (mod n), where G and n are specified in the initial call to ebrick_init()<br>
+→y The y coordinate of eG (mod n), where G and n are specified in the initial call to ebrick_init()</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The least significant bit of y</p>
+
+<p><strong>Note</strong>:</p>
+
+<p>If x and y are not distinct variables, only x is returned</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>Must be preceded by a call to ebrick_init()</p>
+
+<h5 id="2-6-1-37-bool-point_at_infinity-epoint-p">2.6.1.37 BOOL point_at_infinity* (epoint * p)</h5>
+
+<p>Tests if an elliptic curve point is the &#39;point at infinity&#39;</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←p An elliptic curve point</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE if p is the point at infinity, otherwise FALSE</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The point must be initialised  </p>
+
+<h3 id="2-7-floating-slash-routines">2.7 Floating-slash routines</h3>
+
+<p><strong>Functions</strong></p>
+
+<ul>
+<li>  void build (flash x, int(*gen)(_MIPT_ big, int))</li>
+<li>  void dconv (double d, flash w)</li>
+<li>  void denom (flash x, big y)</li>
+<li>  void facos (flash x, flash y)</li>
+<li>  void facosh (flash x, flash y)</li>
+<li>  void fadd (flash x, flash y, flash z)</li>
+<li>  void fasin (flash x, flash y)</li>
+<li>  void fasinh (flash x, flash y)</li>
+<li>  void fatan (flash x, flash y)</li>
+<li>  void fatanh (flash x, flash y)</li>
+<li>  int fcomp (flash x, flash y)</li>
+<li>  void fconv (int n, int d, flash x)</li>
+<li>  void fcos (flash x, flash y)</li>
+<li>  void fcosh (flash x, flash y)</li>
+<li>  void fdiv (flash x, flash y, flash z)</li>
+<li>  double fdsize (flash w)</li>
+<li>  void fexp (flash x, flash y)</li>
+<li>  void fincr (flash x, int n, int d, flash y)</li>
+<li>  void flog (flash x, flash y)</li>
+<li>  void flop (flash x, flash y, int *op, flash z)</li>
+<li>  void fmodulo (flash x, flash y, flash z)</li>
+<li>  void fmul (flash x, flash y, flash z)</li>
+<li>  void fpack (big n, big d, flash x)</li>
+<li>  void fpi (flash pi)</li>
+<li>  void fpmul (flash x, int n, int d, flash y)</li>
+<li>  void fpower (flash x, int n, flash w)</li>
+<li>  void fpowf (flash x, flash y, flash z)</li>
+<li>  void frand (flash x)</li>
+<li>  void frecip (flash x, flash y)</li>
+<li>  BOOL froot (flash x, int n, flash w)</li>
+<li>  void fsin (flash x, flash y)</li>
+<li>  void fsinh (flash x, flash y)</li>
+<li>  void fsub (flash x, flash y, flash z)</li>
+<li>  void ftan (flash x, flash y)</li>
+<li>  void ftanh (flash x, flash y)</li>
+<li>  void ftrunc (flash x, big y, flash z)</li>
+<li>  void mround (big num, big den, flash z)</li>
+<li>  void numer (flash x, big y)</li>
+</ul>
+
+<h4 id="2-7-1-function-documentation">2.7.1 Function Documentation</h4>
+
+<h5 id="2-7-1-1-void-build-flash-x-int-_mipt_-big-int-gen">2.7.1.1 void build (flash x, int(*)(_MIPT_ big, int) gen)</h5>
+
+<p>Uses supplied generator of regular continued fraction expansion to build up a flash number x, rounded if necessary</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x The flash number created<br>
+←gen The generator function</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="kt">int</span> <span class="nf">phi</span><span class="p">(</span><span class="n">flash</span> <span class="n">w</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>  
+    <span class="p">{</span>  
+        <span class="c1">// rcf generator for golden ratio //  </span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>  
+    <span class="p">}</span>  
+    <span class="p">...</span>  
+    <span class="n">build</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">phi</span><span class="p">);</span>  
+    <span class="p">...</span>  
+    <span class="c1">// This will calculate the golden ratio (1 + sqrt(5)) / 2 in x -- very quickly!</span>
+</code></pre></div>
+<h5 id="2-7-1-2-void-dconv-double-d-flash-w">2.7.1.2 void dconv (double d, flash w)</h5>
+
+<p>Converts a double to flash format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←d<br>
+→w The flash equivalent of d</p>
+
+<h5 id="2-7-1-3-void-denom-flash-x-big-y">2.7.1.3 void denom (flash x, big y)</h5>
+
+<p>Extracts the denominator of a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y The denominator of x</p>
+
+<h5 id="2-7-1-4-void-facos-flash-x-flash-y">2.7.1.4 void facos (flash x, flash y)</h5>
+
+<p>Calculates arc-cosine of a flash number, using fasin()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = arccos(x)</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>|x| must be less than or equal to 1</p>
+
+<h5 id="2-7-1-5-void-facosh-flash-x-flash-y">2.7.1.5 void facosh (flash x, flash y)</h5>
+
+<p>Calculates hyperbolic arc-cosine of a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = arccosh(x)</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>|x| must be greater than or equal to 1</p>
+
+<h5 id="2-7-1-6-void-fadd-flash-x-flash-y-flash-z">2.7.1.6 void fadd (flash x, flash y, flash z)</h5>
+
+<p>Adds two flash numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = x + y</p>
+
+<h5 id="2-7-1-7-void-fasin-flash-x-flash-y">2.7.1.7 void fasin (flash x, flash y)</h5>
+
+<p>Calculates arc-sin of a flash number, using fatan()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = arcsin(x)</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>|x| must be less than or equal to 1</p>
+
+<h5 id="2-7-1-8-void-fasinh-flash-x-flash-y">2.7.1.8 void fasinh (flash x, flash y)</h5>
+
+<p>Calculates hyperbolic arc-sin of a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = arcsinh(x)</p>
+
+<h5 id="2-7-1-9-void-fatan-flash-x-flash-y">2.7.1.9 void fatan (flash x, flash y)</h5>
+
+<p>Calculates the arc-tangent of a flash number, using an O(n2.5) method based on Newton&#39;s iteration</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = arctan(x)</p>
+
+<h5 id="2-7-1-10-void-fatanh-flash-x-flash-y">2.7.1.10 void fatanh (flash x, flash y)</h5>
+
+<p>Calculates the hyperbolic arc-tangent of a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = arctanh(x)</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>x2 must be less than 1</p>
+
+<h5 id="2-7-1-11-int-fcomp-flash-x-flash-y">2.7.1.11 int fcomp (flash x, flash y)</h5>
+
+<p>Compares two flash numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>-1 if y &gt; x, +1 if x &gt; y and 0 if x = y</p>
+
+<h5 id="2-7-1-12-void-fconv-int-n-int-d-flash-x">2.7.1.12 void fconv (int n, int d, flash x)</h5>
+
+<p>Converts a simple fraction to flash format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+←d<br>
+→x = n/d</p>
+
+<h5 id="2-7-1-13-void-fcos-flash-x-flash-y">2.7.1.13 void fcos (flash x, flash y)</h5>
+
+<p>Calculates cosine of a given flash angle, using ftan()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = cos(x)</p>
+
+<h5 id="2-7-1-14-void-fcosh-flash-x-flash-y">2.7.1.14 void fcosh (flash x, flash y)</h5>
+
+<p>Calculates hyperbolic cosine of a given flash angle</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = cosh(x)</p>
+
+<h5 id="2-7-1-15-void-fdiv-flash-x-flash-y-flash-z">2.7.1.15 void fdiv (flash x, flash y, flash z)</h5>
+
+<p>Divides two flash numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = x/y</p>
+
+<h5 id="2-7-1-16-double-fdsize-flash-w">2.7.1.16 double fdsize (flash w)</h5>
+
+<p>Converts a flash number to double format</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←w</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>The value of the parameter x as a double</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The value of x must be representable as a double</p>
+
+<h5 id="2-7-1-17-void-fexp-flash-x-flash-y">2.7.1.17 void fexp (flash x, flash y)</h5>
+
+<p>Calculates the exponential of a flash number using O(n2.5) method</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = ex</p>
+
+<h5 id="2-7-1-18-void-fincr-flash-x-int-n-int-d-flash-y">2.7.1.18 void fincr (flash x, int n, int d, flash y)</h5>
+
+<p>Add a simple fraction to a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+←d<br>
+→y = x + n/d</p>
+
+<p><strong>Example</strong>:</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="c1">// This subtracts two-thirds from the value of x</span>
+    <span class="n">fincr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+</code></pre></div>
+<h5 id="2-7-1-19-void-flog-flash-x-flash-y">2.7.1.19 void flog (flash x, flash y)</h5>
+
+<p>Calculates the natural log of a flash number using O(n2.5) method</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = log(x)</p>
+
+<h5 id="2-7-1-20-void-flop-flash-x-flash-y-int-op-flash-z">2.7.1.20 void flop (flash x, flash y, int * op, flash z)</h5>
+
+<p>Performs primitive flash operation. Used internally. See source listing comments for more details</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+←op<br>
+→z = Fn(x,y), where the function performed depends on the parameter op</p>
+
+<h5 id="2-7-1-21-void-fmodulo-flash-x-flash-y-flash-z">2.7.1.21 void fmodulo (flash x, flash y, flash z)</h5>
+
+<p>Finds the remainder when one flash number is divided by another</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = x (mod y)</p>
+
+<h5 id="2-7-1-22-void-fmul-flash-x-flash-y-flash-z">2.7.1.22 void fmul (flash x, flash y, flash z)</h5>
+
+<p>Multiplies two flash numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = xy</p>
+
+<h5 id="2-7-1-23-void-fpack-big-n-big-d-flash-x">2.7.1.23 void fpack (big n, big d, flash x)</h5>
+
+<p>Forms a flash number from big numerator and denominator</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←n<br>
+←d<br>
+→x = n/d</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The denominator must be non-zero. Flash variable x and big variable d must be distinct. The resulting flash variable must not be too big for the representation</p>
+
+<h5 id="2-7-1-24-void-fpi-flash-pi">2.7.1.24 void fpi (flash pi)</h5>
+
+<p>Calculates <strong>π</strong> using Gauss-Legendre O(n2 log n) method. Note that on subsequent calls to this routine, <strong>π</strong> is immediately available, as it is stored internally. (This routine is disappointingly slow. There appears to be no simple way to calculate a rational approximation to <strong>π</strong> quickly)  </p>
+
+<p><strong>Parameters:</strong></p>
+
+<p>→pi =<strong>π</strong></p>
+
+<p><strong>Note</strong>:</p>
+
+<p>Internally allocated memory is freed when the current MIRACL instance is ended by a call to mirexit()</p>
+
+<h5 id="2-7-1-25-void-fpmul-flash-x-int-n-int-d-flash-y">2.7.1.25 void fpmul (flash x, int n, int d, flash y)</h5>
+
+<p>Multiplies a flash number by a simple fraction</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+←d<br>
+→y = xn/d</p>
+
+<h5 id="2-7-1-26-void-fpower-flash-x-int-n-flash-w">2.7.1.26 void fpower (flash x, int n, flash w)</h5>
+
+<p>Raises a flash number to an integer power</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+→w = xn</p>
+
+<h5 id="2-7-1-27-void-fpowf-flash-x-flash-y-flash-z">2.7.1.27 void fpowf (flash x, flash y, flash z)</h5>
+
+<p>Raises a flash number to a flash power</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = xy</p>
+
+<h5 id="2-7-1-28-void-frand-flash-x">2.7.1.28 void frand (flash x)</h5>
+
+<p>Generates a random flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>→x A flash random number in the range 0 &lt; x &lt; 1</p>
+
+<h5 id="2-7-1-29-void-frecip-flash-x-flash-y">2.7.1.29 void frecip (flash x, flash y)</h5>
+
+<p>Calculates reciprocal of a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = 1/x</p>
+
+<h5 id="2-7-1-30-bool-froot-flash-x-int-n-flash-w">2.7.1.30 BOOL froot (flash x, int n, flash w)</h5>
+
+<p>Calculates n-th root of a flash number using Newton&#39;s O(n2) method</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←n<br>
+→w = nx</p>
+
+<p><strong>Returns</strong>:</p>
+
+<p>TRUE for exact root, otherwise FALSE</p>
+
+<h5 id="2-7-1-31-void-fsin-flash-x-flash-y">2.7.1.31 void fsin (flash x, flash y)</h5>
+
+<p>Calculates sine of a given flash angle. Uses ftan()</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = sin(x)</p>
+
+<h5 id="2-7-1-32-void-fsinh-flash-x-flash-y">2.7.1.32 void fsinh (flash x, flash y)</h5>
+
+<p>Calculates hyperbolic sine of a given flash angle</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = sinh(x)</p>
+
+<h5 id="2-7-1-33-void-fsub-flash-x-flash-y-flash-z">2.7.1.33 void fsub (flash x, flash y, flash z)</h5>
+
+<p>Subtracts two flash numbers</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+←y<br>
+→z = x − y</p>
+
+<h5 id="2-7-1-34-void-ftan-flash-x-flash-y">2.7.1.34 void ftan (flash x, flash y)</h5>
+
+<p>Calculates the tan of a given flash angle, using an O(n2.5) method</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = tan(x)</p>
+
+<h5 id="2-7-1-35-void-ftanh-flash-x-flash-y">2.7.1.35 void ftanh (flash x, flash y)</h5>
+
+<p>Calculates the hyperbolic tan of a given flash angle</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = tanh(x)</p>
+
+<h5 id="2-7-1-36-void-ftrunc-flash-x-big-y-flash-z">2.7.1.36 void ftrunc (flash x, big y, flash z)</h5>
+
+<p>Separates a flash number to a big number and a flash remainder</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y = int(x)<br>
+→z The fractional remainder. If y is the same as z, only int(x) is returned</p>
+
+<h5 id="2-7-1-37-void-mround-big-num-big-den-flash-z">2.7.1.37 void mround (big num, big den, flash z)</h5>
+
+<p>Forms a rounded flash number from big numerator and denominator. If rounding takes place the instance variable EXACT is set to FALSE. EXACT Is initialised to TRUE in routine mirsys(). This routine is used internally</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←num<br>
+←den<br>
+→z = R(num/dem)--- the flash number num/dem is rounded if necessary to fit the representation</p>
+
+<p><strong>Precondition</strong>:</p>
+
+<p>The denominator must be non-zero</p>
+
+<h5 id="2-7-1-38-void-numer-flash-x-big-y">2.7.1.38 void numer (flash x, big y)</h5>
+
+<p>Extracts the numerator of a flash number</p>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>←x<br>
+→y the numerator of x</p>
+
+<h2 id="3-miracl-data-structure-documentation">3 MIRACL Data Structure Documentation</h2>
+
+<h3 id="3-1-miracl-structure-reference">3.1 MIRACL Structure Reference</h3>
+
+<p><strong>MIRACL Instance Pointer.</strong></p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="cp">#include &lt;miracl.h&gt;</span>
+</code></pre></div>
+<p><strong>Data Fields</strong></p>
+
+<ul>
+<li>  BOOL ERCON</li>
+<li>  int ERNUM</li>
+<li>  BOOL EXACT</li>
+<li>  int INPLEN</li>
+<li>  int IOBASE</li>
+<li>  int IOBSIZ</li>
+<li>  char * IOBUFF</li>
+<li>  int NTRY</li>
+<li>  int * PRIMES</li>
+<li>  BOOL RPOINT</li>
+<li>  BOOL TRACER</li>
+</ul>
+
+<h4 id="3-1-1-detailed-description">3.1.1 Detailed Description</h4>
+
+<p>MIRACL Instance Pointer.</p>
+
+<h4 id="3-1-2-field-documentation">3.1.2 Field Documentation</h4>
+
+<h5 id="3-1-2-1-bool-ercon">3.1.2.1 BOOL ERCON</h5>
+
+<p>Errors by default generate an error message and immediately abort the program. Alternatively by setting mip-&gt;ERCON=TRUE error control is left to the user</p>
+
+<h5 id="3-1-2-2-int-ernum">3.1.2.2 int ERNUM</h5>
+
+<p>Number of the last error that occurred</p>
+
+<h5 id="3-1-2-3-bool-exact">3.1.2.3 BOOL EXACT</h5>
+
+<p>Initialised to TRUE. Set to FALSE if any rounding takes place during flash arithmetic</p>
+
+<h5 id="3-1-2-4-int-inplen">3.1.2.4 int INPLEN</h5>
+
+<p>Length of input string. Must be used when inputting binary data</p>
+
+<h5 id="3-1-2-5-int-iobase">3.1.2.5 int IOBASE</h5>
+
+<p>The &#39;printable&#39; number base to be used for input and output. May be changed at will within a program.  Must be greater than or equal to 2 and less than or equal to 256</p>
+
+<h5 id="3-1-2-6-int-iobsiz">3.1.2.6 int IOBSIZ</h5>
+
+<p>Size of I/O buffer</p>
+
+<h5 id="3-1-2-7-char-iobuff">3.1.2.7 char* IOBUFF</h5>
+
+<p>Input/Output buffer</p>
+
+<h5 id="3-1-2-8-int-ntry">3.1.2.8 int NTRY</h5>
+
+<p>Number of iterations used in probabilistic primality test by isprime(). Initialised to 6</p>
+
+<h5 id="3-1-2-9-int-primes">3.1.2.9 int* PRIMES</h5>
+
+<p>Pointer to a table of small prime numbers</p>
+
+<h5 id="3-1-2-10-bool-rpoint">3.1.2.10 BOOL RPOINT</h5>
+
+<p>If set to ON numbers are output with a radix point. Otherwise they are output as fractions (the default)</p>
+
+<h5 id="3-1-2-11-bool-tracer">3.1.2.11 BOOL TRACER</h5>
+
+<p>If set to ON causes debug information to be printed out, tracing the progress of all subsequent calls to MIRACL routines. Initialised to OFF</p>
+
+
+        <div class="tags">
+            
+        </div>
+
+        
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+
+      </div>
+
+      <!-- Content Row -->
+
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="aside" id="asideAffix">
+    <div class="title">Resources</div>
+
+            <script>
+
+                $(document).ready(function() {
+                            // Initialize navgoco with default options
+                            $("#mysidebar").navgoco({
+                                caretHtml: '',
+                                accordion: true,
+                                openClass: 'active', // open
+                                save: false, // leave false or nav highlighting doesn't work right
+                                cookie: {
+                                    name: 'navgoco',
+                                    expires: false,
+                                    path: '/'
+                            },
+                            slide: {
+                                duration: 400,
+                                easing: 'swing'
+                                    }
+                                    });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+                });
+
+            </script>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul id="mysidebar" class="nav">
+
+                <span class="siteTagline">PRODUCTS</span>
+
+                
+                
+                
+            
+                
+                <li><a href="#">M-PIN CORE</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-core.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-core-3.3-release-notes.html">Release Notes 3.3</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-access.html">M-PIN Core Access</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-browser-end-user-guide.html">M-Pin Core Brower User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-mobile-end-user-guide.html">M-Pin Core Mobile End User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-understanding-billing-options.html">M-Pin Core Billing</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">M-PIN SSO</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-sso.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html">M-Pin SSO AWS 3.3 release Notes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-configuration-guide.html">Configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html">M-PIN SSO FOR AWS - Getting Started</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Single-sourcing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_conditional_logic.html">Conditional logic</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_content_reuse.html">Content reuse</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Handling reviews</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_commenting_on_files.html">Commenting on files</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Publishing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_build_arguments.html">Build arguments</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_themes.html">Themes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_link_validation.html">Link validation</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_generating_pdfs.html">Generating PDFs</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_excluding_files.html">Excluding files</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_help_api.html">Help APIs and UI tooltips</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_search_configuration.html">Search configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_iterm_profiles.html">iTerm profiles</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_push_build_to_server.html">Pushing builds to server</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Special layouts</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_kb_layout.html">Knowledge-base layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_scroll.html">Scroll layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_shuffle.html">Shuffle layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_faq.html">FAQ layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_glossary.html">Glossary layout</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Tag archives</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="tag_archives_overview.html">Tag archives overview</a></li>
+                        
+
+                        
+                        
+                        <li class="thirdlevel"><a href="#">Tag archive pages</a>
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="tag-getting-started.html">Getting started pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-formatting.html">Formatting pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-navigation.html">Navigation pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-content-types.html">Content types pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-publishing.html">Publishing pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-special-layouts.html">Special layout pages</a></li>
+                                
+
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        
+
+                
+                
+    </ul>
+            
+            
+            
+
+
+    <div class="btn-row">
+      <div class="btn-row">
+        <a href="#" class="default-btn">
+          <span class="txt">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      
+    </div>
+  </div>
+
+</div>
+
+1
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66296557-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<div class="section dark footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Products</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">M-pin Core</a></li>
+					<li><a href="#">M-pin SSO</a></li>
+					<li><a href="#">Datacentre Cryptosystem</a></li>
+					<li><a href="#">Cloud Security</a></li>
+					<li><a href="#">Mobile</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Community</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">How to contribute</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Resources</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get started</a></li>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#"> GitHub</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Contact us</h4>
+				<ul class="list-unstyled">
+					<li>81 Rivington Street<br>United Kingdom, <br>EC2A 3AY</li>
+					<li><a href="mailto:sales@miracl.com?Subject=Want%20to%20say%20hello!" target="_top">sales@miracl.com</a></li>
+					<li><a href="tel:+4402033898190">+44 (0)20 3389 8190</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-center">
+			<ul class="list-inline small-footer">
+				<li>MIRACL UK Ltd., All Rights Reserved.</li>
+				<li><a href="https://www.certivox.com/about-certivox/terms-and-conditions">Terms and Conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</html>
+

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Docs MIRACL Users Manual Example Programs  | MIRACL</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body class="detail-page">
+
+   <header>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/company-logo.svg">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+
+    <a href="#" class="default-btn outline pull-right">
+      <span class="txt">open  miracl</span>
+    </a>
+
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <!-- <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Services
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Dedicated Distributed Trust Aughthority</a></li>
+          <li><a href="#">Cryptographic Engineering</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Products
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Miracl Datacenter Cryptosystem</a></li>
+          <li><a href="#">Miracl Crypto Libraries</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li> -->
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Resources</a></li>
+      <!-- <li><a href="#">Crypto Labs</a></li> -->
+      <li><a href="#">Success Stories</a></li>
+      <!-- <li><a href="#">Community</a></li> -->
+      <!-- <li><a href="#">Contact us</a></li> -->
+    </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+
+</header>
+
+    <div class="header-intro small text-center">
+  <div class="dim"></div>
+  <h1 class="title">Docs MIRACL Users Manual Example Programs</h1>
+  <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
+</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-8 col-md-9 desc-wrapper">
+
+      <div class="content">
+           
+
+            
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+            
+            <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/docs-miracl-miracl-users-manual-example-programs.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+            
+
+               <p>Note: The programs described here are of an experimental nature, and in many cases are not completely &#39;finished off&#39;. For further information read the comments associated with the appropriate source file.</p>
+
+<h2 id="8-1-simple-programs">8.1  Simple Programs</h2>
+
+<h3 id="8-1-1-hail-c">8.1.1  hail.c</h3>
+
+<p>This program allows you to investigate so-called hailstone numbers, as described by Gruenberger [Gruen]. The procedure is simple. Starting with any number apply the following rules:</p>
+
+<p>(a)   If it is odd, multiply it by 3 and add 1.</p>
+
+<p>(b)   If it is even, divide it by 2.</p>
+
+<p>(c)   Repeat the process, until the number becomes equal to 1, in which case stop.</p>
+
+<p>It would appear that for any initial number this process always eventually terminates, although it has not been proved that this must happen, or that the process cannot get stuck in an infinite loop. What goes up, it seems, must come down. Try the program for an initial value of 27. Then try it using much bigger numbers, like 10709980568908647 (which has interesting behaviour).</p>
+
+<h3 id="8-1-2-palin-c">8.1.2  palin.c</h3>
+
+<p>This programs allows one to investigate palindromic reversals [Gruen]. A palindromic number is one which reads the same in both directions. Start with any number and apply the following rules.</p>
+
+<p>(a)   Add the number to the number obtained by reversing the order of the digits. Make this the new number.</p>
+
+<p>(b)   Stop the process when the new number is palindromic.</p>
+
+<p>It appears that for most initial numbers this process quickly terminates. Try it for 89. Then try it for 196.  </p>
+
+<h3 id="8-1-3-mersenne-c">8.1.3  mersenne.c</h3>
+
+<p>This program attempts to generate all prime numbers of the form 2<sup>n</sup>-1. The largest known primes have always been of this form because of the efficiency of this Lucas-Lehmer test. The routine <strong>fft_mult</strong> is used, as it is faster for very large numbers.</p>
+
+<h2 id="8-2-factoring-programs">8.2  Factoring Programs</h2>
+
+<p>Six different Integer Factorisation programs are included, covering all modern approaches to this classical problem. For more background and information on the algorithms used, see [Scott89c].</p>
+
+<h3 id="8-2-1-brute-c">8.2.1  brute.c</h3>
+
+<p>This program attempts to factorise a number by brute force division, using a table of small prime numbers. When attempting a difficult factorisation it makes sense to try this approach first. Factorise 12345678901234567890 using this program. Then try it on bigger random numbers.</p>
+
+<h3 id="8-2-2-brent-c">8.2.2  brent.c</h3>
+
+<p>This program attempts to factorise a number using the Brent-Pollard method. This method is faster at finding larger factors than the simple-minded brute force approach. However it will not always succeed, even for simple factorisations. Use it to factorise R17, that is 11111111111111111 (seventeen ones). Then try it on larger numbers that would not yield to the brute force approach.</p>
+
+<h3 id="8-2-3-pollard-c">8.2.3  pollard.c</h3>
+
+<p>Another factoring program, which implements Pollard&#39;s <em>(p-1)</em> method, specialises in quickly finding a factor <em>p</em> of a number <em>N</em> for which <em>(p-1)</em> has itself only small factors. Phase 1 of this method will work if all these small factors are less than LIMIT1. If Phase 1 fails then Phase 2 searches for just one final larger factor less than</p>
+
+<p>LIMIT2. The constants LIMIT1 and LIMIT2 are set inside the program.</p>
+
+<h3 id="8-2-4-williams-c">8.2.4  williams.c</h3>
+
+<p>This program is similar to Pollards method, but can find a factor <em>p</em> of <em>N</em> for which <em>(p+1)</em> has only small factors. Again two phases are used. In fact this method is sometimes a <em>(p+1)</em> method, and sometimes a <em>(p-1)</em> method, so several attempts are made to hit on the <em>(p+1)</em> condition. The algorithm is rather more complex than that used in Pollards method, and is somewhat slower.</p>
+
+<h3 id="8-2-5-lenstra-c">8.2.5  lenstra.c</h3>
+
+<p>Lenstra [Monty87] has discovered a new method of factorisation, generically similar to the Pollard and Williams methods, but potentially much more powerful. It works by randomly generating an Elliptic Curve, which can then be used to find a factor <em>p</em> of <em>N</em>, for which <em>p+1-d</em> has only small factors, where d depends on the particular curve chosen. If one curve fails then another can be tried, an option not possible with the Pollard/Williams methods. Again this is a two phase method, and although it has very good asymptotic behaviour, it is much slower than the Pollard/Williams methods for each iteration.</p>
+
+<h3 id="8-2-6-qsieve-c">8.2.6  qsieve.c</h3>
+
+<p>This is a sophisticated Pomerance-Silverman-Montgomery [Pomerance], [Silverman] factoring program. which factors F7 = 2<sup>128</sup>+1</p>
+
+<p>340282366920938463463374607431768211457</p>
+
+<p>in less than 30 seconds, running on a 60MHz Pentium-based computer. When this number was first factored, it took 90 minutes on an IBM 360 mainframe (Morrison &amp; Brillhart [Morrison]), albeit using a somewhat inferior algorithm.</p>
+
+<p>Its speciality is factoring all numbers (up to about sixty digits long), irrespective of the size of the factors. If the number to be factored is <em>N</em>, then the program actually works with a number <em>k.N</em>, where <em>k</em> is a small Knuth-Schroepel multiplier. The program itself works out the best value of <em>k</em> to use. Internally, the program uses a &#39;factor base&#39; of small primes. The larger the number, the bigger will be this factor base. The program works by accumulating information from a number of simpler factorisations. As it progresses with these it prints out <em>working...n</em>. When it thinks it has enough information it prints out <em>trying</em>, but these tries may be premature and may not succeed. The program will always terminate before the number <em>n</em> in <em>working...n</em> reaches the size of the factor base.</p>
+
+<p>This program uses much more memory than any of the other example programs, particularly when factoring bigger numbers. The amount of memory that the program can take is limited by the values defined for MEM, MLF and SSIZE at the beginning of the program. These limit the number of primes in the factor base, the number of &#39;larger&#39; primes used by the so-called large-prime variation of the algorithm, and the sieve size respectively. They should be increased if possible, or reduced if your computer has insufficient memory. See [Silverman] for more details.</p>
+
+<p>Use <strong>qsieve</strong> to factor 10000000000000000000000000000000009 (thirty-five digits).  </p>
+
+<h3 id="8-2-7-factor-c">8.2.7  factor.c</h3>
+
+<p>This program combines the above algorithms into a single general purpose program for factoring integers. Each method is used in turn in the attempt to extract factors. The number to be factored is given in the command line, as in <strong>factor 11111111111</strong>. The number can alternatively be specified as a formula, using the switch &#39;-f&#39;, as in  <strong>factor -f (10#11-1)/9</strong>. The symbol # here means &#39;to the power of&#39; (# is used instead of ^ as the latter symbol has a special meaning for DOS on an IBM PC). Type <strong>factor</strong> on its own for a full description of this and other switches that can be used to control the input/output of this program.</p>
+
+<h2 id="8-3-discrete-logarithm-programs">8.3  Discrete Logarithm Programs</h2>
+
+<p>Two programs implement Pollards algorithms [Pollard78] for extracting discrete logarithms. The discrete logarithm problem is to find <em>x</em> given <em>y</em>, <em>r</em> and <em>n</em> in</p>
+
+<p>The above is a good example of a one-way function. It is easy to calculate <em>y</em> given <em>x</em>, but apparently extremely difficult to find <em>x</em> given <em>y</em>. Pollard&#39;s algorithms however perform quite well under certain circumstances, if <em>x</em> is known to be small or if <em>n</em> is a prime <em>p</em> for which <em>p-1</em> has only small factors.</p>
+
+<h3 id="8-3-1-kangaroo-c">8.3.1  kangaroo.c</h3>
+
+<p>This program finds <em>x</em> in the above, assuming that <em>x</em> is quite small. The value of <em>r</em> is fixed (at 16), and the modulus <em>n</em> is also fixed inside the program. Initially a &#39;trap&#39; is set. Subsequently the discrete logarithm can be found (almost certainly) for any number, assuming its discrete logarithm is less than a certain upper limit. The number of steps required will be approximately the square root of this limit.</p>
+
+<h3 id="8-3-2-genprime-c">8.3.2  genprime.c</h3>
+
+<p>A prime number <em>p</em> with known factorisation of <em>p-1</em> is generated by this program, for use by the <em>index.c</em> and <em>identity.c</em> programs described below. The factors of <em>p-1</em> are output to a file <em>prime.dat</em>.  </p>
+
+<h3 id="8-3-3-index-c">8.3.3  index.c</h3>
+
+<p>This program implements Pollard&#39;s rho algorithm for extracting discrete logarithms, when the modulus <em>n</em> in the above equation is a prime <em>p</em>, and when <em>p-1</em> has only relatively small factors. The number of steps required is a function of the square root of the largest of these factors.</p>
+
+<h2 id="8-4-public-key-cryptography">8.4  Public-Key Cryptography</h2>
+
+<p>Public Key Cryptography is a two key cryptographic system with the very desirable feature that the encoding key can be made publicly available, without weakening the strength of the cipher. The first example program demonstrates many popular public-key techniques. Then two functional Public-Key cryptography systems, whose strength appears to depend on the difficulty of factorisation, are presented. The first is the classic RSA system (Rivest, Shamir &amp; Adleman [RSA]). This is fast to encode a message, but painfully slow at decoding. A much faster technique has been invented by Blum and Goldwasser. This probabilistic Public Key system is also stronger than RSA in some senses. For more details see [Brassard], who describes it as &#39;the best that academia has had to offer thus far&#39;. For both methods the keys are constructed from &#39;strong&#39; primes to enhance security. Closely associated with PK Cryptography, is the concept of the Digital Signature.  A group of example programs implement the Digital Signature Standard, using classic finite fields and elliptic curves over both the fields GF(<em>p</em>) and GF(2_<sup>m</sup>_).</p>
+
+<h3 id="8-4-1-pk-demo-c">8.4.1  pk-demo.c</h3>
+
+<p>This program carries out a 1024-bit Diffie-Hellman key exchange, and then another Diffie-Hellman type key exchange, but this time based on a 160-bit prime and an elliptic curve. Next a test string is encrypted and decrypted using the El Gamal method. The program finishes with a 1024 bit RSA encryption/decryption of the same string. For a good description of all these techniques see [Stinson]. Anyone attempting to implement a PK system using MIRACL is strongly encouraged to examine this file, and its C++ counter-part <strong>pk-demo.cpp</strong></p>
+
+<h3 id="8-4-2-bmark-c-imratio-c">8.4.2  bmark.c/imratio.c</h3>
+
+<p>The benchmarking program <em>bmark.c</em> allows the user to quickly determine the time that will be required to implement any of the popular public key methods. It can be compiled and linked with any of the variants of the MIRACL library, as specified in <em>mirdef.h</em>, to determine which gives the best performance on a particular platform for a particular PK method. The program <em>imratio.c</em> when compiled and run calculates the significant ratios S/M, I/M and J/M, where S is the time for a modular squaring, M the time for a modular multiplication, I the time for a modular inversion, and J the time for a Jacobi symbol calculation.</p>
+
+<h3 id="8-4-3-genkey-c">8.4.3  genkey.c</h3>
+
+<p>This program generates the &#39;public&#39; encoding key and &#39;private&#39; decoding keys that are necessary for both the originalRivest-Shamir-Adleman PKsystem and the superior Blum-Goldwasser method [Brassard]. These keys can take a long time to generate, as they are formed from very large prime numbers, which must be generated carefully for maximum security.</p>
+
+<p>The size of each prime in bits is set inside the program by a #define. The security of the system depends on the difficulty of factoring the encoding &#39;public&#39; key, which is formed from two such large primes. The largest numbers which can be routinely factored using hundreds of powerful computers are 430 bits long (1996). So a minimum size of 512 bits for each prime gives plenty of security (for now!)</p>
+
+<p>After this program has run, the two keys are created in files PUBLIC.KEY and PRIVATE.KEY.</p>
+
+<h3 id="8-4-4-encode-c">8.4.4  encode.c</h3>
+
+<p>Messages or files may be encoded with this program, which uses the &#39;public&#39; encoding key from the file PUBLIC.KEY, generated by the program <em>genkey</em>, which must have been run prior to using this program. When run, the user is prompted for a file to encipher. Either supply the name of a text file, or press return to enter a message directly from the keyboard. In the former case the encoded output is sent to a file with the same name, but with the extension .RSA. In the latter case a prompt is issued for an output filename, which must be given. Text entered from the keyboard must be terminated by a CONTROL-Z (end-of-file character). Type out the encoded file and be impressed by how indecipherable it looks.</p>
+
+<h3 id="8-4-5-decode-c">8.4.5  decode.c</h3>
+
+<p>Messages or files encoded using the RSA system may be decoded using this program, which uses the &#39;private&#39; decoding key from the file PRIVATE.KEY generated by the program <em>genkey</em> which must have been run at some stage prior to using this program.</p>
+
+<p>When run, the user is prompted for the name of the file to be decoded. Type in the filename (without an extension - the program will assume the extension .RSA) and press return. Then the user is asked for an output filename. Either supply a filename or press return, in which case the decoded output will be sent straight to the screen. A problem with the RSA system becomes immediately apparent - decoding takes quite a relatively long time! This is particularly true for larger key sizes and long messages.  </p>
+
+<h3 id="8-4-6-enciph-c">8.4.6  enciph.c</h3>
+
+<p>This program works in an identical fashion to the program &#39;encode&#39;, except that it prompts for a random seed before encrypting the data. This random seed is then used internally to generate a larger random number. The encryption process depends on this random number, which means that the same data will not necessarily produce the same cipher-text, which is one of the strengths of this approach. As well as creating a file with a .BLG extension containing the encrypted data, a second small file (with the .KEY extension) is also produced.</p>
+
+<h3 id="8-4-7-deciph-c">8.4.7  deciph.c</h3>
+
+<p>This program works in an identical fashion to the program &#39;decode&#39;. However it has the advantage that it runs much more quickly. There will be a significant initial delay while a rather complex calculation is carried out. This uses the private key and the data in the .KEY file to recover the large random number used in the encryption process. Thereafter deciphering is as fast as encipherment.</p>
+
+<h3 id="8-4-8-dssetup-c">8.4.8  dssetup.c</h3>
+
+<p>A standard method for digital signature has been proposed by the American National Institute of Standards and Technology (NIST), and fully described in the Digital Signature Standard [DSS]. This program generates a prime <em>q</em>, another much larger prime <em>p=2nq+_1, (where _n</em> is random) and a generator <em>g</em>. This information is made common to all. This program generates the common information {<em>p,q,g</em>} into a file <em>common.dss</em></p>
+
+<h3 id="8-4-9-limlee-c">8.4.9  limlee.c</h3>
+
+<p>It has been shown by Lim &amp; Lee [LimLee] that for certain Discrete Logarithm based protocols (but not for the Digital Signature Standard) there is a weakness associated with primes of the kind generated by the <em>dssetup.c</em> program described above. To avoid these problems they recommend that <em>p</em> is of the form <em>p=2.p<sub>1</sub>.p<sub>2</sub>.p<sub>3</sub>…q +</em> 1, where the <em>p<sub>i</sub></em> are primes greater than <em>q</em>. This program generates the values (<em>p,q,g</em>) into a file <em>common.dss</em>, and can be used in place of <em>dssetup.c</em>. It is a little slower.</p>
+
+<h3 id="8-4-10-dssgen-c">8.4.10  dssgen.c</h3>
+
+<p>Each individual user who wishes to digitally sign a computer file randomly generates their own private key <em>x&lt;q</em> and makes available a public key <em>y=g<sup>x</sup> mod p.</em> The security of the system depends on the sizes of <em>p</em> and <em>q</em> (at least 512 bits and 160 bits respectively). This program generates a single public/private key pair in the files <em>public.dss</em> and <em>private.dss</em> respectively.  </p>
+
+<h3 id="8-4-11-dssign-c">8.4.11  dssign.c</h3>
+
+<p>This program uses the private key from <em>private.dss</em> to &#39;sign&#39; a document stored in a file. First the file data is &#39;hashed&#39; down to a 160 bit number using SHA, the Standard Hash Algorithm. This is also specified by the NIST and is implemented in the provided module <em>mrshs.c</em>. The 160-bit hash is duly &#39;signed&#39; as described in [DSS], and the signature, in the form of two 160-bit numbers, written out to a file. This file has the same name as the document file, but with the extension <em>.dss</em>.</p>
+
+<h3 id="8-4-12-dssver-c">8.4.12  dssver.c</h3>
+
+<p>This program uses the public key from <em>public.dss</em> to verify the signature associated with a file, as described in [DSS].</p>
+
+<h3 id="8-4-13-ecsgen-c-ecsign-c-ecsver-c">8.4.13  ecsgen.c, ecsign.c, ecsver.c</h3>
+
+<p>The Digital Signature technique can also be implemented using Elliptic Curves over the field GF(<em>p</em>)[Jurisic]. Common domain information in the order {<em>p</em>,<em>A,B,q,X,Y</em>}is extracted from the file <em>common.ecs</em> created using one of the point-counting algorithms described below. These values specify an initial point (<em>X,Y</em>) on an elliptic curve <em>y<sup>2</sup>=x<sup>3</sup>+Ax+B</em> mod <em>p</em> which has <em>q</em> points on it. The advantages are a much smaller public key for the same level of security. Smaller numbers can be used as the discrete logarithm problem is apparently much more difficult in the context of an elliptic curve. This in turn implies that elliptic curve arithmetic is also potentially faster. However the use of smaller numbers is somewhat offset by the more complex calculations involved.</p>
+
+<p>This set of programs has the same functionality as those described above for the standard DSS. Note however that the file extension <em>.ecs</em> is used for all the generated files. Read the comments in the source files for more information.</p>
+
+<h3 id="8-4-14-ecsgen2-c-ecsign2-c-ecsver2-cpp">8.4.14  ecsgen2.c, ecsign2.c, ecsver2.cpp</h3>
+
+<p>These programs provide the same functionality as those provided above, but use elliptic curves defined over the field GF(2_<sup>m</sup><em>). Domain information in this case is extracted from the file _common2.ecs</em> in the order {<em>m,A,B,q,X,Y,a,b,c</em>}, where (<em>X,Y</em>) specifies an initial point on the elliptic curve <em>y<sup>2</sup>=x<sup>3</sup>+Ax<sup>2</sup>+B</em> defined over GF(2_<sup>m</sup><em>). The parameters of a trinomial or pentanomial basis are also specified, _t<sup>m</sup>+t<sup>a</sup>+1</em> or <em>t<sup>m</sup>+t<sup>a</sup>+t<sup>b</sup>+t<sup>c</sup>+1</em> respectively. In the former case <em>b</em> and <em>c</em> are zero. Finally <em>cf.q</em> specifies the number of points on the curve, the product of a large prime factor <em>q</em> and a small cofactor <em>cf.</em> The latter is normally 2 or 4. The file <em>common2.ecs</em> can be created by the <strong>schoof2</strong> program described below.  </p>
+
+<h3 id="8-4-15-cm-cpp-schoof-cpp-mueller-cpp-process-cpp-sea-cpp-schoof2-cpp">8.4.15  cm.cpp, schoof.cpp, mueller.cpp, process.cpp, sea.cpp, schoof2.cpp</h3>
+
+<p>A problem with Elliptic curve cryptography is the construction of suitable curves. This is actually much more difficult than the equivalent problem in the integer finite field as implemented by the program <em>dssetup.c/dssetup.cpp</em>. One approach is the Complex Multiplication method, as described in the Annex to the IEEE P1363 Standard Specifications for Public Key Cryptography (available from the Web). This is implemented here by the C++ program <em>cm.cpp</em> and its supporting modules <em>float.cpp</em>, <em>complex.cpp, flpoly.cpp, poly.cpp</em>, and associated header files.</p>
+
+<p>The program when run uses command line arguments. Type <strong>cm</strong> on its own to get instructions. For example</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    cm -f 2#224-2#96+1 -o common.ecs
+</code></pre></div>
+<p>generates the common information needed to implement elliptic curve cryptography into the file <em>common.ecs</em>.</p>
+
+<p>As an alternative to the CM method, a random curve can be generated, and the points on the curve directly counted. This is more time-consuming than complex multiplication, but may lead to more secure, less structured curves. The basic algorithm is due to Schoof [Sch],[Blake] and is only practical due to the use of Fast Fourier Transform methods [Shoup] for the multiplication/division of large degree polynomials. See <em>mrfast.c</em>. Its still very slow, much slower than <strong>cm</strong>. Type <strong>schoof</strong> on its own to get instructions. For example</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    schoof –f 2#192-2#64-1 –3 35317045537
+</code></pre></div>
+<p>counts the points on the curve <em>y<sup>2</sup> = x<sup>3</sup> –3x +35317045537</em> mod <em>2<sup>192</sup>-2<sup>64</sup>-1</em>.</p>
+
+<p>This curve is randomly selected (actually 35317045537 is my international phone number). The answer is the prime number</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">6277101735386680763835789423127240467907482257771524603027
+</code></pre></div>
+<p>Be prepared to wait, or….</p>
+
+<p>Use the suite of programs, <strong>mueller</strong>, <strong>process</strong>, and <strong>sea</strong>, which together implement the superior, but more complex, Schoof-Elkies-Atkin method for point counting. See [Blake] for details.</p>
+
+<p>First of all the <strong>mueller</strong> program should be run, to generate the required Modular Polynomials. This needs to be done just once – ever. The greater your collection of Modular Polynomials, the greater the size of prime modulus that can be used for the elliptic curves of interest. Note that this program is particularly hard on memory resources, as well as taking a long time to run. However after an hour at most you should have enough Modular Polynomials to start experimenting. As with all these programs, simply typing the program name without parameters generates instructions for use. Also be sure to read the comments at the start of the source file, in this case <em>mueller.cpp.</em></p>
+
+<p>Next run the <strong>process</strong> application, which processes the file of raw modular polynomials output by <strong>mueller</strong>, for use with a specified prime modulus.</p>
+
+<p>Finally run <strong>sea</strong> to count the points on the curve, and optionally to create a <em>.ecs</em> file as described above.</p>
+
+<p>For example:-</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    mueller 0 120 –o mueller.raw
+
+    process –f 65112*2#144-1 –i mueller.raw –o test160.pol
+
+    sea –3 49 –i test160.pol
+</code></pre></div>
+<p>generates all the modular polynomials for primes from 0 to 120, and outputs them to the file <em>mueller.raw</em>. Then these polynomials are processed with respect to the prime <em>p</em> = 65112.2<sup>144</sup>-1, to create the file <em>test160.pol</em>. Finally the main <strong>sea</strong> application counts the points on the curve y<sup>2</sup>=x<sup>3</sup>-3x+49 mod <em>p</em></p>
+
+<p>This may be more complicated to use, but its much faster than <strong>schoof</strong>.</p>
+
+<p>Read the comments at the start of <em>sea.cpp</em> for more information.</p>
+
+<p>For elliptic curves over GF(2_<sup>m</sup>_), the program <strong>schoof2</strong> can be used, which is quite similar to <strong>schoof</strong>. It is even slower, but just about usable on contemporary hardware. For example</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    schoof2 1 52 191 9 –o common2.ecs
+</code></pre></div>
+<p>counts the points on the curve  <em>y<sup>2</sup>+xy=x<sup>3</sup>+x<sup>2</sup>+52</em>, over the field GF(2<sup>191</sup>). A suitable irreducible basis must also be specified, in this case <em>t<sup>191</sup>+t<sup>9</sup>+1</em>. Tables of suitable bases can be found in many documents, for example in Appendix A of the IEEE P1363 standard. See [Menezes] for a description of the method.</p>
+
+<p>For more information on building these applications see the files <em>cm.txt, schoof.txt, schoof2.txt</em> and <em>sea.txt.</em></p>
+
+<h3 id="8-4-16-crsetup-cpp-crgen-cpp-crencode-cpp-crdecode-cpp">8.4.16  crsetup.cpp, crgen.cpp, crencode.cpp, crdecode.cpp</h3>
+
+<p>Public key schemes should ideally be immune from <em>adaptive chosen cipher-text</em> attacks, whereby an attacker is able to obtain decryptions of any presented cipher-texts other than the particular one they are interested in. Recently Cramer &amp; Shoup [CS] have come up with a Public Key encryption method that is provably immune to such powerful attacks. The program <strong>crsetup</strong> creates various global parameters, and <strong>crgen</strong> generates one set of public and private keys in the files <em>public.crs</em> and <em>private.crs</em> respectively. To encrypt an ASCII file called for example <em>fred.txt</em>, run the <strong>crencode</strong> program that generates a random session key, and uses it to encrypt the file. This session key is in turn encrypted by the public key and stored in the file <em>fred.key</em>. The binary encrypted file itself is stored as <em>fred.crs</em>. To decrypt the file, run the <strong>crdecode</strong> program, which uses the private key to recover the session key, and hence decode the text to the screen.</p>
+
+<p>A couple of points are worth highlighting. First of all the bulk encryption is carried out using a block cipher method. Such hybrid systems are standard practise, as block ciphers are much faster than public key methods. The block cipher scheme used is the new Advanced Encryption Standard block cipher, which is implemented in <em>mraes.c</em>.</p>
+
+<p>Examination of the source code <em>crdecode.cpp</em> reveals that decryption is a two-pass process. On the first pass the program determines the validity of the cipher-text, and only after that is known to be valid does the program go on to decrypt the file. So the decryption procedure will not respond at all to arbitrary bit strings concocted by an attacker.</p>
+
+<h3 id="8-4-17-brick-c-ebrick-c-ebrick2-c">8.4.17  brick.c, ebrick.c, ebrick2.c</h3>
+
+<p>Certain Cryptographic protocols require the exponentiation of a fixed number <em>g</em>, that is the calculation of <em>g<sup>x</sup> mod n</em>, where <em>g</em> and <em>n</em> are known in advance. In this case the calculation can be substantially speeded up by a precomputation which generates a small table of <em>big</em> numbers. The method was first described by Brickell et al [Brick]. The example program <em>brick.c</em> illustrates the method. The GF(<em>p</em>) elliptic curve equivalent is provided in <em>ebrick.c</em> and the GF(2_<sup>m</sup><em>) equivalent in _ebrick2.c</em>. In a typical application the precomputed tables might be generated using one of these programs (see commented-out code in <em>ebrick2.c</em>), which then might be transferred to ROM in an embedded program. The embedded program might use a static build of MIRACL to make use of these tables.</p>
+
+<h3 id="8-4-18-identity-c">8.4.18  identity.c</h3>
+
+<p>This is a program that allows individuals, issued with certain secret information, to establish mutual keys by performing a calculation involving only the other correspondents publicly known identity. No interchange of data is required [Maurer], and so this is called Non-Interactive Key Exchange. Note that the &#39;publicly known identity&#39; might, for example, be simply an email address. For a full description see [Scott92]. This example program generates the secret data from the proffered Identity. However before this program is run, the program <em>genprime.c</em> must be run twice, to generate a pair of suitable trap-door primes. Copy the output of the program, <em>prime.dat,</em> first to <em>trap1.dat</em> and then to <em>trap2.dat</em>. The product of these primes will be used as the composite modulus used for subsequent calculations.</p>
+
+<h3 id="8-4-19-pairing-based-cryptography">8.4.19  Pairing based Cryptography</h3>
+
+<p>A number of experimental programs are provided to implement cryptographic protocols based on <em>pairings</em>. Notably there are examples of Identity-Based Encryption (IBE) and authenticated key exchange. Read the files <em>pairings.txt</em>, <em>ake.txt</em> and <em>ibe.txt</em> for details.  </p>
+
+<h2 id="8-5-39-flash-39-programs">8.5  &#39;flash&#39; Programs</h2>
+
+<p>Several programs demonstrate the use of <em>flash</em> variables. One gives an implementation of Gaussian elimination to solve a set of linear equations, involving notoriously ill-conditioned Hilbert matrices. Others show how rational arithmetic can be used to approximate real arithmetic, in, for example the calculation of roots and p. The former program detected an error in the value for the square root of 5 given in Knuth&#39;s appendix A [Knuth81]. The correct value is</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    2.23606 79774 99789 69640 91736 68731 **2**7623 54406
+</code></pre></div>
+<p>The error is in the tenth last digit, which is a 2, and not a 1.</p>
+
+<p>The <em>roots</em> program runs particularly fast when calculating the square roots of single precision integers, as a simple form of continued fraction generator can be used. In one test the golden ratio was calculated to 100,000 decimal places in 3 hours of CPU time on a VAX11/780.</p>
+
+<p>The &#39;sample&#39; program was used to calculate p correct to 1000 decimal places, taking less than a minute on a 25MHz 80386-based IBM PC to do so.</p>
+
+<h3 id="8-5-1-roots-c">8.5.1  roots.c</h3>
+
+<p>This program calculates the square root of an input number, using Newtons method. Try using it to calculate the square root of two. The accuracy obtained depends on the size of the flash variables, specified in the initial call to <strong>mirsys</strong>. The tendency of flash arithmetic to prefer simple numbers can be illustrated by requesting, say, the square root of 7. The program calculates this value and then squares it, to give 7 again exactly. On your pocket calculator the same result will only be obtained if clever use is made of extra (hidden) guard digits.</p>
+
+<h3 id="8-5-2-hilbert-c">8.5.2  hilbert.c</h3>
+
+<p>Traditionally the inversion of &#39;Hilbert&#39; matrices is regarded as a tough test for any system of arithmetic. This programs solves the set of linear equations <em>H.x = b</em>, where <em>H</em> is a Hilbert matrix and <em>b</em> is the vector [1,1,1,1,....1], using the classical Gaussian Elimination method.</p>
+
+<h3 id="8-5-3-sample-c">8.5.3  sample.c</h3>
+
+<p>This program is the same as that used by Brent [Brent78] to demonstrate some of the capabilities of his Fortran Multiprecision arithmetic package. It calculates p, , and .</p>
+
+<h3 id="8-5-4-ratcalc-c">8.5.4  ratcalc.c</h3>
+
+<p>As a comprehensive and useful demonstration of flash arithmetic this program simulates a standard full-function scientific calculator. Its unique feature (besides its 36-digit accuracy) is its ability to work directly with fractions, and to handle mixed calculations involving both fractions and decimals. By using this program the user will quickly get a feel for flash arithmetic and its capabilities. Note that this program contains some non-portable code (screen handling routines) that must be tailored to each individual computer/terminal combination. The version supplied works only on standard PCs using DOS, or a command prompt window in Windows &#39;NT/&#39;98.</p>
+
+
+        <div class="tags">
+            
+        </div>
+
+        
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+
+      </div>
+
+      <!-- Content Row -->
+
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="aside" id="asideAffix">
+    <div class="title">Resources</div>
+
+            <script>
+
+                $(document).ready(function() {
+                            // Initialize navgoco with default options
+                            $("#mysidebar").navgoco({
+                                caretHtml: '',
+                                accordion: true,
+                                openClass: 'active', // open
+                                save: false, // leave false or nav highlighting doesn't work right
+                                cookie: {
+                                    name: 'navgoco',
+                                    expires: false,
+                                    path: '/'
+                            },
+                            slide: {
+                                duration: 400,
+                                easing: 'swing'
+                                    }
+                                    });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+                });
+
+            </script>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul id="mysidebar" class="nav">
+
+                <span class="siteTagline">PRODUCTS</span>
+
+                
+                
+                
+            
+                
+                <li><a href="#">M-PIN CORE</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-core.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-core-3.3-release-notes.html">Release Notes 3.3</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-access.html">M-PIN Core Access</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-browser-end-user-guide.html">M-Pin Core Brower User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-mobile-end-user-guide.html">M-Pin Core Mobile End User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-understanding-billing-options.html">M-Pin Core Billing</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">M-PIN SSO</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-sso.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html">M-Pin SSO AWS 3.3 release Notes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-configuration-guide.html">Configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html">M-PIN SSO FOR AWS - Getting Started</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Single-sourcing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_conditional_logic.html">Conditional logic</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_content_reuse.html">Content reuse</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Handling reviews</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_commenting_on_files.html">Commenting on files</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Publishing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_build_arguments.html">Build arguments</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_themes.html">Themes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_link_validation.html">Link validation</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_generating_pdfs.html">Generating PDFs</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_excluding_files.html">Excluding files</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_help_api.html">Help APIs and UI tooltips</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_search_configuration.html">Search configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_iterm_profiles.html">iTerm profiles</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_push_build_to_server.html">Pushing builds to server</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Special layouts</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_kb_layout.html">Knowledge-base layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_scroll.html">Scroll layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_shuffle.html">Shuffle layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_faq.html">FAQ layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_glossary.html">Glossary layout</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Tag archives</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="tag_archives_overview.html">Tag archives overview</a></li>
+                        
+
+                        
+                        
+                        <li class="thirdlevel"><a href="#">Tag archive pages</a>
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="tag-getting-started.html">Getting started pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-formatting.html">Formatting pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-navigation.html">Navigation pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-content-types.html">Content types pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-publishing.html">Publishing pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-special-layouts.html">Special layout pages</a></li>
+                                
+
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        
+
+                
+                
+    </ul>
+            
+            
+            
+
+
+    <div class="btn-row">
+      <div class="btn-row">
+        <a href="#" class="default-btn">
+          <span class="txt">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      
+    </div>
+  </div>
+
+</div>
+
+1
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66296557-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<div class="section dark footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Products</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">M-pin Core</a></li>
+					<li><a href="#">M-pin SSO</a></li>
+					<li><a href="#">Datacentre Cryptosystem</a></li>
+					<li><a href="#">Cloud Security</a></li>
+					<li><a href="#">Mobile</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Community</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">How to contribute</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Resources</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get started</a></li>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#"> GitHub</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Contact us</h4>
+				<ul class="list-unstyled">
+					<li>81 Rivington Street<br>United Kingdom, <br>EC2A 3AY</li>
+					<li><a href="mailto:sales@miracl.com?Subject=Want%20to%20say%20hello!" target="_top">sales@miracl.com</a></li>
+					<li><a href="tel:+4402033898190">+44 (0)20 3389 8190</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-center">
+			<ul class="list-inline small-footer">
+				<li>MIRACL UK Ltd., All Rights Reserved.</li>
+				<li><a href="https://www.certivox.com/about-certivox/terms-and-conditions">Terms and Conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</html>
+

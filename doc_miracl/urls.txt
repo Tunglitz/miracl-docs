@@ -30,142 +30,66 @@ tocpage:
 
 
 
-index:
-  title: "Introduction"
-  url: "index.html"
-  link: "<a href='index.html'>Introduction</a>"
+docs-m-pin-core:
+  title: "Overview"
+  url: "docs-m-pin-core.html"
+  link: "<a href='docs-m-pin-core.html'>Overview</a>"
 
 
-doc_getting_started:
-  title: "Getting started with this theme"
-  url: "doc_getting_started.html"
-  link: "<a href='doc_getting_started.html'>Getting started with this theme</a>"
+docs-m-pin-core-m-pin-core-3.3-release-notes:
+  title: "Release Notes 3.3"
+  url: "docs-m-pin-core-m-pin-core-3.3-release-notes.html"
+  link: "<a href='docs-m-pin-core-m-pin-core-3.3-release-notes.html'>Release Notes 3.3</a>"
 
 
-doc_configuration_settings:
-  title: "Setting configuration options"
-  url: "doc_configuration_settings.html"
-  link: "<a href='doc_configuration_settings.html'>Setting configuration options</a>"
+docs-m-pin-core-access:
+  title: "M-PIN Core Access"
+  url: "docs-m-pin-core-access.html"
+  link: "<a href='docs-m-pin-core-access.html'>M-PIN Core Access</a>"
 
 
-doc_customizing_the_theme:
-  title: "Customizing the theme"
-  url: "doc_customizing_the_theme.html"
-  link: "<a href='doc_customizing_the_theme.html'>Customizing the theme</a>"
+docs-m-pin-core-m-pin-in-browser-end-user-guide:
+  title: "M-Pin Core Brower User Guide"
+  url: "docs-m-pin-core-m-pin-in-browser-end-user-guide.html"
+  link: "<a href='docs-m-pin-core-m-pin-in-browser-end-user-guide.html'>M-Pin Core Brower User Guide</a>"
 
 
-doc_supported_features:
-  title: "Supported features"
-  url: "doc_supported_features.html"
-  link: "<a href='doc_supported_features.html'>Supported features</a>"
+docs-m-pin-core-m-pin-in-mobile-end-user-guide:
+  title: "M-Pin Core Mobile End User Guide"
+  url: "docs-m-pin-core-m-pin-in-mobile-end-user-guide.html"
+  link: "<a href='docs-m-pin-core-m-pin-in-mobile-end-user-guide.html'>M-Pin Core Mobile End User Guide</a>"
 
 
-
-
-doc_pages:
-  title: "Pages"
-  url: "doc_pages.html"
-  link: "<a href='doc_pages.html'>Pages</a>"
-
-
-doc_webstorm_text_editor:
-  title: "WebStorm Text Editor"
-  url: "doc_webstorm_text_editor.html"
-  link: "<a href='doc_webstorm_text_editor.html'>WebStorm Text Editor</a>"
-
-
-doc_series:
-  title: "Series"
-  url: "doc_series.html"
-  link: "<a href='doc_series.html'>Series</a>"
-
-
-doc_collections:
-  title: "Collections"
-  url: "doc_collections.html"
-  link: "<a href='doc_collections.html'>Collections</a>"
+docs-m-pin-core-m-pin-understanding-billing-options:
+  title: "M-Pin Core Billing"
+  url: "docs-m-pin-core-m-pin-understanding-billing-options.html"
+  link: "<a href='docs-m-pin-core-m-pin-understanding-billing-options.html'>M-Pin Core Billing</a>"
 
 
 
 
-doc_sidebar_navigation:
-  title: "Sidebar navigation"
-  url: "doc_sidebar_navigation.html"
-  link: "<a href='doc_sidebar_navigation.html'>Sidebar navigation</a>"
+docs-m-pin-sso:
+  title: "Overview"
+  url: "docs-m-pin-sso.html"
+  link: "<a href='docs-m-pin-sso.html'>Overview</a>"
 
 
-doc_top_navigation:
-  title: "Top navigation"
-  url: "doc_top_navigation.html"
-  link: "<a href='doc_top_navigation.html'>Top navigation</a>"
+docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes:
+  title: "M-Pin SSO AWS 3.3 release Notes"
+  url: "docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html"
+  link: "<a href='docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html'>M-Pin SSO AWS 3.3 release Notes</a>"
 
 
-doc_tags:
-  title: "Tags"
-  url: "doc_tags.html"
-  link: "<a href='doc_tags.html'>Tags</a>"
+docs-m-pin-sso-m-pin-sso-configuration-guide:
+  title: "Configuration"
+  url: "docs-m-pin-sso-m-pin-sso-configuration-guide.html"
+  link: "<a href='docs-m-pin-sso-m-pin-sso-configuration-guide.html'>Configuration</a>"
 
 
-
-
-doc_adding_tooltips:
-  title: "Tooltips"
-  url: "doc_adding_tooltips.html"
-  link: "<a href='doc_adding_tooltips.html'>Tooltips</a>"
-
-
-doc_alerts:
-  title: "Alerts"
-  url: "doc_alerts.html"
-  link: "<a href='doc_alerts.html'>Alerts</a>"
-
-
-doc_icons:
-  title: "Icons"
-  url: "doc_icons.html"
-  link: "<a href='doc_icons.html'>Icons</a>"
-
-
-doc_images:
-  title: "Images"
-  url: "doc_images.html"
-  link: "<a href='doc_images.html'>Images</a>"
-
-
-doc_labels:
-  title: "Labels"
-  url: "doc_labels.html"
-  link: "<a href='doc_labels.html'>Labels</a>"
-
-
-doc_hyperlinks:
-  title: "Links"
-  url: "doc_hyperlinks.html"
-  link: "<a href='doc_hyperlinks.html'>Links</a>"
-
-
-doc_navtabs:
-  title: "Navtabs"
-  url: "doc_navtabs.html"
-  link: "<a href='doc_navtabs.html'>Navtabs</a>"
-
-
-doc_video_embeds:
-  title: "Video embeds"
-  url: "doc_video_embeds.html"
-  link: "<a href='doc_video_embeds.html'>Video embeds</a>"
-
-
-doc_tables:
-  title: "Tables"
-  url: "doc_tables.html"
-  link: "<a href='doc_tables.html'>Tables</a>"
-
-
-doc_syntax_highlighting:
-  title: "Syntax highlighting"
-  url: "doc_syntax_highlighting.html"
-  link: "<a href='doc_syntax_highlighting.html'>Syntax highlighting</a>"
+docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide:
+  title: "M-PIN SSO FOR AWS - Getting Started"
+  url: "docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html"
+  link: "<a href='docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html'>M-PIN SSO FOR AWS - Getting Started</a>"
 
 
 

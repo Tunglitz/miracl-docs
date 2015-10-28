@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Docs MIRACL Users Manual The C Interface  | MIRACL</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body class="detail-page">
+
+   <header>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/company-logo.svg">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+
+    <a href="#" class="default-btn outline pull-right">
+      <span class="txt">open  miracl</span>
+    </a>
+
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <!-- <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Services
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Dedicated Distributed Trust Aughthority</a></li>
+          <li><a href="#">Cryptographic Engineering</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Products
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Miracl Datacenter Cryptosystem</a></li>
+          <li><a href="#">Miracl Crypto Libraries</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li> -->
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Resources</a></li>
+      <!-- <li><a href="#">Crypto Labs</a></li> -->
+      <li><a href="#">Success Stories</a></li>
+      <!-- <li><a href="#">Community</a></li> -->
+      <!-- <li><a href="#">Contact us</a></li> -->
+    </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+
+</header>
+
+    <div class="header-intro small text-center">
+  <div class="dim"></div>
+  <h1 class="title">Docs MIRACL Users Manual The C Interface</h1>
+  <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
+</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-8 col-md-9 desc-wrapper">
+
+      <div class="content">
+           
+
+            
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+            
+            <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/docs-miracl-miracl-users-manual-the-c-interface.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+            
+
+               <p>Many users of the MIRACL package would be disappointed that they have to calculate</p>
+
+<p><img src="dataassetsimageschunks7-1.png" alt=""></p>
+
+<p>for a flash variable <em>x</em> by the sequence</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">  <span class="n">fmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+  <span class="n">fadd</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+  <span class="n">fincr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
+</code></pre></div>
+<p>rather than by simply</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">  <span class="n">t</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Someone could of course use the MIRACL library to write a special purpose C compiler which could properly interpret such an instruction (see Cherry and Morris [Cherry] for an example of this approach). However such a drastic step is not necessary. A superset of C, called C++ has gained general acceptance as the natural successor to C. The enhancements to C are mainly aimed at making it an object-oriented language. By defining <em>big</em> and <em>flash</em> variables as ‘classes’ (in C++ terminology), it is possible to ‘overload’ the usual mathematical operators, so that the compiler will automatically substitute calls to the appropriate MIRACL routines when these operators are used in conjunction with <em>big</em> or <em>flash</em> variables. Furthermore C++ is able to look after the initialisation (and ultimate elimination) of these data-types automatically, using its constructor/destructor mechanism, which is included with the class definition. This relieves the programmer from the tedium of explicitly initialising each <em>big</em> and <em>flash</em> variable by repeated calls to <strong>mirvar</strong> . Indeed once the classes are properly defined and set up, it is as simple to work with the new data-types as with the built-in <em>double</em> and <em>int</em> types. Using C++ also helps shield the user from the internal workings of MIRACL.</p>
+
+<p>The MIRACL library is interfaced to C++ via the header files <em>big.h</em>, <em>flash.h,</em> <em>zzn.h</em>, <em>gf2m.h, ecn.h</em> and <em>ec2.h</em>. Function implementation is in the associated files <em>big.cpp</em>, <em>flash.cpp</em>, <em>zzn.cpp, gf2m.cpp,</em> <em>ecn.cpp</em> and <em>ec2.cpp</em>, which must be linked into any application that requires them. The Chinese Remainder Theorem is also elegantly implemented as a class, in files <em>crt.h</em> and <em>crt.cpp</em>. See <em>decode.cpp</em> for an example of use. The Comb method for fast modular exponentiation with precomputation [HAC] is implemented in <em>brick.h</em>. See <em>brick.cpp</em> for an example of use. The GF(<em>p</em>) elliptic curve equivalents are in <em>ebrick.h</em> and <em>ebrick.cpp</em> and the GF(2<sup>m</sup>) elliptic curve equivalents in <em>ebrick2.h</em> and <em>ebrick2.cpp</em> respectively.</p>
+
+<p><strong>EXAMPLE</strong></p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="cm">/*</span>
+<span class="cm">    * Program to calculate factorials.</span>
+<span class="cm">    */</span>
+
+    <span class="cp">#include &lt;iostream&gt;</span>
+    <span class="cp">#include &quot;big.h&quot; </span><span class="cm">/* include MIRACL system */</span><span class="cp"></span>
+
+    <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+    <span class="n">Miracl</span> <span class="nf">precision</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// This makes sure that MIRACL</span>
+
+    <span class="c1">// is initialised before main() // is called</span>
+
+    <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+    <span class="p">{</span> <span class="cm">/* calculate factorial of number */</span>
+        <span class="n">Big</span> <span class="n">nf</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="cm">/* declare &quot;Big&quot; variable nf */</span>
+        <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;factorial program</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;input number n= </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">nf</span><span class="o">*=</span><span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">);</span> <span class="cm">/* nf=n!=n*(n-1)*(n-2)*....3*2*1 */</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;n!= </span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">nf</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Compare this with the C version of Chapter 3. Note the neat use of a dummy class <em>Miracl</em> used to set the precision of the <em>big</em> variables. Its declaration at global scope ensures that MIRACL is initialised before <em>main()</em> is called. (Note that this would not be appropriate in a multi-threaded environment.) When compiling and linking this program, don’t forget to link in the <em>Big</em> class implementation file <em>big.cpp.</em></p>
+
+<p>Conversion to/from internal <em>Big</em> format is quite important:-</p>
+
+<p>To convert a hex character string to a <em>Big</em></p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">Big</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">c</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="p">...</span>
+    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span><span class="o">=</span><span class="mi">16</span><span class="p">;</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">c</span><span class="p">;</span>
+</code></pre></div>
+<p>To convert a <em>Big</em> to a hex character string</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span><span class="o">=</span><span class="mi">16</span><span class="p">;</span>
+    <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="n">x</span><span class="p">;</span>
+</code></pre></div>
+<p>To convert to/from pure binary, use the <strong>from_binary</strong>( ) and <strong>to_binary</strong>( ) friend functions.</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="kt">int</span> <span class="n">len</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">c</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="p">...</span>
+    <span class="n">Big</span> <span class="n">x</span><span class="o">=</span><span class="n">from_binary</span><span class="p">(</span><span class="n">len</span><span class="p">,</span><span class="n">c</span><span class="p">);</span>
+    <span class="c1">// creates Big x from len bytes of binary in c</span>
+    <span class="n">len</span><span class="o">=</span><span class="n">to_binary</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">FALSE</span><span class="p">);</span>
+    <span class="c1">// converts Big x to len bytes binary in c[100]</span>
+    <span class="n">len</span><span class="o">=</span><span class="n">to_binary</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">TRUE</span><span class="p">);</span> 
+    <span class="c1">// converts Big x to len bytes binary in c[100]</span>
+    <span class="c1">// (right justified with leading zeros)</span>
+</code></pre></div>
+<p>In many of the example programs, particularly the factoring programs, all the arithmetic is done <em>mod n</em>. To avoid the tedious reduction <em>mod n</em> required after each operation, a new C++ class <em>ZZn</em> has been used, and defined in the file <em>zzn.h</em>. This class <em>ZZn</em> (for <em>ZZ(n)</em> or the ring of integers <em>mod n</em> ) has its arithmetic operators defined to automatically perform the reduction. The function <strong>modulo(n)</strong> sets the modulus. In an analogous fashion the C++ class <em>GF2m</em> deals with elements of the field defined over GF(2_<sup>m</sup><em>). In this case the “modulus” is set via <strong>modulo(m,a,b,c)</strong>, which also specifies either a trinomial basis _t<sup>m</sup> + t<sup>a</sup> +1,</em> (and set <em>b=c=0</em>), or a pentanomial basis <em>t<sup>m</sup> + t<sup>a</sup> + t<sup>b</sup> + t<sup>c</sup> +1</em>. See the IEEE P1363 documentation for details. <a href="http://grouper.ieee.org/groups/1363/">http://grouper.ieee.org/groups/1363/</a></p>
+
+<p>Internally the <em>ZZn</em> class uses Montgomery representation. See <em>zzn.h</em>. Note that the internal implementation of <em>ZZn</em> is hidden from the application programmer, a classic feature of C++. Thus the awkward internals ofMontgomery representation need not concern the C++ programmer.</p>
+
+<p>The class <em>ECn</em> defined in <em>ecn.h</em> makes manipulation of points on GF (<em>p</em>) elliptic curves a simple matter, again hiding all the grizzly details. The class <em>EC2</em> defined in <em>ec2.h</em> does the same for GF(2<sup>m</sup>) elliptic curves.</p>
+
+<p>Almost all of MIRACL’s functionality is accessible from C++. Programming can often be done intuitively, without reference to this manual, using familiar C syntax as illustrated above. Other functions are accessed using the ‘obvious’ syntax - as in for example x=gcd(x,y);, or y=sin(x);. For more details examine the header files and example programs.</p>
+
+<p>C++ versions of most of the example programs are included in the distribution media, with the file extensions <em>.cpp</em></p>
+
+<p>One problem with manipulating large objects in C++ is the tendency of the compiler to generate code to create/destroy/copy multiple temporary objects. By default MIRACL obtains memory for <em>Big</em> and <em>Flash</em> variables from the heap. This can be quite time-consuming, and all such objects need ultimately to be destroyed. It would be faster to assign memory instead from the stack, especially for relative small big numbers. This can now be achieved by defining <strong>BIGS=m</strong> at compilation time. For example if using the Microsoft C++ compiler from the command line:-</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">    C:miracl&gt;cl /O2 /GX /DBIGS=50 brent.cpp big.cpp zzn.cpp miracl.lib
+</code></pre></div>
+<p>Note that the value of <strong>m</strong> should be the same as or less than the value of <strong>n</strong> that is specified in the call to mirsys(<strong>n</strong>,0); or in Miracl precision=<strong>n</strong>; in the main program.</p>
+
+<p>When using finite-field arithmetic, valid numbers are always less than a certain fixed modulus. For example in the finite field mod <em>n</em>, the class defined in <em>zzn.h</em> and <em>zzn.cpp</em> might handle numbers with respect to a 512-bit modulus <em>n</em>, which is set by <strong>modulo(n)</strong>. In this case one can define <strong>ZZNS=16</strong> so that all elements are of a size 16x32=512, and are created on the stack. (This works particularly well in combination with the Comba mechanism described in Chapter 5.)</p>
+
+<p>In a similar fashion, when working over the field GF(2<sup>283</sup>) , one can define <strong>GF2MS=9</strong>, so that all elements in the field are stored in a fixed memory allocation of 9 words taken from the stack.</p>
+
+<p>In these latter two cases the precision <strong>n</strong> specified in the call to mirsys(<strong>n</strong>,0); or in Miracl precision=<strong>n;</strong> in the main program should be at least 2 greater than the <strong>m</strong> that specified in the <strong>ZZNS=m</strong> or <strong>GF2MS=m</strong> definition.</p>
+
+<p>This is not recommended for program development, or if the objects are very large. It is only relevant with C++ programs. See the comments in the sample programs <em>ibe_dec.cpp</em> and <em>dl.cpp</em> for examples of the use of this mechanism. However the benefits can often be substantial – programs may be up to twice as fast.</p>
+
+<p>Finally here is a more elaborate C++ program to implement a relatively complex cryptographic protocol. Note the convention of using capitalised variables for field elements.</p>
+<div class="highlight"><pre><code class="language-c" data-lang="c">    <span class="cm">/*</span>
+<span class="cm">    * Gunthers&#39;s ID based key exchange - Finite field version</span>
+<span class="cm">    * See RFC 1824</span>
+<span class="cm">    * r^r variant (with Perfect Forward Security)</span>
+<span class="cm">    */</span>
+
+    <span class="cp">#include &lt;iostream&gt;</span>
+    <span class="cp">#include &lt;fstream&gt;</span>
+    <span class="cp">#include &quot;zzn.h&quot;</span>
+
+    <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+    <span class="n">Miracl</span> <span class="n">precision</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+
+    <span class="kt">char</span> <span class="o">*</span><span class="n">IDa</span><span class="o">=</span><span class="s">&quot;Identity 1&quot;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">IDb</span><span class="o">=</span><span class="s">&quot;Identity 2&quot;</span><span class="p">;</span>
+
+    <span class="c1">// Hash function</span>
+    <span class="n">Big</span> <span class="nf">H</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">ID</span><span class="p">)</span>
+    <span class="p">{</span> <span class="c1">// hash character string to 160-bit big number</span>
+        <span class="kt">int</span> <span class="n">b</span><span class="p">;</span>
+        <span class="n">Big</span> <span class="n">h</span><span class="p">;</span>
+        <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+        <span class="n">sha</span> <span class="n">sh</span><span class="p">;</span>
+        <span class="n">shs_init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sh</span><span class="p">);</span>
+        <span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">ID</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span> <span class="n">shs_process</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sh</span><span class="p">,</span><span class="o">*</span><span class="n">ID</span><span class="o">++</span><span class="p">);</span>
+        <span class="n">shs_hash</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sh</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+        <span class="n">h</span><span class="o">=</span><span class="n">from_binary</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">h</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">bits</span><span class="p">;</span>
+        <span class="n">ifstream</span> <span class="n">common</span><span class="p">(</span><span class="s">&quot;common.dss&quot;</span><span class="p">);</span> <span class="c1">// construct file stream</span>
+        <span class="n">Big</span> <span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">k</span><span class="p">,</span><span class="n">ra</span><span class="p">,</span><span class="n">rb</span><span class="p">,</span><span class="n">sa</span><span class="p">,</span><span class="n">sb</span><span class="p">,</span><span class="n">ta</span><span class="p">,</span><span class="n">tb</span><span class="p">,</span><span class="n">wa</span><span class="p">,</span><span class="n">wb</span><span class="p">;</span>
+        <span class="n">ZZn</span> <span class="n">G</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Ra</span><span class="p">,</span><span class="n">Rb</span><span class="p">,</span><span class="n">Ua</span><span class="p">,</span><span class="n">Ub</span><span class="p">,</span><span class="n">Va</span><span class="p">,</span><span class="n">Vb</span><span class="p">,</span><span class="n">Key</span><span class="p">;</span>
+        <span class="n">ZZn</span> <span class="n">A</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+        <span class="n">Big</span> <span class="n">b</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+        <span class="kt">long</span> <span class="n">seed</span><span class="p">;</span>
+        <span class="n">miracl</span> <span class="o">*</span><span class="n">mip</span><span class="o">=&amp;</span><span class="n">precision</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Enter 9 digit random number seed = &quot;</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">seed</span><span class="p">;</span> <span class="n">irand</span><span class="p">(</span><span class="n">seed</span><span class="p">);</span>
+
+        <span class="c1">// get common data. Its in hex. G^q mod p = 1</span>
+        <span class="n">common</span> <span class="o">&gt;&gt;</span> <span class="n">bits</span><span class="p">;</span>
+        <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span><span class="o">=</span><span class="mi">16</span><span class="p">;</span>
+        <span class="n">common</span> <span class="o">&gt;&gt;</span> <span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="n">q</span> <span class="o">&gt;&gt;</span> <span class="n">g</span><span class="p">;</span>
+        <span class="n">mip</span><span class="o">-&gt;</span><span class="n">IOBASE</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">modulo</span><span class="p">(</span><span class="n">p</span><span class="p">);</span> <span class="c1">// set modulus</span>
+        <span class="n">G</span><span class="o">=</span><span class="p">(</span><span class="n">ZZn</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Setting up Certification Authority ... &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// CA generates its secret and public keys</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>  <span class="c1">// CA secret key, 0 &lt; x &lt; q</span>
+        <span class="n">Y</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>  <span class="c1">// CA public key, Y=G^x</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Visiting CA ....&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// Visit to CA - a</span>
+        <span class="n">k</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">Ra</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+        <span class="n">ra</span><span class="o">=</span><span class="p">(</span><span class="n">Big</span><span class="p">)</span><span class="n">Ra</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">sa</span><span class="o">=</span><span class="p">(</span><span class="n">H</span><span class="p">(</span><span class="n">IDa</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">ra</span><span class="p">)</span><span class="o">%</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">sa</span><span class="o">=</span><span class="p">(</span><span class="n">sa</span><span class="o">*</span><span class="n">inverse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">q</span><span class="p">))</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+
+        <span class="c1">// Visit to CA - b</span>
+        <span class="n">k</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">Rb</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">k</span><span class="p">);</span>
+        <span class="n">rb</span><span class="o">=</span><span class="p">(</span><span class="n">Big</span><span class="p">)</span><span class="n">Rb</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">sb</span><span class="o">=</span><span class="p">(</span><span class="n">H</span><span class="p">(</span><span class="n">IDb</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">rb</span><span class="p">)</span><span class="o">%</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">sb</span><span class="o">=</span><span class="p">(</span><span class="n">sb</span><span class="o">*</span><span class="n">inverse</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">q</span><span class="p">))</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Offline calculations .... &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// offline calculation - a</span>
+        <span class="n">wa</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">Va</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">wa</span><span class="p">);</span>
+        <span class="n">ta</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">Ua</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">ta</span><span class="p">);</span>
+
+        <span class="c1">// offline calculation - b</span>
+        <span class="n">wb</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">Vb</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">wb</span><span class="p">);</span>
+        <span class="n">tb</span><span class="o">=</span><span class="n">rand</span><span class="p">(</span><span class="n">q</span><span class="p">);</span>
+        <span class="n">Ub</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="n">tb</span><span class="p">);</span>
+
+        <span class="c1">// Swap ID, R, U, V</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Calculate Key ... &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// calculate key – a</span>
+        <span class="c1">// Key = Vb^wa.Ub^sa.G^[(H(IDa)*tb)%q].Rb^[(rb*ta)%q] mod p</span>
+        <span class="n">rb</span><span class="o">=</span><span class="p">(</span><span class="n">Big</span><span class="p">)</span><span class="n">Rb</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">Vb</span><span class="p">;</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">Ub</span><span class="p">;</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">G</span><span class="p">;</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">Rb</span><span class="p">;</span>
+        <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">wa</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">sa</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">H</span><span class="p">(</span><span class="n">IDb</span><span class="p">)</span><span class="o">*</span><span class="n">ta</span><span class="p">)</span><span class="o">%</span><span class="n">q</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">rb</span><span class="o">*</span><span class="n">ta</span><span class="p">)</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">Key</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">);</span> <span class="c1">// extended exponentiation</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Key= </span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Key</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+        <span class="c1">// calculate key - b</span>
+        <span class="n">ra</span><span class="o">=</span><span class="p">(</span><span class="n">Big</span><span class="p">)</span><span class="n">Ra</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">Va</span><span class="p">;</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">Ua</span><span class="p">;</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="n">G</span><span class="p">;</span> <span class="n">A</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="n">Ra</span><span class="p">;</span>
+        <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">wb</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">sb</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">H</span><span class="p">(</span><span class="n">IDa</span><span class="p">)</span><span class="o">*</span><span class="n">tb</span><span class="p">)</span><span class="o">%</span><span class="n">q</span><span class="p">;</span> <span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">ra</span><span class="o">*</span><span class="n">tb</span><span class="p">)</span><span class="o">%</span><span class="n">q</span><span class="p">;</span>
+        <span class="n">Key</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">b</span><span class="p">);</span> <span class="c1">// extended exponentiation</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Key= </span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">Key</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>MIRACL has evolved quite a complex class hierarchy – see the diagram below. Where possible classes are built directly on top of the C/assembly core. Note the support for polynomials, power series and extension fields.  </p>
+
+<p><img src="dataassetsimageschunks7-2.png" alt=""></p>
+
+
+        <div class="tags">
+            
+        </div>
+
+        
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+
+      </div>
+
+      <!-- Content Row -->
+
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="aside" id="asideAffix">
+    <div class="title">Resources</div>
+
+            <script>
+
+                $(document).ready(function() {
+                            // Initialize navgoco with default options
+                            $("#mysidebar").navgoco({
+                                caretHtml: '',
+                                accordion: true,
+                                openClass: 'active', // open
+                                save: false, // leave false or nav highlighting doesn't work right
+                                cookie: {
+                                    name: 'navgoco',
+                                    expires: false,
+                                    path: '/'
+                            },
+                            slide: {
+                                duration: 400,
+                                easing: 'swing'
+                                    }
+                                    });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+                });
+
+            </script>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul id="mysidebar" class="nav">
+
+                <span class="siteTagline">PRODUCTS</span>
+
+                
+                
+                
+            
+                
+                <li><a href="#">M-PIN CORE</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-core.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-core-3.3-release-notes.html">Release Notes 3.3</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-access.html">M-PIN Core Access</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-browser-end-user-guide.html">M-Pin Core Brower User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-mobile-end-user-guide.html">M-Pin Core Mobile End User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-understanding-billing-options.html">M-Pin Core Billing</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">M-PIN SSO</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-sso.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html">M-Pin SSO AWS 3.3 release Notes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-configuration-guide.html">Configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html">M-PIN SSO FOR AWS - Getting Started</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Single-sourcing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_conditional_logic.html">Conditional logic</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_content_reuse.html">Content reuse</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Handling reviews</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_commenting_on_files.html">Commenting on files</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Publishing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_build_arguments.html">Build arguments</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_themes.html">Themes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_link_validation.html">Link validation</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_generating_pdfs.html">Generating PDFs</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_excluding_files.html">Excluding files</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_help_api.html">Help APIs and UI tooltips</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_search_configuration.html">Search configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_iterm_profiles.html">iTerm profiles</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_push_build_to_server.html">Pushing builds to server</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Special layouts</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_kb_layout.html">Knowledge-base layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_scroll.html">Scroll layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_shuffle.html">Shuffle layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_faq.html">FAQ layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_glossary.html">Glossary layout</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Tag archives</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="tag_archives_overview.html">Tag archives overview</a></li>
+                        
+
+                        
+                        
+                        <li class="thirdlevel"><a href="#">Tag archive pages</a>
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="tag-getting-started.html">Getting started pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-formatting.html">Formatting pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-navigation.html">Navigation pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-content-types.html">Content types pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-publishing.html">Publishing pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-special-layouts.html">Special layout pages</a></li>
+                                
+
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        
+
+                
+                
+    </ul>
+            
+            
+            
+
+
+    <div class="btn-row">
+      <div class="btn-row">
+        <a href="#" class="default-btn">
+          <span class="txt">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      
+    </div>
+  </div>
+
+</div>
+
+1
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66296557-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<div class="section dark footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Products</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">M-pin Core</a></li>
+					<li><a href="#">M-pin SSO</a></li>
+					<li><a href="#">Datacentre Cryptosystem</a></li>
+					<li><a href="#">Cloud Security</a></li>
+					<li><a href="#">Mobile</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Community</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">How to contribute</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Resources</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get started</a></li>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#"> GitHub</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Contact us</h4>
+				<ul class="list-unstyled">
+					<li>81 Rivington Street<br>United Kingdom, <br>EC2A 3AY</li>
+					<li><a href="mailto:sales@miracl.com?Subject=Want%20to%20say%20hello!" target="_top">sales@miracl.com</a></li>
+					<li><a href="tel:+4402033898190">+44 (0)20 3389 8190</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-center">
+			<ul class="list-inline small-footer">
+				<li>MIRACL UK Ltd., All Rights Reserved.</li>
+				<li><a href="https://www.certivox.com/about-certivox/terms-and-conditions">Terms and Conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</html>
+

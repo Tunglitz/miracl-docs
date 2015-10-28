@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Docs M-Pin Core - M-Pin SSO Configuration Guide  | MIRACL</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body class="detail-page">
+
+   <header>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/company-logo.svg">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+
+    <a href="#" class="default-btn outline pull-right">
+      <span class="txt">open  miracl</span>
+    </a>
+
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <!-- <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Services
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Dedicated Distributed Trust Aughthority</a></li>
+          <li><a href="#">Cryptographic Engineering</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Products
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Miracl Datacenter Cryptosystem</a></li>
+          <li><a href="#">Miracl Crypto Libraries</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li> -->
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Resources</a></li>
+      <!-- <li><a href="#">Crypto Labs</a></li> -->
+      <li><a href="#">Success Stories</a></li>
+      <!-- <li><a href="#">Community</a></li> -->
+      <!-- <li><a href="#">Contact us</a></li> -->
+    </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+
+</header>
+
+    <div class="header-intro small text-center">
+  <div class="dim"></div>
+  <h1 class="title">Docs M-Pin Core - M-Pin SSO Configuration Guide</h1>
+  <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
+</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-8 col-md-9 desc-wrapper">
+
+      <div class="content">
+           
+
+            
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+            
+            <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/docs-m-pin-sso-m-pin-sso-configuration-guide.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+            
+
+               <h2 id="summary">Summary</h2>
+
+<p>This content explains how to configure AWS and Dropbox as SAML2 Service Providers to authenticate through your M-Pin SSO Platform.</p>
+
+<h2 id="in-this-section">In this section</h2>
+
+<p><a href="#part1">Configuring an AWS Service Provider</a></p>
+
+<p><a href="#part1a">Overview</a>
+<a href="#part1b">Details</a></p>
+
+<p><a href="#part2">Configuring a Dropbox Service Provider</a></p>
+
+<p><a href="#part2a">Overview</a>
+<a href="#part2b">Details</a></p>
+
+<h2 id="configuring-an-aws-service-provider">Configuring an AWS Service Provider</h2>
+
+<h3 id="configuring-an-aws-service-provider-overview">Configuring an AWS Service Provider Overview</h3>
+
+<p>Following are the main steps to configuring an AWS Service provider with M-Pin SSO. For the full detailed procedure, see <a href="#part1">Configuring an AWS Service Provider Details.</a></p>
+
+<ol>
+<li> In your AWS account, <strong>declare an Identity Provider and a Role for that Provider</strong>, using the SAML2 Identity Provider metadata of your M-Pin SSO System.</li>
+<li> In your M-Pin SSO web management interface, <strong>create an AWS profile</strong> using the declared Identity Provider and Role.</li>
+</ol>
+
+<h3 id="configuring-an-aws-service-provider-details">Configuring an AWS Service Provider Details</h3>
+
+<p>Following is the detailed procedure to configuring an AWS Service Provider with M-Pin SSO.</p>
+
+<ol>
+<li><p><strong>Declare an Identity Provider and a Role for that Provider</strong> in AWS.</p>
+
+<p>In your AWS account, declare an Identity Provider and a Role for accessing that Provider, using the SAML2 Identity Provider metadata of your M-Pin SSO System.</p>
+
+<p>Settings:</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-text" data-lang="text">*   **Identity Provider name** – must be unique within your AWS account
+*   **Identity Provider type** – SSL
+*   **Role type** – Identity Provider Access, Web Single Sign-On (WebSSO) access to SAML providers
+*   **SAML2 Identity Provider metadata URL**
+
+http://HOST/idp/saml2/metadata
+
+where HOST is the Public DNS or Public IP address of your M-Pin SSO instance
+
+For details on how to perform this step, refer to AWS user documentation.
+</code></pre></div>
+<ol>
+<li> <strong>Create an AWS Profile</strong> in M-Pin SSO.</li>
+</ol>
+
+<p>In the web management interface of your M-Pin SSO system, create an AWS profile using the newly declared Identity Provider and Role. To do this:</p>
+
+<ol>
+<li><p>On the <em>Dashboard</em> page, <em>Integration</em> panel, <em>AWS profiles</em> row, <strong>select the Add button</strong>.</p>
+
+<p><img src="dataassetsimageschunksSSOCG1.png" alt="SSOCG1"></p>
+
+<p>This will display the Add AWS profiles page.</p>
+
+<p><img src="dataassetsimageschunksSSOCG2.png" alt="SSOCG2"></p></li>
+<li><p><strong>Fill in the Profile’s fields</strong> and then <strong>save the profile</strong>.</p></li>
+</ol>
+
+<p>Settings:</p>
+
+<ul>
+<li>  <strong>Name</strong> <em>(Required)</em> – Name of the profile</li>
+<li>  <strong>AWS Role</strong> <em>(Required)</em> – the Role you created in step 1</li>
+<li>  <strong>AWS Account Number</strong> <em>(Required)</em> – the unique account number of your AWS account</li>
+<li>  <strong>AWS Provider</strong> <em>(Required)</em> – the Identity Provider you created in step 1</li>
+<li>  <strong>LDAP Profile</strong> <em>(Optional)</em> – if you have LDAP profiles configured, they will be available in this drop-down</li>
+</ul>
+
+<p>After saving, the profile will display on the AWS Profiles page.</p>
+
+<h2 id=""><img src="dataassetsimageschunksSSOCG3.png" alt="SSOCG3"></h2>
+
+<p>Configuring a Dropbox Service Provider</p>
+
+<h3 id="configuring-a-dropbox-service-provider-overview">Configuring a Dropbox Service Provider Overview</h3>
+
+<p>Following are the main steps to configuring a Dropbox Service provider with M-Pin SSO. For the full detailed procedure, see <a href="#part2b">Configuring a Dropbox Service Provider Details.</a></p>
+
+<ol>
+<li> In your Dropbox account, <strong>declare the end point URL for your M-Pin SSO System and your SSL key</strong>.</li>
+<li> In your M-Pin SSO web management interface, <strong>create a Dropbox profile</strong>.</li>
+</ol>
+
+<h3 id="configuring-a-dropbox-service-provider-details">Configuring a Dropbox Service Provider Details</h3>
+
+<p>Following is the detailed procedure to configuring an AWS Service Provider with M-Pin SSO.</p>
+
+<ol>
+<li><p><strong>Declare the end point URL for your M-Pin SSO System and your SSL key</strong> in your Dropbox account, SSO settings.</p>
+
+<p>The M-Pin SSO end point URL is</p>
+
+<p>http://HOST/idp/saml2/sso</p>
+
+<p>where HOST is the Public DNS or Public IP address of your M-Pin SSO instance.<br>
+For details on how to perform this step, refer to Dropbox user documentation.</p></li>
+<li><p><strong>Create a Dropbox Profile</strong> in M-Pin SSO.</p></li>
+</ol>
+
+<p>In the web management interface of your M-Pin SSO system, create a Dropbox profile. To do this:</p>
+
+<ol>
+<li><p>On the <em>Dashboard</em> page, <em>Integration</em> panel, <em>Dropbox</em> profiles row, <strong>select the Add button</strong>.</p>
+
+<p><img src="dataassetsimageschunksSSOCG4.png" alt="SSOCG4"></p>
+
+<p>This will display the Add Dropbox profiles page.</p>
+
+<p><img src="dataassetsimageschunksSSOCG5.png" alt="SSOCG5"></p></li>
+<li><p><strong>Fill in the Profile’s fields</strong> and then <strong>save the profile</strong>.</p></li>
+</ol>
+
+<p>Settings:</p>
+
+<ul>
+<li>  <strong>Name</strong> <em>(Required)</em> – name of the profile</li>
+<li>  <strong>SSL Key</strong> <em>(Required)</em> – paste or upload your SSL key</li>
+<li>  <strong>LDAP Profile</strong> <em>(Optional)</em> – if you have LDAP profiles configured, they will be available in this drop-down.</li>
+</ul>
+
+<p>After saving, the profile will display on the <em>Dropbox profiles</em> page.</p>
+
+
+        <div class="tags">
+            
+        </div>
+
+        
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+
+      </div>
+
+      <!-- Content Row -->
+
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="aside" id="asideAffix">
+    <div class="title">Resources</div>
+
+            <script>
+
+                $(document).ready(function() {
+                            // Initialize navgoco with default options
+                            $("#mysidebar").navgoco({
+                                caretHtml: '',
+                                accordion: true,
+                                openClass: 'active', // open
+                                save: false, // leave false or nav highlighting doesn't work right
+                                cookie: {
+                                    name: 'navgoco',
+                                    expires: false,
+                                    path: '/'
+                            },
+                            slide: {
+                                duration: 400,
+                                easing: 'swing'
+                                    }
+                                    });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+                });
+
+            </script>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul id="mysidebar" class="nav">
+
+                <span class="siteTagline">PRODUCTS</span>
+
+                
+                
+                
+            
+                
+                <li><a href="#">M-PIN CORE</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-core.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-core-3.3-release-notes.html">Release Notes 3.3</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-access.html">M-PIN Core Access</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-browser-end-user-guide.html">M-Pin Core Brower User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-mobile-end-user-guide.html">M-Pin Core Mobile End User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-understanding-billing-options.html">M-Pin Core Billing</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">M-PIN SSO</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-sso.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html">M-Pin SSO AWS 3.3 release Notes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li class="active"><a href="docs-m-pin-sso-m-pin-sso-configuration-guide.html">Configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html">M-PIN SSO FOR AWS - Getting Started</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Single-sourcing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_conditional_logic.html">Conditional logic</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_content_reuse.html">Content reuse</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Handling reviews</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_commenting_on_files.html">Commenting on files</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Publishing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_build_arguments.html">Build arguments</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_themes.html">Themes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_link_validation.html">Link validation</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_generating_pdfs.html">Generating PDFs</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_excluding_files.html">Excluding files</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_help_api.html">Help APIs and UI tooltips</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_search_configuration.html">Search configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_iterm_profiles.html">iTerm profiles</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_push_build_to_server.html">Pushing builds to server</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Special layouts</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_kb_layout.html">Knowledge-base layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_scroll.html">Scroll layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_shuffle.html">Shuffle layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_faq.html">FAQ layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_glossary.html">Glossary layout</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Tag archives</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="tag_archives_overview.html">Tag archives overview</a></li>
+                        
+
+                        
+                        
+                        <li class="thirdlevel"><a href="#">Tag archive pages</a>
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="tag-getting-started.html">Getting started pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-formatting.html">Formatting pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-navigation.html">Navigation pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-content-types.html">Content types pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-publishing.html">Publishing pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-special-layouts.html">Special layout pages</a></li>
+                                
+
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        
+
+                
+                
+    </ul>
+            
+            
+            
+
+
+    <div class="btn-row">
+      <div class="btn-row">
+        <a href="#" class="default-btn">
+          <span class="txt">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      
+    </div>
+  </div>
+
+</div>
+
+1
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66296557-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<div class="section dark footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Products</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">M-pin Core</a></li>
+					<li><a href="#">M-pin SSO</a></li>
+					<li><a href="#">Datacentre Cryptosystem</a></li>
+					<li><a href="#">Cloud Security</a></li>
+					<li><a href="#">Mobile</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Community</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">How to contribute</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Resources</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get started</a></li>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#"> GitHub</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Contact us</h4>
+				<ul class="list-unstyled">
+					<li>81 Rivington Street<br>United Kingdom, <br>EC2A 3AY</li>
+					<li><a href="mailto:sales@miracl.com?Subject=Want%20to%20say%20hello!" target="_top">sales@miracl.com</a></li>
+					<li><a href="tel:+4402033898190">+44 (0)20 3389 8190</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-center">
+			<ul class="list-inline small-footer">
+				<li>MIRACL UK Ltd., All Rights Reserved.</li>
+				<li><a href="https://www.certivox.com/about-certivox/terms-and-conditions">Terms and Conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</html>
+

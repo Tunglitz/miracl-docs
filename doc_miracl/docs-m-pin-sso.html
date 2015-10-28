@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Docs MIRACL M-Pin SSO  | MIRACL</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body class="detail-page">
+
+   <header>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="img/company-logo.svg">
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+
+    <a href="#" class="default-btn outline pull-right">
+      <span class="txt">open  miracl</span>
+    </a>
+
+    <ul class="nav navbar-nav">
+      <!-- <li class="active"><a href="#">Home</a></li> -->
+      <!-- <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Services
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Dedicated Distributed Trust Aughthority</a></li>
+          <li><a href="#">Cryptographic Engineering</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+      Products
+      <span class="caret"></span>
+      </a>
+        <ul class="dropdown-menu" aria-labelledby="drop2">
+          <li><a href="#">Miracl Datacenter Cryptosystem</a></li>
+          <li><a href="#">Miracl Crypto Libraries</a></li>
+          <li role="separator" class="visible-xs divider"></li>
+        </ul>
+      </li> -->
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Resources</a></li>
+      <!-- <li><a href="#">Crypto Labs</a></li> -->
+      <li><a href="#">Success Stories</a></li>
+      <!-- <li><a href="#">Community</a></li> -->
+      <!-- <li><a href="#">Contact us</a></li> -->
+    </ul>
+      </div><!-- /.navbar-collapse -->
+
+    </div>
+  </nav>
+
+</header>
+
+    <div class="header-intro small text-center">
+  <div class="dim"></div>
+  <h1 class="title">Docs MIRACL M-Pin SSO</h1>
+  <p class="title-desc">You'll definitely fall in love with this product.<span class="hidden-xs"><br></span>It’s like a missing part of your live.</p>
+</div>
+
+<div class="content-wrapper">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-8 col-md-9 desc-wrapper">
+
+      <div class="content">
+           
+
+            
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+            
+            <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/docs-m-pin-sso.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+            
+
+               <h2 id="summary">Summary</h2>
+
+<p><img src="dataassetsimageschunks1-m-pin-sso.png" alt="M-Pin Core" title="M-Pin Core"></p>
+
+<p>This section provides a conceptual overview M-Pin SSO Platform, its components, services, and operation. It is a good place to start if you are new to M-Pin SSO and want to find out what it is and how it works.</p>
+
+<h3 id="in-this-section">In this section:</h3>
+
+<ul>
+<li>  <a href="#chap1">M-Pin SSO General Overview</a></li>
+<li><p><a href="#chap2">M-Pin Services Run by MIRACL</a></p></li>
+<li><p><a href="#chap21">M-Pin SSO Services Run by MIRACL</a></p></li>
+<li><p><a href="#chap22">M-Pin SSO Services Run by MIRACL Customers</a></p></li>
+<li><p><a href="#chap3">M-Pin Authentication Protocol Overview</a></p></li>
+<li><p><a href="#chap31">Zero-Knowledge Proof Protocol Concept Overview</a></p></li>
+<li><p><a href="#chap32">M-Pin Protocol Background</a></p></li>
+<li><p><a href="#chap33">The M-Pin Protocol in a Few Sentences</a></p></li>
+<li><p><a href="#chap4">Distributed Trusted Authorities (D-TAs) Overview</a></p></li>
+<li><p><a href="#chap41">Trusted Authority (TA) Concept Overview</a></p></li>
+<li><p><a href="#chap42">M-Pin Platform&#39;s Distributed Trusted Authority Architecture Overview</a></p></li>
+<li><p><a href="#chap43">MIRACL D-TA Operation</a></p></li>
+<li><p><a href="#chap44">MIRACL D-TA Privacy And Security</a></p></li>
+<li><p><a href="#chap5">M-Pin Clients Overview</a></p></li>
+<li><p><a href="#chap6">M-Pin User Setup Overview</a></p></li>
+<li><p><a href="#chap7">M-Pin Authentication Overview</a></p></li>
+</ul>
+
+<h2 id="m-pin-sso-general-overview">M-Pin SSO General Overview</h2>
+
+<p>M-Pin SSO is an extension of the M-Pin Strong Authentication Platform that is compatible with SAML federated and RADIUS authenticated applications.</p>
+
+<p>For SAML-federated applications, M-Pin SSO produces a SAML token, as the result of an M-Pin Strong Authentication based on patented M-Pin Protocol. This allows an end-user to authenticate with M-Pin and gain access to SAML-federated applications associated with M-Pin SSO. Examples of applications compatible with M-Pin SSO are Amazon AWS, Dropbox, Salesforce.</p>
+
+<p>For Radius authenticated applications, M-Pin SSO generates a one-time password (OTP) as the result of a successful M-Pin Strong Authentication. The end-user can access a RADIUS-authenticated application associated with M-Pin SSO using that OTP as their password for the single application login. Examples of Radius authenticated applications are VPN clients, Remote Desktop and Virtual Desktop applications.</p>
+
+<p>M-Pin SSO is distributed through AWS Marketplace as a server product, and it includes a web-based administrator console and end-user interfaces for the actual user authentication.</p>
+
+<p><strong>The M-Pin SSO Authentication Platform is based on:</strong></p>
+
+<ul>
+<li>  M-Pin Protocol: A zero-knowledge proof authentication protocol, based on elliptic curve cryptography that delivers multi-factor authentication between M-Pin Clients and Servers. The M-Pin Protocol is proprietary of MIRACL.</li>
+<li>  M-Pin Server: An open source server written in Python, designed for Linux OS, but can run on Windows as well. M-Pin Server eliminates the threat of password or credential database breaches, as it stores no password or authentication credentials which internal or external actors can compromise.</li>
+<li>  M-Pin Client Software: The open source software application, available for JavaScript or smartphone operating systems (iOS, Android, Windows Phone), that provides the UI and performs the authentication protocol against M-Pin Server. MPin Client software works in any HTML5 enabled browser, and authenticates users into a browser session on the same device. As part of the client software offering, the M-Pin Mobile is a web app compatible with HTML5 enabled mobile browsers, and provides hands-off access to a second device browser session while performing the user authentication from the mobile app – this is referred to as &quot;Global Authenticator mode&quot; and eliminates the threat of host based malware stealing user login details.</li>
+<li>  MIRACL&#39;s Distributed Trusted Authority (D-TA) Architecture: An advancement in elliptic curve cryptography that results in eliminating single points of compromise at MIRACL and its customers, without affecting the privacy of MIRACL customers or the security efficacy of the system. The D-TA architecture enables MIRACL customers to gain the benefits of MIRACL&#39;s enhanced security posture without having to invest in the infrastructure or personnel to maintain it.</li>
+</ul>
+
+<p>As part of the Distributed Trusted Authority Architecture, several services are split between MIRACL and its customer:</p>
+
+<h2 id="m-pin-sso-services">M-Pin SSO Services</h2>
+
+<h3 id="m-pin-sso-services-run-by-miracl">M-Pin SSO Services Run by MIRACL</h3>
+
+<ul>
+<li>  <strong>D-TA</strong> - Distributed Trusted Authority Service, managed by MIRACL. It is responsible for generating Client and Server Key Shares as well as Time Permit Shares. Each customer&#39;s D-TA instance is isolated and unique to each customer, and its cryptographic Master Key is protected with encryption keys housed in FIPS 140-2 Level 3 hardware security models.</li>
+<li>  <strong>D-TA Proxy</strong> – It proxies request to the D-TA from the customer&#39;s applications (RSA/S), validating RPS signatures and provides security to the D-TA. The D-TA Proxy is public facing, while the D-TA is never publicly accessible.</li>
+<li>  <strong>MIRACL API</strong> - Additional services for customer/application registration</li>
+</ul>
+
+<h3 id="m-pin-sso-services-run-by-miracl-customers">M-Pin SSO Services Run by MIRACL Customers</h3>
+
+<p>M-Pin Server – A drop-in replacement for password-based authentication applicable for any online service or system that removes the risk of password database breaches entirely. The M-Pin Server includes the following modules:</p>
+
+<ul>
+<li>  *<em>AML IdP *</em>– Security Assertions Markup Language Identity Provider. It is the service that generates the SAML identity assertion to be consumed by SAML federated applications.</li>
+<li>  *<em>RADIUS Service *</em>– it is the service against which the RADIUS federated application authenticates its end users</li>
+<li>  <strong>Web Server</strong> - serves up the M-Pin PIN pad for SAML and RADIUS federated authentication, and also displays the resulting one-time password specifically for Radius authentication.</li>
+<li>  <strong>M-Pin Clients</strong> - all the client side services, providing the user interface and the cryptographic functions on the end user&#39;s device. For M-Pin SSO they are all already embedded in the web pages distributed with the package</li>
+</ul>
+
+<h2 id="m-pin-authentication-protocol-overview">M-Pin Authentication Protocol Overview</h2>
+
+<p>This page provides a very brief summary of the M-Pin Authentication Protocol. If you need a more detailed explanation, refer to our <a href="dataassetsdownloadspdfscrypto-labsCertiVox_Labs_mpin.pdf">M-Pin: A Multi-Factor Zero Knowledge Authentication Protocol</a> white paper.</p>
+
+<h3 id="zero-knowledge-proof-protocol-concept-overview">Zero-Knowledge Proof Protocol Concept Overview</h3>
+
+<p>A <a href="http://en.wikipedia.org/wiki/Zero-knowledge_proof">zero-knowledge proof</a> protocol is a method by which one party (the prover) can prove to another party (the verifier) that a given statement is true, without conveying any additional information apart from the fact that the statement is indeed true. Proving that one possesses certain knowledge is, in most cases, trivial if one is allowed to simply reveal that knowledge; the challenge is proving that one has such knowledge without revealing it or without revealing anything else.</p>
+
+<h3 id="m-pin-protocol-background">M-Pin Protocol Background</h3>
+
+<p>The M-Pin Protocol is the first productized zero-knowledge proof protocol to hit mainstream adoption. While M-Pin is a relatively new product and service, the M-Pin Protocol was first introduced in academic circles over a decade ago by Dr. Michael Scott, MIRACL&#39;s chief cryptographer, and has been sited over three thousand times in cryptographic research since initial publication. To date, no known theoretical or practical attacks exist against it.</p>
+
+<p>For more information on the M-Pin Protocol in general, refer to the M-Pin cryptographic white papers available on the <a href="http://www.certivox.com">MIRACL website</a> in the <a href="/crypto-labs">MIRACL Research</a> section.</p>
+
+<h3 id="the-m-pin-protocol-in-a-few-sentences">The M-Pin Protocol in a Few Sentences</h3>
+
+<p>The M-Pin Authentication Protocol is a zero-knowledge proof authentication protocol using proven, strong, standards-based elliptic curve cryptography:</p>
+
+<ul>
+<li>  M-Pin Server and M-Pin Client Keys are issued according to elliptic curve cryptography principles, and the server can tell whether a client key comes from the right elliptic curve set</li>
+<li>  M-Pin Server can prove who a user is without having to store a client credential on a server, or in a database (like passwords currently are)</li>
+<li>  Credentials (M-Pin Client Keys) are NEVER exchanged (encrypted or unencrypted) between a user and the M-Pin Server</li>
+<li>  M-Pin Server Key compromise doesn&#39;t reveal anything about users or their credentials, eliminating scenarios like password database breaches</li>
+<li>  The code that manipulates the M-Pin Client Key (a user&#39;s credential) runs in the user&#39;s browser or app, therefore no separate hardware tokens or software installations are required.</li>
+</ul>
+
+<p>The picture below represents schematically the operation of the M-Pin Authentication Protocol – a cryptographic zero-knowledge proof, challenge-response authentication protocol built on standards-based elliptic curve cryptography.</p>
+
+<p><img src="dataassetsimageschunks1-m-pin-authentication-overlay.jpg" alt="1-m-pin-authentication-overlay"></p>
+
+<h2 id="distributed-trusted-authorities-d-tas-overview">Distributed Trusted Authorities (D-TAs) Overview</h2>
+
+<h3 id="trusted-authority-ta-concept-overview">Trusted Authority (TA) Concept Overview</h3>
+
+<p>The concept of Trusted Authority (TA) is very familiar in the Public Key Infrastructure (PKI) paradigm, where a central Certification Authority (CA) is responsible for verifying all the requests, and for issuing valid credentials (in this case Digital Certificates) to associate to private/public key pairs, using its root, or master key. One big weakness of the PKI paradigm is that the CA is a single point of trust, and failure, and its reliability is strongly dependent on how the CA maintains and securely stores its master key.</p>
+
+<p>Many organizations are realizing that by using the services of a 3rd party certificate authority, or any security vendor that holds a root key, or seed value, they are placing an inappropriate level of trust and leaking personally identifiable information about end users that may violate regulatory standards and put their organization at risk.</p>
+
+<h3 id="m-pin-platform-39-s-distributed-trusted-authority-architecture-overview">M-Pin Platform&#39;s Distributed Trusted Authority Architecture Overview</h3>
+
+<p>The M-Pin Strong Authentication Platform&#39;s Distributed Trusted Authority architecture has been designed to address these weaknesses.</p>
+
+<p>The M-Pin Platform&#39;s architecture is designed to distribute the single point of compromise between MIRACL and its customers. For this reason, M-Pin TA is split into two Distributed TAs: MIRACL D-TA and Customer D-TA. Each MIRACL customer runs its own D-TA, and for each Customer D-TA, MIRACL runs a corresponding MIRACL D-TA. The two D-TAs do not communicate in any way.</p>
+
+<p>MIRACL hosts a dedicated D-TA for each paying customer.</p>
+
+<p>The picture below represents schematically the Distributed Trust Authorities and demonstrates how this distributed architecture removes insider threats and single points of compromise.</p>
+
+<p><img src="dataassetsimageschunks2-DTA-nodes-overlay.jpg" alt="2-DTA-nodes-overlay"></p>
+
+<h3 id="miracl-d-ta-operation">MIRACL D-TA Operation</h3>
+
+<p>The MIRACL D-TA issues:</p>
+
+<ul>
+<li>  One share of the server key to customers, to be used when setting up M-Pin Server</li>
+<li>  One share of the client key to customers&#39; clients, issued when an end user registers</li>
+<li>  One share of the time permit to customers&#39; clients, issued when an end user authenticates</li>
+</ul>
+
+<p>All the above elements are needed to perform the M-Pin Authentication, together with a correspondent share issued by the M-Pin Server deployed, owned and managed by MIRACL customers.</p>
+
+<h3 id="miracl-d-ta-privacy-and-security">MIRACL D-TA Privacy And Security</h3>
+
+<p>MIRACL personnel is never exposed to the unencrypted Master Key inside of the customer&#39;s D-TA service at MIRACL. The Master Key of each Enterprise-Tier Customer is housed in each distinct D-TA Service is cryptographically protected with FIPS 140-2 Level 3 hardware security module. Because the D-TA architecture removes the single point of compromise, in order to have a security breach equivalent to a PKI root key breach or 2FA seed value breach, both Master Keys inside the D-TA services, at MIRACL and MIRACL&#39;s customer, must be compromised.</p>
+
+<p>Customers gain the benefit of the security efficacy achieved using FIPS validated hardware security modules, without having to invest in resources or infrastructure to maintain this level of security. MIRACL houses its D-TA infrastructure at ISO/IEC 27001 certified data center locations in the European Union for resiliency and high availability, offering 100% uptime of its D-TA service.</p>
+
+<p>Additionally, when the MIRACL API receives a request for a M-Pin Client Key share, the request is made in a cryptographically secured manner, in which the identity of the end user, which is bound to the requested M-Pin Client Key, is hashed through a one-way function, so that MIRACL never receives any personally identifiable information about who our customer&#39;s end users are.</p>
+
+<p>As an example, user John Doe may have 3 M-Pin Client Keys issued, one for each device he owns. MIRACL has no way to ascertain the identity of the M-Pin Client Keys (that they belong to John Doe) or that they are related to any one identity whatsoever.</p>
+
+<h2 id="m-pin-clients-overview">M-Pin Clients Overview</h2>
+
+<p>The M-Pin Client software is responsible for M-Pin User Setup, performing the M-Pin Authentication Protocol against the server and handling of the M-Pin Client Keys and MPin Tokens. The M-Pin Client software contains the &quot;PIN Pad&quot; UI that guides the end user through the various workflows including setup, authentication and Global Authenticator mode. The M-Pin Client software is available as:</p>
+
+<ul>
+<li>  A JavaScript application suitable for desktop applications</li>
+<li>  An HTML5 &quot;web app&quot; which can be deployed to any smart device capable of running a browser. This enables enterprises and ISVs to deploy the M-Pin web app onto their user&#39;s devices without having to create a native app and deploy it via a workflow with an app store. An HTML5 web app can simply be deployed over a publicly accessible URL.</li>
+</ul>
+
+<h2 id="m-pin-user-setup-overview">M-Pin User Setup Overview</h2>
+
+<p>M-Pin adds multi-factor authentication to its zero-knowledge proof protocol by splitting the M-Pin Client Key into, at a minimum, two parts; an M-Pin Token, so that it is no longer representative of the end user&#39;s identity, and a low entropy PIN or passphrase:</p>
+
+<ul>
+<li>  End users choose their PIN - nobody else knows it, it&#39;s not stored anywhere</li>
+<li>  Programmatically, the PIN is &quot;extracted&quot; from the M-Pin Client Key, and ONLY the resulting token (M-Pin Token) is stored in the browser, locked to the domain of the issuer, or stored in secured storage within an app</li>
+<li>  Neither the PIN, nor the M-Pin Token, or the combination of the two is ever exchanged between client and server; this is the benefit of zero-knowledge proof protocols</li>
+</ul>
+
+<p>The picture below represents schematically the M-Pin User Setup process – splitting the M-Pin Client Key into an M-Pin Token and PIN or other factors.</p>
+
+<p><img src="dataassetsimageschunks3-m-pin-setup-overlay.jpg" alt="3-m-pin-setup-overlay"></p>
+
+<h2 id="m-pin-authentication-overview">M-Pin Authentication Overview</h2>
+
+<p>To successfully authenticate with M-Pin, an end user must have access to two factors:</p>
+
+<ul>
+<li>  The token in the browser or application: &quot;something you have&quot;</li>
+<li>  The PIN number: &quot;something you know&quot;</li>
+</ul>
+
+<p>The level of security is the same used in payment systems by the coupling of credit/debit cards and PIN numbers. M-Pin is arguably more secure, as the client key and the PIN are never stored. M-Pin is an online authentication protocol, it is impossible to mount an offline attack, and so the configurable number of incorrect attempts can result in the revocation of an M-Pin Client Key according the security guidelines set by an application.</p>
+
+<p>To enable revocation of users who have already been issued with a valid client key, M-Pin introduces the concept of Time Permits. Before the actual authentication protocol is started, the end user must request a valid Time Permit. If no valid Time Permit is available, the M-Pin protocol simply doesn&#39;t start, and the authentication cannot be performed.</p>
+
+<p>The picture below represents schematically the M-Pin Authentication – recombining from PIN/Passphrase + M-Pin Token and optionally additional factors.</p>
+
+<p><img src="http://cdn2.hubspot.net/hub/230906/file-2142907027-jpg/Images-cos/diagrams/4-m-pin-login-overlay-235200-edited.jpg" alt="4-m-pin-login-overlay"></p>
+
+
+        <div class="tags">
+            
+        </div>
+
+        
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+      </div>
+
+      </div>
+
+      <!-- Content Row -->
+
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="aside" id="asideAffix">
+    <div class="title">Resources</div>
+
+            <script>
+
+                $(document).ready(function() {
+                            // Initialize navgoco with default options
+                            $("#mysidebar").navgoco({
+                                caretHtml: '',
+                                accordion: true,
+                                openClass: 'active', // open
+                                save: false, // leave false or nav highlighting doesn't work right
+                                cookie: {
+                                    name: 'navgoco',
+                                    expires: false,
+                                    path: '/'
+                            },
+                            slide: {
+                                duration: 400,
+                                easing: 'swing'
+                                    }
+                                    });
+
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
+
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
+
+                });
+
+            </script>
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <ul id="mysidebar" class="nav">
+
+                <span class="siteTagline">PRODUCTS</span>
+
+                
+                
+                
+            
+                
+                <li><a href="#">M-PIN CORE</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="docs-m-pin-core.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-core-3.3-release-notes.html">Release Notes 3.3</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-access.html">M-PIN Core Access</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-browser-end-user-guide.html">M-Pin Core Brower User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-in-mobile-end-user-guide.html">M-Pin Core Mobile End User Guide</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-core-m-pin-understanding-billing-options.html">M-Pin Core Billing</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">M-PIN SSO</a>
+                    <ul>
+                        
+                        
+                        
+                        <li class="active"><a href="docs-m-pin-sso.html">Overview</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-aws-3.3-release-notes.html">M-Pin SSO AWS 3.3 release Notes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-configuration-guide.html">Configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="docs-m-pin-sso-m-pin-sso-for-aws-getting-started-guide.html">M-PIN SSO FOR AWS - Getting Started</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Single-sourcing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_conditional_logic.html">Conditional logic</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_content_reuse.html">Content reuse</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Handling reviews</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_commenting_on_files.html">Commenting on files</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Publishing</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_build_arguments.html">Build arguments</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_themes.html">Themes</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_link_validation.html">Link validation</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_generating_pdfs.html">Generating PDFs</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_excluding_files.html">Excluding files</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_help_api.html">Help APIs and UI tooltips</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_search_configuration.html">Search configuration</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_iterm_profiles.html">iTerm profiles</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_push_build_to_server.html">Pushing builds to server</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Special layouts</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="doc_kb_layout.html">Knowledge-base layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_scroll.html">Scroll layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_shuffle.html">Shuffle layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_faq.html">FAQ layout</a></li>
+                        
+
+                        
+
+                
+                
+                        
+                        
+                        <li><a href="doc_glossary.html">Glossary layout</a></li>
+                        
+
+                        
+
+                
+                
+    </ul>
+            
+            
+                
+                <li><a href="#">Tag archives</a>
+                    <ul>
+                        
+                        
+                        
+                        <li><a href="tag_archives_overview.html">Tag archives overview</a></li>
+                        
+
+                        
+                        
+                        <li class="thirdlevel"><a href="#">Tag archive pages</a>
+                            <ul>
+                                
+                                
+                                
+                                <li><a href="tag-getting-started.html">Getting started pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-formatting.html">Formatting pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-navigation.html">Navigation pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-content-types.html">Content types pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-publishing.html">Publishing pages</a></li>
+                                
+
+                                
+                                
+                                
+                                
+                                <li><a href="tag-special-layouts.html">Special layout pages</a></li>
+                                
+
+                                
+                                
+                            </ul>
+                        </li>
+                        
+                        
+
+                
+                
+    </ul>
+            
+            
+            
+
+
+    <div class="btn-row">
+      <div class="btn-row">
+        <a href="#" class="default-btn">
+          <span class="txt">Download PDF</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+      
+    </div>
+  </div>
+
+</div>
+
+1
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-66296557-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+<div class="section dark footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Products</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">M-pin Core</a></li>
+					<li><a href="#">M-pin SSO</a></li>
+					<li><a href="#">Datacentre Cryptosystem</a></li>
+					<li><a href="#">Cloud Security</a></li>
+					<li><a href="#">Mobile</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Community</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get Involved</a></li>
+					<li><a href="#">How to contribute</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Resources</h4>
+				<ul class="list-unstyled">
+					<li><a href="#">Get started</a></li>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#"> GitHub</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-sm-3 column">
+				<h4 class="section-sub-title up">Contact us</h4>
+				<ul class="list-unstyled">
+					<li>81 Rivington Street<br>United Kingdom, <br>EC2A 3AY</li>
+					<li><a href="mailto:sales@miracl.com?Subject=Want%20to%20say%20hello!" target="_top">sales@miracl.com</a></li>
+					<li><a href="tel:+4402033898190">+44 (0)20 3389 8190</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="row text-center">
+			<ul class="list-inline small-footer">
+				<li>MIRACL UK Ltd., All Rights Reserved.</li>
+				<li><a href="https://www.certivox.com/about-certivox/terms-and-conditions">Terms and Conditions</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</html>
+
