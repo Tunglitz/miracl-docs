@@ -54,7 +54,7 @@ The structure of _big_ and _flash_ numbers is illustrated in figure (4.1).
 
 These structures combine ease of use with representational efficiency. A denominator of length zero (_d=0_), implies an actual denominator of one; and similarly a numerator of length zero (_n=0_) implies a numerator of one. Zero itself is uniquely defined as the number whose first element is zero (i.e. _n=d=0_).   
 
-![](\data\assets\images\chunks\4-1.png)
+![](/img/4-1.png)
 
 Figure 4.1:   Structure of _big_ and _flash_ data-types where s is the sign of the number, _n_ and _d_ are the lengths of the numerator and denominator respectively, and LSW and MSW mean ‘Least significant word and ‘Most significant word’ respectively
 

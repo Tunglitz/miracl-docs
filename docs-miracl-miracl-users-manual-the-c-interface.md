@@ -10,7 +10,7 @@ summary:
 
 Many users of the MIRACL package would be disappointed that they have to calculate
 
-![](\data\assets\images\chunks\7-1.png)
+![](/img/7-1.png)
 
 for a flash variable _x_ by the sequence
 
@@ -233,4 +233,4 @@ Finally here is a more elaborate C\+\+ program to implement a relatively complex
 
 MIRACL has evolved quite a complex class hierarchy – see the diagram below. Where possible classes are built directly on top of the C/assembly core. Note the support for polynomials, power series and extension fields.  
 
-![](\data\assets\images\chunks\7-2.png)
+![](/img/7-2.png)

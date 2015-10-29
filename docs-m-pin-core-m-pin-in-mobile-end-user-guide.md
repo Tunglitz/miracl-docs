@@ -18,68 +18,68 @@ Also note that the workflow described below is for the case when you want to log
 
 When you first visit a page that is protected by M-Pin using your PC's browser, you will see the M-Pin PIN pad as follows:
 
-![MMEUG1](\data\assets\images\chunks\MMEUG1.png)
+![MMEUG1](/img/MMEUG1.png)
 
 Select “Setup your phone”:
 
-![MMEUG2](\data\assets\images\chunks\MMEUG2.png)
+![MMEUG2](/img/MMEUG2.png)
 
 If your mobile phone has a QR code reader, you can use it to launch the M-Pin-In-Mobile site. If not, simply enter the URL below the QR code into the browser on your mobile phone:
 
-![MMEUG3](\data\assets\images\chunks\MMEUG3.png)
+![MMEUG3](/img/MMEUG3.png)
 
 Follow the instructions to add the M-Pin-In-Mobile app to your phone's home screen. Note that this step refers to running M-Pin-In-Mobile on an Apple iOS device. On other phones, instead of adding the app to your homescreen, simply bookmark the page in your phone's browser. Some other mobile browsers will then allow you to add an icon to this bookmark to your phone's home screen for easy access.
 
 Now when you launch the app from your home screen, you will see the following screen:
 
-![MMEUG4](\data\assets\images\chunks\MMEUG4.jpg)
+![MMEUG4](/img/MMEUG4.jpg)
 
 Enter your email address and optionally change the “Device name” to something meaningful to yourself, e.g. “My Laptop”. Note that “Device Name” will only be visible if your system administrator has set up device revocation. If device revocation has been set up, this is the name you will need to provide to your system administrator if you want to revoke access from this device in the event that it is for example lost or stolen. Once you have entered the correct information, select “Setup M-Pin™”:
 
-![MMEUG5](\data\assets\images\chunks\MMEUG5.jpg)
+![MMEUG5](/img/MMEUG5.jpg)
 
 You should now receive an email with an activation link. Click the link in the email, then select “Confirm and activate” on the resulting web page. Note that you don't need to access the confirmation email and link on the same device that you are registering. Now you can select “I confirmed my email”. Note that if the email doesn't arrive, you can select “Resend confirmation email” to request that the email is resent to you.
 
 Next, you will be asked to setup your PIN. Please ensure that nobody can see the PIN that you use either when setting it up or when using it, and we also strongly recommend that you don't write it down anywhere.
 
-![MMEUG6](\data\assets\images\chunks\MMEUG6.jpg)
+![MMEUG6](/img/MMEUG6.jpg)
 
 Enter you 4-digit PIN, then select “SETUP” to complete the registration process:
 
-![MMEUG7](\data\assets\images\chunks\MMEUG7.jpg)
+![MMEUG7](/img/MMEUG7.jpg)
 
 ## Authentication
 
 Now that you have registered your mobile device, you can select “Sign in with this M-Pin” and it will ask for an “access number”:
 
-![MMEUG8](\data\assets\images\chunks\MMEUG8.jpg)
+![MMEUG8](/img/MMEUG8.jpg)
 
 Now return to the PIN pad on your PC's browser and select “Sign in with Phone”:
 
-![MMEUG9](\data\assets\images\chunks\MMEUG9.png)
+![MMEUG9](/img/MMEUG9.png)
 
 Now you need to enter the 7-digit access number displayed on your PC's browser into the M-Pin-In-Mobile app. Note that this access number is only valid for 99 seconds and the countdown in the centre of the screen shows you how much time is left.
 
 If you enter the access number incorrectly, you will see the following warning screen:
 
-![MMEUG10](\data\assets\images\chunks\MMEUG10.jpg)
+![MMEUG10](/img/MMEUG10.jpg)
 
 Please try again with the correct access number.
 Once you have entered the access number into your phone, click “Next” and it will ask you to enter your personal PIN:
 
-![MMEUG11](\data\assets\images\chunks\MMEUG11.jpg)
+![MMEUG11](/img/MMEUG11.jpg)
 
 If you enter an incorrect PIN, you will see the following warning screen:
 
-![MMEUG12](\data\assets\images\chunks\MMEUG12.jpg)
+![MMEUG12](/img/MMEUG12.jpg)
 
 Please try again with the correct PIN. If you enter an incorrect PIN 3 times, you will see the following message and you will need to register again:
 
-![MMEUG13](\data\assets\images\chunks\MMEUG13.jpg)
+![MMEUG13](/img/MMEUG13.jpg)
 
 When you enter your correct PIN then select “Login”, you will be logged into the site on your PC's browser and you will see a confirmation screen on your mobile device:
 
-![MMEUG14](\data\assets\images\chunks\MMEUG14.jpg)
+![MMEUG14](/img/MMEUG14.jpg)
 
 Note that you can also log out of the session on your PC's browser by clicking “Sign out” on your mobile device.
 
@@ -87,7 +87,7 @@ Note that you can also log out of the session on your PC's browser by clicking �
 
 If you use different identities to access your service, or if you are sharing your PC with another user, you can add additional identities to the PIN pad. Click the menu icon to the right of your identity to display the account management screen:
 
-![MMEUG15](\data\assets\images\chunks\MMEUG15.jpg)
+![MMEUG15](/img/MMEUG15.jpg)
 
 Select “Add new identity” and simply proceed setting up the identity as before.
 
@@ -95,13 +95,13 @@ Select “Add new identity” and simply proceed setting up the identity as befo
 
 When the PIN pad asks for your PIN, it also displays the identity that you are about to login as. If you wish to you another identity, select the menu icon, then click on the identity that you with to authenticate as:
 
-![MMEUG16](\data\assets\images\chunks\MMEUG16.jpg)
+![MMEUG16](/img/MMEUG16.jpg)
 
 ## Managing an Existing Identity
 
 Select the menu icon then select the pencil icon next to the identity that you wish to manage:
 
-![MMEUG17](\data\assets\images\chunks\MMEUG17.jpg)
+![MMEUG17](/img/MMEUG17.jpg)
 
 If you have forgotten your PIN, select “Reset PIN”followed by “Yes, Reactivate it” to confirm that you wish to reset your PIN. You will then be sent a confirmation email and you can proceed with the standard registration workflow.  
 

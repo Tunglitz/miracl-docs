@@ -12,13 +12,13 @@ The straightforward way to represent rational numbers is as reduced fractions, a
 
 An alternative way to represent rationals would be as a finite continued fraction [Knuth81]. Every rational number _p/q_ can be written as
 
-![](\data\assets\images\chunks\equation2.png)
+![](/img/equation2.png)
 
 or more elegantly as _p/q_ = [_a<sub>0</sub>/a<sub>1</sub>/a<sub>2</sub>/..../a<sub>n</sub>_] where the _a<sub>i</sub>_ are positive integers, usually quite small.
 
 For example
 
-![](\data\assets\images\chunks\equation1.png)
+![](/img/equation1.png)
 
 Note that the _a<sub>i</sub>_ elements of the above continued fraction representation are easily found as the quotients generated as a by-product when the Euclidean GCD algorithm is applied to _p_ and _q_.
 

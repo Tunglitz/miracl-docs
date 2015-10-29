@@ -39,7 +39,7 @@ To access your M-Pin Core demo application and test its functionality:
 
 The page will display the M-Pin PIN Pad:
 
-![core-access1](\data\assets\images\chunks\core-access1.png)
+![core-access1](/img/core-access1.png)
 
 *   Follow the instructions in the PIN Pad to **create your access PIN and sign in to the demo application**.
 

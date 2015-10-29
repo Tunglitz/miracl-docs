@@ -8,7 +8,7 @@ last_updated: October 21, 2015
 summary: 
 ---
 
-![CLINT-landing](\data\assets\images\chunks\miot-crypto-library-landing.jpg)
+![CLINT-landing](/img/miot-crypto-library-landing.jpg)
 
 **We are currently working hard getting CLINT ready for it's public release, however you can jump the queue and be one of the first to access CLINT by joining the CLINT mailing list, [simply complete the join up form on this page to get access first](/clint).**
 

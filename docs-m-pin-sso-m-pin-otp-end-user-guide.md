@@ -16,7 +16,7 @@ The registration, authentication and account management workflows for the OTP ge
 
 Your system administrator will give you the link to the OTP generating site. Users who wish to use the browser on their own PC to generate OTPs should read the [M-Pin-In-Browser End User Guide](/docs/m-pin-core/mpin-in-browser-end-user-guide). The workflows described in that document are identical to the OTP generation workflows with the exception that in the 'Authentication' section of this guide, after entering your PIN, instead of logging into a service, the OTP is displayed in your browser:
 
-![MOTPEUG1](\data\assets\images\chunks\MOTPEUG1.png)
+![MOTPEUG1](/img/MOTPEUG1.png)
 
 ## Generating OTPs using M-Pin-In-Mobile
 
@@ -24,4 +24,4 @@ Users who wish to use their mobile to generate OTPs should read the [M-Pin-In-Mo
 
 Once you have registered the M-Pin-In-Mobile app for the OTP site, you will immediately see the PIN pad asking for your PIN (the screen asking for an access number is not required for OTP generation). When you have entered your PIN, the OTP will be displayed:
 
-![MOTPEUG2](\data\assets\images\chunks\MOTPEUG2.jpe)
+![MOTPEUG2](/img/MOTPEUG2.jpe)

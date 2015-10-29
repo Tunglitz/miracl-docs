@@ -20,49 +20,49 @@ When you first visit a site that is protected with M-Pin, you will see the M-Pin
 
 Select “Sign in from here”:
 
-![MBEUG1](\data\assets\images\chunks\MBEUG1.png)
+![MBEUG1](/img/MBEUG1.png)
 
-![MBEUG2](\data\assets\images\chunks\MBEUG2.png)
+![MBEUG2](/img/MBEUG2.png)
 
 Select “Sign in with browser”:
 
-![MBEUG3](\data\assets\images\chunks\MBEUG3.png)
+![MBEUG3](/img/MBEUG3.png)
 
 Enter your email address and optionally change the “Device name” to something meaningful to yourself, e.g. “My Laptop”. Note that “Device Name” will only be visible if your system administrator has set up device revocation. If device revocation has been set up, this is the name you will need to provide to your system administrator if you want to revoke access from this device in the event that it is for example lost or stolen. Once you have entered the correct information, select “Setup M-Pin™”:
 
-![MBEUG4](\data\assets\images\chunks\MBEUG4.png)
+![MBEUG4](/img/MBEUG4.png)
 
 You should now receive an email with an activation link. Click the link in the email, then select “Confirm and activate” on the resulting web page. Now you can select “I confirmed my email”. Note that if the email doesn't arrive, you can select “Resend confirmation email” to request that the email is resent to you.
 
 Next, you will be asked to setup your PIN. Please ensure that nobody can see the PIN that you use either when setting it up or when using it, and we also strongly recommend that you don't write it down anywhere.
 
-![MBEUG5](\data\assets\images\chunks\MBEUG5.png)
+![MBEUG5](/img/MBEUG5.png)
 
 Enter 4 digits using your mouse, then select “Setup”:
 
-![MBEUG6](\data\assets\images\chunks\MBEUG6.png)
+![MBEUG6](/img/MBEUG6.png)
 
 ## Authentication
 
 Now that you have created your PIN, you can select “Sign in now” and the PIN pad will be displayed asking you to enter your PIN. The PIN pad will also automatically be displayed requesting your PIN if you revisit the site or refresh your browser. Note that each PIN is tied to the specific browser that you used to register. So, for example, if you wish to use both Chrome and Firefox to authenticate, you will need to register using both browsers. It is up to you whether you use the same PIN on both.
 
-![MBEUG7](\data\assets\images\chunks\MBEUG7.png)
+![MBEUG7](/img/MBEUG7.png)
 
 Simply enter your 4-digit PIN then click “Login” to authenticate into your site.
 
 If you enter an incorrect PIN, you will see the following warning:
 
-![MBEUG8](\data\assets\images\chunks\MBEUG8.png)
+![MBEUG8](/img/MBEUG8.png)
 
 Please try again with the correct PIN. If you enter an incorrect PIN 3 times, you will see the following warning and you will need to register again:
 
-![MBEUG9](\data\assets\images\chunks\MBEUG9.png)
+![MBEUG9](/img/MBEUG9.png)
 
 ## Adding A New Identity
 
 If you use different identities to access your service, or if you are sharing your PC with another user, you can add additional identities to the PIN pad. Click the menu icon to the right of your identity to display the account management screen:
 
-![MBEUG10](\data\assets\images\chunks\MBEUG10.png)
+![MBEUG10](/img/MBEUG10.png)
 
 Select “Add new identity” and simply proceed setting up the identity as before.  
 
@@ -70,13 +70,13 @@ Select “Add new identity” and simply proceed setting up the identity as befo
 
 When the PIN pad asks for your PIN, it also displays the identity that you are about to login as. If you wish to you another identity, select the menu icon, then double-click on the identity that you with to authenticate as:
 
-![MBEUG11](\data\assets\images\chunks\MBEUG11.png)
+![MBEUG11](/img/MBEUG11.png)
 
 ## Managing an Existing Identity
 
 Select the menu icon then select the pencil icon next to the identity that you wish to manage:
 
-![MBEUG12](\data\assets\images\chunks\MBEUG12.png)
+![MBEUG12](/img/MBEUG12.png)
 
 If you have forgotten your PIN, select “Reset PIN”followed by “Yes, Reactivate it” to confirm that you wish to reset your PIN. You will then be sent a confirmation email and you can proceed with the standard registration workflow.  
 

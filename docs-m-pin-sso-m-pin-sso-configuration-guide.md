@@ -60,11 +60,11 @@ In the web management interface of your M-Pin SSO system, create an AWS profile 
 
 1.  On the _Dashboard_ page, _Integration_ panel, _AWS profiles_ row, **select the Add button**.
 
-    ![SSOCG1](\data\assets\images\chunks\SSOCG1.png)
+    ![SSOCG1](/img/SSOCG1.png)
 
     This will display the Add AWS profiles page.
 
-    ![SSOCG2](\data\assets\images\chunks\SSOCG2.png)
+    ![SSOCG2](/img/SSOCG2.png)
 
 2.  **Fill in the Profile’s fields** and then **save the profile**.
 
@@ -78,7 +78,7 @@ Settings:
 
 After saving, the profile will display on the AWS Profiles page.
 
-## ![SSOCG3](\data\assets\images\chunks\SSOCG3.png)
+## ![SSOCG3](/img/SSOCG3.png)
 Configuring a Dropbox Service Provider
 
 ### Configuring a Dropbox Service Provider Overview
@@ -107,11 +107,11 @@ In the web management interface of your M-Pin SSO system, create a Dropbox profi
 
 1.  On the _Dashboard_ page, _Integration_ panel, _Dropbox_ profiles row, **select the Add button**.
 
-    ![SSOCG4](\data\assets\images\chunks\SSOCG4.png)
+    ![SSOCG4](/img/SSOCG4.png)
 
     This will display the Add Dropbox profiles page.
 
-    ![SSOCG5](\data\assets\images\chunks\SSOCG5.png)
+    ![SSOCG5](/img/SSOCG5.png)
 
 2.  **Fill in the Profile’s fields** and then **save the profile**.
 

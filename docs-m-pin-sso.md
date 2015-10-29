@@ -10,7 +10,7 @@ summary:
 
 ## Summary
 
-![M-Pin Core](\data\assets\images\chunks\1-m-pin-sso.png "M-Pin Core")
+![M-Pin Core](/img/1-m-pin-sso.png "M-Pin Core")
 
 This section provides a conceptual overview M-Pin SSO Platform, its components, services, and operation. It is a good place to start if you are new to M-Pin SSO and want to find out what it is and how it works.
 
@@ -77,7 +77,7 @@ M-Pin Server – A drop-in replacement for password-based authentication applica
 
 ## M-Pin Authentication Protocol Overview
 
-This page provides a very brief summary of the M-Pin Authentication Protocol. If you need a more detailed explanation, refer to our [M-Pin: A Multi-Factor Zero Knowledge Authentication Protocol](\data\assets\downloads\pdfs\crypto-labs\CertiVox_Labs_mpin.pdf) white paper.
+This page provides a very brief summary of the M-Pin Authentication Protocol. If you need a more detailed explanation, refer to our [M-Pin: A Multi-Factor Zero Knowledge Authentication Protocol](/downloads/pdfs/crypto-labs/CertiVox_Labs_mpin.pdf) white paper.
 
 ### Zero-Knowledge Proof Protocol Concept Overview
 
@@ -101,7 +101,7 @@ The M-Pin Authentication Protocol is a zero-knowledge proof authentication proto
 
 The picture below represents schematically the operation of the M-Pin Authentication Protocol – a cryptographic zero-knowledge proof, challenge-response authentication protocol built on standards-based elliptic curve cryptography.
 
-![1-m-pin-authentication-overlay](\data\assets\images\chunks\1-m-pin-authentication-overlay.jpg)
+![1-m-pin-authentication-overlay](/img/1-m-pin-authentication-overlay.jpg)
 
 ## Distributed Trusted Authorities (D-TAs) Overview
 
@@ -121,7 +121,7 @@ MIRACL hosts a dedicated D-TA for each paying customer.
 
 The picture below represents schematically the Distributed Trust Authorities and demonstrates how this distributed architecture removes insider threats and single points of compromise.
 
-![2-DTA-nodes-overlay](\data\assets\images\chunks\2-DTA-nodes-overlay.jpg)
+![2-DTA-nodes-overlay](/img/2-DTA-nodes-overlay.jpg)
 
 ### MIRACL D-TA Operation
 
@@ -160,7 +160,7 @@ M-Pin adds multi-factor authentication to its zero-knowledge proof protocol by s
 
 The picture below represents schematically the M-Pin User Setup process – splitting the M-Pin Client Key into an M-Pin Token and PIN or other factors.
 
-![3-m-pin-setup-overlay](\data\assets\images\chunks\3-m-pin-setup-overlay.jpg)
+![3-m-pin-setup-overlay](/img/3-m-pin-setup-overlay.jpg)
 
 ## M-Pin Authentication Overview
 
@@ -175,4 +175,4 @@ To enable revocation of users who have already been issued with a valid client k
 
 The picture below represents schematically the M-Pin Authentication – recombining from PIN/Passphrase + M-Pin Token and optionally additional factors.
 
-![4-m-pin-login-overlay](http://cdn2.hubspot.net/hub/230906/file-2142907027-jpg/Images-cos/diagrams/4-m-pin-login-overlay-235200-edited.jpg)
+![4-m-pin-login-overlay](/img/4-m-pin-login-overlay-235200-edited.jpg)
